@@ -43,7 +43,7 @@ export default function Archive () {
             </div>
 
             <div className="px-10 md:px-20 pb-32">
-                {years.map(({ year, solutions }) => <YearArchive year={year} solutions={solutions} />)}
+                {years.map(({ year, solutions }) => <YearArchive key={year} year={year} solutions={solutions} />)}
             </div>
         </main>
     )
