@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { Heading1, Heading2, Paragraph, Title } from './components/headers'
+import { Heading1, Heading2, Paragraph, Title } from '../components/headers'
+import NavBar from '@/components/nav'
 
 
 const InfoBlock = (props: { header: string, children:string }) => {
@@ -28,6 +29,7 @@ const Sponsor = (props: { src: string, url: string, alt:string, square?:boolean 
 export default function Home() {
   return (
     <main>
+      <NavBar />
       <div className="px-10 pb-16 pt-32 md:px-20">
         <Title>GUNN MATH COMPETITION</Title>
         <h2 className="text-md md:text-xl">March 24th, 2024  ///  8:30 AM - 4:30 PM  ///  Gunn High School</h2>
