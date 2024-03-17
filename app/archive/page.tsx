@@ -18,7 +18,7 @@ const YearArchive = (props: {year: number, solutions:boolean}) => {
                 {divs.map(division => <div key={division}>
                     <Heading2>Division {division}</Heading2>
 
-                    <div className={`grid grid-cols-${props.solutions ? 3 : 2} max-w-md`}>
+                    <div className={`grid ${props.solutions ? "grid-cols-3" : "grid-cols-2"} max-w-md`}>
 
                         {tests.map(test => <Fragment key={test}>
                             <div className="font-bold">{test}:</div>
