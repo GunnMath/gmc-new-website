@@ -47,8 +47,8 @@ export default function Home() {
           </div>
         </div>
 
-        <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSenCWtv3C2JBd_ibmI-xp7mkOTdQYrtLHhC8BSwOlm_pW3dvg/viewform">
-          <div className="inline-block font-bold text-3xl mt-12 py-5 px-16 rounded-lg bg-[#DEC880] hover:rotate-6 transition-all">Register</div>
+        <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1n-bjPMppW39OI7QTfZLr3yaN9NNtV1W4F7K1sea9TUo/edit?usp=sharing">
+          <div className="inline-block font-bold text-3xl mt-12 py-5 px-16 rounded-lg bg-[#DEC880] hover:rotate-6 transition-all">GMC Manual</div>
         </a>
       </div>
 
