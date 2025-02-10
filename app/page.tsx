@@ -32,7 +32,7 @@ export default function Home() {
       <NavBar />
       <div className="px-10 pb-16 pt-32 md:px-20">
         <Title>GUNN MATH COMPETITION</Title>
-        <h2 className="text-md md:text-xl">March 24th, 2024  ///  8:30 AM - 4:30 PM  ///  Gunn High School</h2>
+        <h2 className="text-md md:text-xl">March 30th, 2025  ///  8:30 AM - 4:30 PM  ///  Gunn High School</h2>
         
         <div className="absolute right-5 top-[20%] z-[-1] invisible md:visible"><Image src="/fsh.png" width={500} height={400} alt="GMC logo" /></div>
 
@@ -47,15 +47,25 @@ export default function Home() {
           </div>
         </div>
 
-        <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1n-bjPMppW39OI7QTfZLr3yaN9NNtV1W4F7K1sea9TUo/edit?usp=sharing">
-          <div className="inline-block font-bold text-3xl mt-12 py-5 px-16 rounded-lg bg-[#DEC880] hover:rotate-6 transition-all">GMC Manual</div>
-        </a>
+        <div className="flex gap-4">
+          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?usp=sharing">
+          <div className="inline-block font-bold text-3xl mt-12 py-5 px-16 rounded-lg bg-[#DEC880] hover:rotate-6 transition-all">
+            GMC Manual
+          </div>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSek6UnuM0p-Qx9Nntd_Cva_dOnVLDZq2WwoqYzN2lyjPkXM2g/viewform">
+            <div className="inline-block font-bold text-3xl mt-12 py-5 px-16 rounded-lg bg-[#DEC880] hover:rotate-6 transition-all">
+              Registration
+            </div>
+          </a>
+</div>
+
       </div>
 
       <div className="px-10 py-10 md:px-20">
         <Heading1>About</Heading1>
         <Paragraph>
-          The third annual Gunn Math Competition is hosted by dedicated students from Gunn Math Circle and will be held at Gunn High School on Sunday, March 24th 2024.
+          The third annual Gunn Math Competition is hosted by dedicated students from Gunn Math Circle and will be held at Gunn High School on Sunday, March 30th 2025.
         </Paragraph>
 
         <Heading2>Divisions</Heading2>
@@ -72,7 +82,7 @@ export default function Home() {
         <Paragraph>
           Individual Round: 60 minutes, 10 problems<br />
           Team Round: 60 minutes, 15 problems<br />
-          Guts Round: 75 minutes, 3x8 problems<br />
+          Guts Round: 90 minutes, 3x8 problems + 3x2 estimations<br />
           Tiebreaker Round: 15 minutes, 3 problems (Qualifiers Only)
         </Paragraph>
 
@@ -96,7 +106,7 @@ export default function Home() {
         <ScheduleItem start="14:30" end="15:45">Activities / Tiebreaks</ScheduleItem>
         <ScheduleItem start="16:00" end="16:30">Awards Ceremony</ScheduleItem>
       </div>
-
+{/*
       <div className="flex flex-col items-center py-32 gap-5">
         <h1 className="font-bold text-3xl md:text-5xl my-5">Sponsors</h1>
         <Sponsor src="/janestreet.png" url="https://www.janestreet.com/" alt="Jane Street" />
@@ -105,6 +115,7 @@ export default function Home() {
         <Sponsor src="/wolfram.png" url="https://www.wolfram.com/" alt="Wolfram" />
         <Sponsor src="/live.png" url="https://live.poshenloh.com/" alt="Live" />
       </div>
+  */}
     </main>
   );
 }
