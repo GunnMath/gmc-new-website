@@ -6,11 +6,12 @@ import { Fragment } from "react";
 const divs = ["A", "B"];
 const tests = ["Individual", "Team", "Guts", "Tiebreak"];
 
-const years = [{ year: 2023, solutions: false }, { year: 2022, solutions: true }];
+const years = [{year: 2024, solutions: false}, { year: 2023, solutions: false }, { year: 2022, solutions: true }];
 
 const YearArchive = (props: {year: number, solutions:boolean}) => {
     return (
         <div>
+            <hr className="my-4 border-t border-[var(--dark-gold)]" />
             <Heading1>{props.year}</Heading1>
             <div>Year {props.year - 2021}.</div>
 

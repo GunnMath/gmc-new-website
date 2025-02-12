@@ -6,7 +6,7 @@ const libre = Libre_Franklin({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Gunn Math Competition",
-  description: "Join us at Gunn High School on March 24th to compete for prizes in teams of 4!",
+  description: "Join us at Gunn High School on March 30th, 2025 to compete for prizes in teams of 4!",
 };
 
 export default function RootLayout({
