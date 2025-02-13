@@ -16,6 +16,7 @@ export default function NavBar() {
         <div className="flex gap-10 p-5 italic">
             <NavOption url="/">About</NavOption>
             <NavOption url="/archive">Archive</NavOption>
+            <NavOption url="https://docs.google.com/document/d/1xVPsXSMIRpIVcHKfncZmQsb5UXslwHl74RNFR6OjrKw/edit?tab=t.0">Sponsor Packet</NavOption>
         </div>
     )
 }
