@@ -108,7 +108,7 @@
           <Heading1>Schedule</Heading1>
           <ScheduleItem start="8:00" end="8:45" location="Bow gym">Registration</ScheduleItem>
           <ScheduleItem start="8:45" end="9:00" location="Bow gym">Opening Ceremony</ScheduleItem>
-          <ScheduleItem start="9:15" end="10:15" location="N-building">Individual Round</ScheduleItem>
+          <ScheduleItem start="9:15" end="10:15" location="N-building">Individual Round / Po Shen Loh talk for parents</ScheduleItem>
           <ScheduleItem start="10:25" end="11:25" location="N-building">Team Round</ScheduleItem>
           <ScheduleItem start="11:30" end="12:30" location="Bow Gym">Lunch</ScheduleItem>
           <ScheduleItem start="12:45" end="14:05" location="Bow Gym">Guts Round</ScheduleItem>
