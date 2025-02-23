@@ -107,12 +107,13 @@
         <div className="flex flex-col items-center py-32">
           <Heading1>Schedule</Heading1>
           <ScheduleItem start="8:00" end="8:45" location="Bow gym">Registration</ScheduleItem>
-          <ScheduleItem start="9:00" end="9:30" location="Bow gym">Po Shen Loh talk!</ScheduleItem>
-          <ScheduleItem start="9:45" end="10:45" location="N-building">Individual Round</ScheduleItem>
-          <ScheduleItem start="10:55" end="11:55" location="N-building">Team Round</ScheduleItem>
-          <ScheduleItem start="12:10" end="13:00" location="Bow Gym">Lunch</ScheduleItem>
-          <ScheduleItem start="13:15" end="14:35" location="Bow Gym">Guts Round</ScheduleItem>
-          <ScheduleItem start="14:45" end="15:45" location="N-building">Activities / Tiebreaks</ScheduleItem>
+          <ScheduleItem start="8:45" end="9:00" location="Bow gym">Opening Ceremony</ScheduleItem>
+          <ScheduleItem start="9:15" end="10:15" location="N-building">Individual Round</ScheduleItem>
+          <ScheduleItem start="10:25" end="11:25" location="N-building">Team Round</ScheduleItem>
+          <ScheduleItem start="11:30" end="12:30" location="Bow Gym">Lunch</ScheduleItem>
+          <ScheduleItem start="12:45" end="14:05" location="Bow Gym">Guts Round</ScheduleItem>
+          <ScheduleItem start="14:15" end="15:15" location="N-building">Activities / Tiebreaks</ScheduleItem>
+          <ScheduleItem start="15:30" end="16:00" location="Bow gym">Po Shen Loh talk!</ScheduleItem>
           <ScheduleItem start="16:00" end="16:30" location="Bow Gym">Awards Ceremony</ScheduleItem>
 
         </div>
@@ -121,8 +122,8 @@
           <h1 className="font-bold text-3xl md:text-5xl my-5">Sponsors</h1>
           <Sponsor src="/janestreetblack.png" url="https://www.janestreet.com/" alt="Jane Street" />
           <Sponsor src="/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" />
-          <Sponsor src="/live.png" url="https://live.poshenloh.com/" alt="Po Shen Loh Live" />
           {/*
+          <Sponsor src="/live.png" url="https://live.poshenloh.com/" alt="Po Shen Loh Live" />
           
           <Sponsor src="/thinkfund.png" url="https://www.mitchellparkteenservices.org/thinkfund" alt="Thinkfund" square />
           <Sponsor src="/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" />
