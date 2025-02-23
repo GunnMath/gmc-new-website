@@ -3,20 +3,25 @@
   import NavBar from '@/components/nav'
 
 
-  const InfoBlock = (props: { header: string, children:string }) => {
+  const InfoBlock = (props: { header: string; children: string }) => {
     return (
       <div>
         <div className="text-3xl font-bold">{props.header}</div>
-        <div>{props.children}</div>
+        <div className="break-words whitespace-normal">{props.children}</div>
       </div>
-    )
-  }
+    );
+  };
+  
 
-  const ScheduleItem = (props: { start: string, end:string, children:string}) => {
+  const ScheduleItem = (props: { start: string, end: string, children: string, location?: string }) => {
     return (
-      <div className="md:text-lg"><span className="font-bold">{">"}{props.start}-{props.end}:</span> {props.children}</div>
-    )
-  }
+      <div className="md:text-lg">
+        <span className="font-bold">{">"}{props.start}-{props.end}:</span> {props.children}
+        {props.location && <span className="text-gray-500"> {props.location}</span>}
+      </div>
+    );
+  };
+  
 
   const Sponsor = (props: { src: string, url: string, alt:string, square?:boolean }) => {
     return (
@@ -43,7 +48,10 @@
             </div>
             <div className="flex flex-col gap-5">
               <InfoBlock header="3 Rounds">Individual, Guts, & Team</InfoBlock>
-              <InfoBlock header="Over $1000 in Prizes">For the top teams and individuals</InfoBlock>
+              <InfoBlock header="Over $1500 in Prizes">For the top teams and individuals</InfoBlock>
+            </div>
+            <div className="flex flex-col gap-5">
+              <InfoBlock header="Po Shen Loh Talk!"> insight on AI from distinguished mathetician </InfoBlock>
             </div>
           </div>
 
@@ -65,7 +73,7 @@
         <div className="px-10 py-10 md:px-20">
           <Heading1>About</Heading1>
           <Paragraph>
-            The third annual Gunn Math Competition is hosted by dedicated students from Gunn Math Circle and will be held at Gunn High School on Sunday, March 30th 2025.
+            The fourth annual Gunn Math Competition is hosted by dedicated students from Gunn Math Circle and will be held at Gunn High School on Sunday, March 30th 2025.
           </Paragraph>
 
           <Heading2>Divisions</Heading2>
@@ -98,25 +106,28 @@
 
         <div className="flex flex-col items-center py-32">
           <Heading1>Schedule</Heading1>
-          <ScheduleItem start="8:30" end="9:15">Registration</ScheduleItem>
-          <ScheduleItem start="9:30" end="10:40">Individual Round</ScheduleItem>
-          <ScheduleItem start="10:40" end="12:00">Team Round</ScheduleItem>
-          <ScheduleItem start="12:10" end="13:00">Lunch</ScheduleItem>
-          <ScheduleItem start="13:00" end="14:20">Guts Round</ScheduleItem>
-          <ScheduleItem start="14:30" end="15:45">Activities / Tiebreaks</ScheduleItem>
-          <ScheduleItem start="16:00" end="16:30">Awards Ceremony</ScheduleItem>
+          <ScheduleItem start="8:00" end="8:45" location="Bow gym">Registration</ScheduleItem>
+          <ScheduleItem start="9:00" end="9:30" location="Bow gym">Po Shen Loh talk!</ScheduleItem>
+          <ScheduleItem start="9:45" end="10:45" location="N-building">Individual Round</ScheduleItem>
+          <ScheduleItem start="10:55" end="11:55" location="N-building">Team Round</ScheduleItem>
+          <ScheduleItem start="12:10" end="13:00" location="Bow Gym">Lunch</ScheduleItem>
+          <ScheduleItem start="13:15" end="14:35" location="Bow Gym">Guts Round</ScheduleItem>
+          <ScheduleItem start="14:45" end="15:45" location="N-building">Activities / Tiebreaks</ScheduleItem>
+          <ScheduleItem start="16:00" end="16:30" location="Bow Gym">Awards Ceremony</ScheduleItem>
+
         </div>
 
         <div className="flex flex-col items-center py-32 gap-5">
           <h1 className="font-bold text-3xl md:text-5xl my-5">Sponsors</h1>
           <Sponsor src="/janestreetblack.png" url="https://www.janestreet.com/" alt="Jane Street" />
           <Sponsor src="/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" />
+          <Sponsor src="/live.png" url="https://live.poshenloh.com/" alt="Po Shen Loh Live" />
           {/*
           
           <Sponsor src="/thinkfund.png" url="https://www.mitchellparkteenservices.org/thinkfund" alt="Thinkfund" square />
           <Sponsor src="/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" />
           <Sponsor src="/wolfram.png" url="https://www.wolfram.com/" alt="Wolfram" />
-          <Sponsor src="/live.png" url="https://live.poshenloh.com/" alt="Live" />
+          
         
     */}
     </div>
