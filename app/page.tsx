@@ -122,8 +122,8 @@
           <h1 className="font-bold text-3xl md:text-5xl my-5">Sponsors</h1>
           <Sponsor src="/janestreetblack.png" url="https://www.janestreet.com/" alt="Jane Street" />
           <Sponsor src="/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" />
+          <Sponsor src="/dailychallenge.png" url="https://daily.poshenloh.com/" alt="Po Shen Loh Live" />
           {/*
-          <Sponsor src="/live.png" url="https://live.poshenloh.com/" alt="Po Shen Loh Live" />
           
           <Sponsor src="/thinkfund.png" url="https://www.mitchellparkteenservices.org/thinkfund" alt="Thinkfund" square />
           <Sponsor src="/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" />
