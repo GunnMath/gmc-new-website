@@ -51,7 +51,7 @@
               <InfoBlock header="Over $1500 in Prizes">For the top teams and individuals</InfoBlock>
             </div>
             <div className="flex flex-col gap-5">
-              <InfoBlock header="Po Shen Loh Talk!"> insight on AI from distinguished mathetician </InfoBlock>
+              <InfoBlock header="Po-Shen Loh Talk!"> insight on AI from distinguished mathetician </InfoBlock>
             </div>
           </div>
 
@@ -108,12 +108,12 @@
           <Heading1>Schedule</Heading1>
           <ScheduleItem start="8:00" end="8:45" location="Bow gym">Registration</ScheduleItem>
           <ScheduleItem start="8:45" end="9:00" location="Bow gym">Opening Ceremony</ScheduleItem>
-          <ScheduleItem start="9:15" end="10:15" location="N-building">Individual Round / Po Shen Loh talk for parents</ScheduleItem>
+          <ScheduleItem start="9:15" end="10:15" location="N-building">Individual Round / Po-Shen Loh talk for parents</ScheduleItem>
           <ScheduleItem start="10:25" end="11:25" location="N-building">Team Round</ScheduleItem>
           <ScheduleItem start="11:30" end="12:30" location="Bow Gym">Lunch</ScheduleItem>
           <ScheduleItem start="12:45" end="14:05" location="Bow Gym">Guts Round</ScheduleItem>
           <ScheduleItem start="14:15" end="15:15" location="N-building">Activities / Tiebreaks</ScheduleItem>
-          <ScheduleItem start="15:30" end="16:00" location="Bow gym">Po Shen Loh talk!</ScheduleItem>
+          <ScheduleItem start="15:30" end="16:00" location="Bow gym">Po-Shen Loh talk!</ScheduleItem>
           <ScheduleItem start="16:00" end="16:30" location="Bow Gym">Awards Ceremony</ScheduleItem>
 
         </div>
