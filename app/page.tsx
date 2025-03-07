@@ -124,10 +124,11 @@
           <Sponsor src="/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" />
           <Sponsor src="/dailychallenge.png" url="https://daily.poshenloh.com/" alt="Po Shen Loh Live" />
           <Sponsor src="/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" />
+          <Sponsor src="/wolfram.png" url="https://www.wolfram.com/" alt="Wolfram" />
+          <Sponsor src="/DRW.png" url="https://www.drw.com/" alt="DRW" />
           {/*
           
           <Sponsor src="/thinkfund.png" url="https://www.mitchellparkteenservices.org/thinkfund" alt="Thinkfund" square />
-          <Sponsor src="/wolfram.png" url="https://www.wolfram.com/" alt="Wolfram" />
           
         
     */}
