@@ -48,7 +48,7 @@
             </div>
             <div className="flex flex-col gap-5">
               <InfoBlock header="3 Rounds">Individual, Guts, & Team</InfoBlock>
-              <InfoBlock header="Over $1500 in Prizes">For the top teams and individuals</InfoBlock>
+              <InfoBlock header="Over $7500 in Prizes">For the top teams and individuals</InfoBlock>
             </div>
             <div className="flex flex-col gap-5">
               <InfoBlock header="Po-Shen Loh Talk!"> insight on AI from distinguished mathematician </InfoBlock>
