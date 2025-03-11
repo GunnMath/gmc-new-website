@@ -4,10 +4,10 @@
 
 :root {
   --foreground: #3c3621;
-  --background: #FFE9A1;
-  --dark-gold: #ddc77f;
+  --background: #ffffffb6;
+  --dark-gold: #c9958f;
 }
-/* dark gold is the color of the deltafish in the background*/
+/* dark gold is the color of the deltafish in the background, FFE9A1 is the old yellow*/
 
 /* 
 @media (prefers-color-scheme: dark) {
