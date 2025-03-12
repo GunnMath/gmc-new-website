@@ -1,4 +1,3 @@
-"use client"
 import React, { useState, useEffect } from "react";
 import Image from 'next/image';
 import { Heading1, Heading2, Paragraph, Title } from '../components/headers';
@@ -130,15 +129,18 @@ export default function Home() {
         <ScheduleItem start="16:00" end="16:30" location="Bow Gym">Awards Ceremony</ScheduleItem>
       </div>
 
-      <div className="flex flex-col items-center py-16">
+      {/* <div className="flex flex-col items-center py-16">
         <h1 className="font-bold text-3xl md:text-5xl">Prize Pool</h1>
         
-        <div className=""> {/* Ensures spacing between title and images */}
+        <div className="">  Ensures spacing between title and images 
           <PrizePool />
         </div>
       </div>
+
+       */}
       <div className="flex flex-col items-center py-32 gap-5">
         <h1 className="font-bold text-3xl md:text-5xl my-5">Sponsors</h1>
+
 
         <Sponsor src="/sponsors/janestreetblack.png" url="https://www.janestreet.com/" alt="Jane Street" />
         <Sponsor src="/sponsors/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" />
