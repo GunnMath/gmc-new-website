@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/maryyu/Documents/GitHub/gmc-new-website/app/layout":["static/media/92daa4d0098aa288-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
