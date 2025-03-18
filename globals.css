@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #3c3621;
+  --background: #FFE9A1;
+  --dark-gold: #ddc77f;
+}
+/* dark gold is the color of the deltafish in the background*/
+
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
