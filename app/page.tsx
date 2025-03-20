@@ -32,7 +32,7 @@ const ScheduleItem = (props: { start: string, end: string, children: string, loc
 const Sponsor = (props: { src: string, url: string, alt: string, square?: boolean }) => {
   return (
     <a target="_blank" rel="noopener noreferrer" href={props.url}>
-      <img alt={props.alt} className={(props.square ? "max-w-[15rem] max-h-[15rem]" : "max-w-[20rem] max-h-[5rem]") + " rounded-md"} src={`/gmc-new-website/${props.src}`} />
+      <img alt={props.alt} className={(props.square ? "max-w-[15rem] max-h-[15rem]" : "max-w-[20rem] max-h-[5rem]") + " rounded-md"} src={`/public/sponsors/${props.src}`} />
     </a>
   );
 };
@@ -48,7 +48,7 @@ export default function Home() {
         <h2 className="text-md md:text-xl">March 30th, 2025  ///  8:30 AM - 4:30 PM  ///  Gunn High School</h2>
 
         <div className="absolute right-5 top-[20%] z-[-1] invisible md:visible">
-          <Image src="/gmc-new-website/fsh.png" width={500} height={400} alt="GMC logo" />
+          <Image src="/public/fsh.png" width={500} height={400} alt="GMC logo" />
         </div>
 
         <div className="mt-10 flex gap-10">
