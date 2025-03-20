@@ -32,7 +32,7 @@ const ScheduleItem = (props: { start: string, end: string, children: string, loc
 const Sponsor = (props: { src: string, url: string, alt: string, square?: boolean }) => {
   return (
     <a target="_blank" rel="noopener noreferrer" href={props.url}>
-      <img alt={props.alt} className={(props.square ? "max-w-[15rem] max-h-[15rem]" : "max-w-[20rem] max-h-[5rem]") + " rounded-md"} src={`/sponsors/${props.src}`} />
+      <img alt={props.alt} className={(props.square ? "max-w-[15rem] max-h-[15rem]" : "max-w-[20rem] max-h-[5rem]") + " rounded-md"} src={`${props.src}`} />
     </a>
   );
 };
