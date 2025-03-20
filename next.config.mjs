@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: "export",
-    basePath: "", 
-    assetPrefix: "",
+    basePath: "/gmc-new-website",
     images: {
         unoptimized: true
     }
