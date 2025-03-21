@@ -144,7 +144,8 @@ export default function Home() {
 
         <Sponsor src="/sponsors/janestreetblack.png" url="https://www.janestreet.com/" alt="Jane Street" />
         <Sponsor src="/sponsors/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" />
-        <Sponsor src="/sponsors/dailychallenge.png" url="https://daily.poshenloh.com/" alt="Po Shen Loh Live" />
+        <Sponsor src="/sponsors/dailychallenge.png" url="https://daily.poshenloh.com/" alt="Po-Shen Loh daily challenge" />
+        <Sponsor src="/sponsors/live.png" url="https://live.poshenloh.com/" alt="LIVE courses by Po-Shen Loh" />
         <Sponsor src="/sponsors/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" />
         <Sponsor src="/sponsors/wolfram.png" url="https://www.wolfram.com/" alt="Wolfram" />
         <Sponsor src="/sponsors/digipen.png" url="https://www.digipen.edu/" alt="Digipen Institute of Technology" />
