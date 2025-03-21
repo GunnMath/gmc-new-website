@@ -147,6 +147,11 @@ export default function Home() {
         <Sponsor src="/sponsors/dailychallenge.png" url="https://daily.poshenloh.com/" alt="Po Shen Loh Live" />
         <Sponsor src="/sponsors/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" />
         <Sponsor src="/sponsors/wolfram.png" url="https://www.wolfram.com/" alt="Wolfram" />
+        <Sponsor src="/sponsors/digipen.png" url="https://www.digipen.edu/" alt="Digipen Institute of Technology" />
+        <Sponsor src="/sponsors/desmos.png" url="https://www.desmos.com/" alt="Desmos" />
+        <Sponsor src="/sponsors/iheartcustomshirts.jpg" url="https://www.iheartcustomshirts.com/" alt="I heart custom shirts - screen printing" />
+        <Sponsor src="/sponsors/PaloAlto.png" url="https://www.cityofpaloalto.org/Home" alt="City of Palo Alto" />
+        <Sponsor src="/sponsors/ThinkFund.png" url="https://www.mitchellparkteenservices.org/thinkfund" alt="Thinkfund" />
         <Sponsor src="/sponsors/DRW.png" url="https://www.drw.com/" alt="DRW" />
       </div>
     </main>
