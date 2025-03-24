@@ -2,6 +2,8 @@ import { Heading1, Heading2, Title } from "@/components/headers";
 import NavBar from "@/components/nav";
 import Link from "next/link";
 import { Fragment } from "react";
+import Image from 'next/image';
+
 
 const divs = ["A", "B"];
 const tests = ["Individual", "Team", "Guts", "Tiebreak"];
@@ -38,6 +40,9 @@ export default function Archive () {
     return (
         <main>
             <NavBar />
+            <div className="absolute right-5 top-[20%] z-[-1] invisible md:visible">
+                <Image src="/fsh.png" width={500} height={400} alt="GMC logo" />
+            </div>
             <div className="px-10 pb-10 pt-32 md:px-20">
                 <Title>Archive</Title>
                 <div>Since 2022.</div>
