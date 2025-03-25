@@ -88,7 +88,12 @@ export default function Home() {
 
         <Heading2>Divisions</Heading2>
         <Paragraph>
-          The competition has 2 divisions, A and B. Division B will be for those who are relatively new to competition math and are generally taking a math class before calculus. Division A will be for those who are familiar with competition math, and will thus have harder problems. Participants who have participated in the AIME must compete in Division A.
+          The competition has 2 divisions, A and B. Division B will be for those who are relatively new to competition math. Division A will be for those who are familiar with competition math, and will thus have harder problems. Participants who have participated in the AIME must compete in Division A.
+        </Paragraph>
+
+        <Heading2>Difficulty</Heading2>
+        <Paragraph>
+          For Div. A, the difficulty of the problems will range from early AMC 10 to mid or late AIME. For Div. B, the difficulty of the problems will range from AMC 8 to late AMC 10. In general, the Guts and Team rounds will be more difficult than the Individual round, as participants are working as a team.
         </Paragraph>
 
         <Heading2>Teams</Heading2>
@@ -102,7 +107,7 @@ export default function Home() {
           *problems and test format will be finalized on Thursday, March 27th*
           Individual Round: 60 minutes, 10 problems<br />
           Team Round: 60 minutes, 10 problems<br />
-          Guts Round: 90 minutes, 3x8 problems + 3x2 estimations<br />
+          Guts Round: 75 minutes, 3x8 problems + 3x2 estimations<br />
           Tiebreaker Round: 15 minutes, 3 problems (Qualifiers Only)
         </Paragraph>
 
@@ -110,10 +115,6 @@ export default function Home() {
           In the Guts Round, problems are released in sets of 3. Students must submit answers to the problems in each set before moving on to the next set. This year, we will have multiple activities in the afternoon for students to choose from, including an Estimathon. More details about the exact activities will be announced soon!
         </Paragraph>
 
-        <Heading2>Difficulty</Heading2>
-        <Paragraph>
-          For Div. A, the difficulty of the problems will range from early AMC 10 to mid or late AIME. For Div. B, the difficulty of the problems will range from AMC 8 to late AMC 10. In general, the Guts and Team rounds will be more difficult than the Individual round, as participants are working as a team.
-        </Paragraph>
       </div>
 
       <div className="flex flex-col items-center py-32">
