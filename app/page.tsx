@@ -142,7 +142,7 @@ export default function Home() {
       <div className="flex flex-col items-center py-32 gap-5">
         <h1 className="font-bold text-3xl md:text-5xl my-5 underline">Partner</h1>
         <div className="flex flex-wrap justify-center gap-20">
-          <Sponsor src="/sponsors/paloalto.png" url="https://www.cityofpaloalto.org/Home" alt="City of Palo Alto" />
+          <Sponsor src="/sponsors/PaloAlto.png" url="https://www.cityofpaloalto.org/Home" alt="City of Palo Alto" />
           <Sponsor src="/sponsors/thinkfund.png" url="https://www.mitchellparkteenservices.org/thinkfund" alt="Thinkfund" />
         </div>
 
@@ -155,18 +155,18 @@ export default function Home() {
         <div className="flex flex-wrap justify-center gap-20">
           <Sponsor src="/sponsors/wolfram.png" url="https://www.wolfram.com/" alt="Wolfram" />
           <Sponsor src="/sponsors/citadel.png" url="https://www.citadelsecurities.com/" alt="Citadel" />
-          <Sponsor src="/sponsors/drw.png" url="https://www.drw.com/" alt="DRW" />
+          <Sponsor src="/sponsors/DRW.png" url="https://www.drw.com/" alt="DRW" />
         </div>
         
         <h1 className="font-bold text-3xl md:text-5xl my-5 text-[#B8B8B8] underline">Silver Sponsors</h1>
         <div className="flex flex-wrap justify-center gap-20">
-          <Sponsor src="/sponsors/hrt.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" />
+          <Sponsor src="/sponsors/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" />
           <Sponsor src="/sponsors/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" />
         </div>
 
         <h1 className="font-bold text-3xl md:text-5xl my-5 text-[#AA7042] underline">Bronze Sponsors</h1>
         <div className="flex flex-wrap justify-center gap-10">
-          <Sponsor src="/sponsors/digipen.png" url="https://www.digipen.edu/" alt="Digipen Institute of Technology" />
+          <Sponsor src="/sponsors/Digipen.png" url="https://www.digipen.edu/" alt="Digipen Institute of Technology" />
           <Sponsor src="/sponsors/desmos.png" url="https://www.desmos.com/" alt="Desmos" />
           <Sponsor src="/sponsors/iheartcustomshirts.jpg" url="https://www.iheartcustomshirts.com/" alt="I heart custom shirts - screen printing" />
         </div>
