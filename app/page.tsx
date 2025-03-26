@@ -119,15 +119,16 @@ export default function Home() {
 
       <div className="flex flex-col items-center py-32">
         <Heading1>Schedule</Heading1>
+        <div>schedule is subjest to change</div>
         <ScheduleItem start="8:00" end="8:45" location="Bow gym">Registration and Check-in</ScheduleItem>
         <ScheduleItem start="8:45" end="9:00" location="Bow gym">Opening Ceremony</ScheduleItem>
         <ScheduleItem start="9:15" end="10:15" location="N-building">Individual Round / Po-Shen Loh talk for parents</ScheduleItem>
         <ScheduleItem start="10:25" end="11:25" location="N-building">Team Round</ScheduleItem>
         <ScheduleItem start="11:30" end="12:15" location="Bow Gym">Lunch</ScheduleItem>
-        <ScheduleItem start="12:30" end="13:45" location="Bow Gym">Guts Round</ScheduleItem>
-        <ScheduleItem start="14:00" end="15:15" location="N-building">Activities / Tiebreaks</ScheduleItem>
-        <ScheduleItem start="15:30" end="16:00" location="Bow gym">Po-Shen Loh talk!</ScheduleItem>
-        <ScheduleItem start="16:00" end="16:30" location="Bow Gym">Awards Ceremony</ScheduleItem>
+        <ScheduleItem start="12:30" end="14:00" location="Bow Gym">Guts Round</ScheduleItem>
+        <ScheduleItem start="14:15" end="15:30" location="N-building">Activities / Tiebreaks</ScheduleItem>
+        <ScheduleItem start="15:45" end="16:15" location="Bow gym">Po-Shen Loh talk!</ScheduleItem>
+        <ScheduleItem start="16:15" end="16:45" location="Bow Gym">Awards Ceremony</ScheduleItem>
       </div>
 
       {/* <div className="flex flex-col items-center py-16">
@@ -143,7 +144,7 @@ export default function Home() {
         <h1 className="font-bold text-3xl md:text-5xl my-5 underline">Partner</h1>
         <div className="flex flex-wrap justify-center gap-20">
           <Sponsor src="/sponsors/PaloAlto.png" url="https://www.cityofpaloalto.org/Home" alt="City of Palo Alto" />
-          <Sponsor src="/sponsors/ThinkFund.png" url="https://www.mitchellparkteenservices.org/thinkfund" alt="Thinkfund" />
+          <Sponsor src="/sponsors/thinkfund.png" url="https://www.mitchellparkteenservices.org/thinkfund" alt="Thinkfund" />
         </div>
 
         <h1 className="font-bold text-3xl md:text-5xl my-5 text-[#AF9500] underline">Gold Sponsors</h1>
