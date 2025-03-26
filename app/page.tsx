@@ -4,7 +4,6 @@ import { Heading1, Heading2, Paragraph, Title } from '../components/headers';
 import NavBar from '@/components/nav';
 import fs from 'fs';
 import path from 'path';
-import PrizePool from '../components/prizes'
 
 interface SlideshowProps {
   prizes: string[];
