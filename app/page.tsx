@@ -166,7 +166,7 @@ export default function Home() {
 
         <h1 className="font-bold text-3xl md:text-5xl my-5 text-[#AA7042] underline">Bronze Sponsors</h1>
         <div className="flex flex-wrap justify-center gap-10">
-          <Sponsor src="/sponsors/Digipen.png" url="https://www.digipen.edu/" alt="Digipen Institute of Technology" />
+          <Sponsor src="/sponsors/DigiPen.png" url="https://www.digipen.edu/" alt="Digipen Institute of Technology" />
           <Sponsor src="/sponsors/desmos.png" url="https://www.desmos.com/" alt="Desmos" />
           <Sponsor src="/sponsors/iheartcustomshirts.jpg" url="https://www.iheartcustomshirts.com/" alt="I heart custom shirts - screen printing" />
         </div>
