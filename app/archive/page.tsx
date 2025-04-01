@@ -8,7 +8,7 @@ import Image from 'next/image';
 const divs = ["A", "B"];
 const tests = ["Individual", "Team", "Guts", "Tiebreak"];
 
-const years = [{year: 2024, solutions: false}, { year: 2023, solutions: false }, { year: 2022, solutions: true }];
+const years = [{year: 2025, solutions: false}, {year: 2024, solutions: false}, { year: 2023, solutions: false }, { year: 2022, solutions: true }];
 
 const YearArchive = (props: {year: number, solutions:boolean}) => {
     return (
