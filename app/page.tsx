@@ -44,7 +44,7 @@ export default function Home() {
       <NavBar />
       <div className="px-10 pb-16 pt-32 md:px-20">
         <Title>GUNN MATH COMPETITION</Title>
-        <h2 className="text-md md:text-xl">March 30th, 2025  ///  8:30 AM - 4:30 PM  ///  Gunn High School</h2>
+        <h2 className="text-md md:text-xl">March 7th, 2026  ///  8:30 AM - 4:30 PM  ///  Gunn High School</h2>
 
         <div className="absolute right-5 top-[20%] z-[-1] invisible md:visible">
           <Image src="/fsh.png" width={500} height={400} alt="GMC logo" />
@@ -60,7 +60,7 @@ export default function Home() {
             <InfoBlock header="Over $7500 in Prizes">For the top teams and individuals</InfoBlock>
           </div>
           <div className="flex flex-col gap-5">
-            <InfoBlock header="Po-Shen Loh Talk!"> insight on AI and math from former IMO coach </InfoBlock>
+            <InfoBlock header="Guest speaker!"> insight on math applications  </InfoBlock>
           </div>
         </div>
 
@@ -70,7 +70,7 @@ export default function Home() {
               GMC Manual
             </div>
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSek6UnuM0p-Qx9Nntd_Cva_dOnVLDZq2WwoqYzN2lyjPkXM2g/viewform">
+          <a target="_blank" rel="noopener noreferrer" href="https://linktr.ee/gunnmath">
             <div className="inline-block font-bold text-3xl mt-8 py-5 px-16 rounded-lg bg-[#DEC880] hover:rotate-6 transition-all">
               Registration
             </div>
@@ -82,7 +82,7 @@ export default function Home() {
       <div className="px-10 py-10 md:px-20">
         <Heading1>About</Heading1>
         <Paragraph>
-          The fourth annual Gunn Math Competition is hosted by dedicated students from Gunn Math Circle and will be held at Gunn High School on Sunday, March 30th 2025.
+          The fourth annual Gunn Math Competition is hosted by dedicated students from Gunn Math Circle and will be held at Gunn High School on Sunday, March 7th, 2026.
         </Paragraph>
 
         <Heading2>Divisions</Heading2>

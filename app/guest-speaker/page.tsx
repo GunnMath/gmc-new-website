@@ -13,7 +13,10 @@ export default function Guestspeaker () {
                 <Image src="/fsh.png" width={500} height={400} alt="GMC logo" />
             </div>
             <div className="px-10 pb-10 pt-32 md:px-20">
-                <Title>Guest speaker: Po-Shen Loh</Title>
+            <Title>2026 Guest speaker: Coming soon</Title>
+            </div>
+            <div className="px-10 pb-10 pt-32 md:px-20">
+                <Title>2025 Guest speaker: Po-Shen Loh</Title>
                 <div>Carnegie Mellon University professor. Former USA head coach for International Mathematical Olympiad (IMO).   </div>
                 
                 <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?usp=sharing">
