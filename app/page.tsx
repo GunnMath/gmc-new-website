@@ -70,7 +70,7 @@ export default function Home() {
               GMC Manual
             </div>
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://linktr.ee/gunnmath">
+          <a target="_blank" rel="noopener noreferrer" href="https://contestdojo.com/">
             <div className="inline-block font-bold text-3xl mt-8 py-5 px-16 rounded-lg bg-[#DEC880] hover:rotate-6 transition-all">
               Registration
             </div>
@@ -80,6 +80,10 @@ export default function Home() {
       </div>
 
       <div className="px-10 py-10 md:px-20">
+        <Heading1>Registration</Heading1>
+        <Paragraph>
+          Create an account as a student. Then register for 'GMC 2026', 'register without a coach'. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code. 
+        </Paragraph>
         <Heading1>About</Heading1>
         <Paragraph>
           The fourth annual Gunn Math Competition is hosted by dedicated students from Gunn Math Circle and will be held at Gunn High School on Sunday, March 7th, 2026.
@@ -143,33 +147,33 @@ export default function Home() {
       <div className="flex flex-col items-center py-32 gap-5">
         <h1 className="font-bold text-3xl md:text-5xl my-5 underline">Partner</h1>
         <div className="flex flex-wrap justify-center gap-20">
-          <Sponsor src="/sponsors/PaloAlto.png" url="https://www.cityofpaloalto.org/Home" alt="City of Palo Alto" />
-          <Sponsor src="/sponsors/thinkfund.png" url="https://www.mitchellparkteenservices.org/thinkfund" alt="Thinkfund" />
+          {/* <Sponsor src="/sponsors/PaloAlto.png" url="https://www.cityofpaloalto.org/Home" alt="City of Palo Alto" /> */}
+          {/* <Sponsor src="/sponsors/thinkfund.png" url="https://www.mitchellparkteenservices.org/thinkfund" alt="Thinkfund" />  */}
         </div>
 
         <h1 className="font-bold text-3xl md:text-5xl my-5 text-[#AF9500] underline">Gold Sponsors</h1>
         <div className="flex flex-wrap justify-center gap-20">
-          <Sponsor src="/sponsors/janestreetblack.png" url="https://www.janestreet.com/" alt="Jane Street" />
-          <Sponsor src="/sponsors/dailychallenge.png" url="https://daily.poshenloh.com/" alt="Po-Shen Loh daily challenge" />
-          <Sponsor src="/sponsors/live.png" url="https://live.poshenloh.com/" alt="LIVE courses by Po-Shen Loh" />
+          {/* <Sponsor src="/sponsors/janestreetblack.png" url="https://www.janestreet.com/" alt="Jane Street" /> */}
+          {/* <Sponsor src="/sponsors/dailychallenge.png" url="https://daily.poshenloh.com/" alt="Po-Shen Loh daily challenge" /> */}
+          {/* <Sponsor src="/sponsors/live.png" url="https://live.poshenloh.com/" alt="LIVE courses by Po-Shen Loh" /> */}
         </div>
         <div className="flex flex-wrap justify-center gap-20">
-          <Sponsor src="/sponsors/wolfram.png" url="https://www.wolfram.com/" alt="Wolfram" />
-          <Sponsor src="/sponsors/citadel.png" url="https://www.citadelsecurities.com/" alt="Citadel" />
-          <Sponsor src="/sponsors/DRW.png" url="https://www.drw.com/" alt="DRW" />
+          <Sponsor src="/sponsors/wolfram.png" url="https://www.wolfram.com/" alt="Wolfram" /> 
+          {/* <Sponsor src="/sponsors/citadel.png" url="https://www.citadelsecurities.com/" alt="Citadel" /> */}
+          {/* <Sponsor src="/sponsors/DRW.png" url="https://www.drw.com/" alt="DRW" />  */}
         </div>
         
         <h1 className="font-bold text-3xl md:text-5xl my-5 text-[#B8B8B8] underline">Silver Sponsors</h1>
         <div className="flex flex-wrap justify-center gap-20">
-          <Sponsor src="/sponsors/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" />
-          <Sponsor src="/sponsors/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" />
+          <Sponsor src="/sponsors/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" /> 
+          {/* <Sponsor src="/sponsors/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" /> */}
         </div>
 
         <h1 className="font-bold text-3xl md:text-5xl my-5 text-[#AA7042] underline">Bronze Sponsors</h1>
         <div className="flex flex-wrap justify-center gap-10">
-          <Sponsor src="/sponsors/DigiPen.png" url="https://www.digipen.edu/" alt="Digipen Institute of Technology" />
-          <Sponsor src="/sponsors/desmos.png" url="https://www.desmos.com/" alt="Desmos" />
-          <Sponsor src="/sponsors/iheartcustomshirts.jpg" url="https://www.iheartcustomshirts.com/" alt="I heart custom shirts - screen printing" />
+          {/* <Sponsor src="/sponsors/DigiPen.png" url="https://www.digipen.edu/" alt="Digipen Institute of Technology" /> */}
+          {/* <Sponsor src="/sponsors/desmos.png" url="https://www.desmos.com/" alt="Desmos" /> */}
+          {/* <Sponsor src="/sponsors/iheartcustomshirts.jpg" url="https://www.iheartcustomshirts.com/" alt="I heart custom shirts - screen printing" /> */}
         </div>
       </div>
     </main>
