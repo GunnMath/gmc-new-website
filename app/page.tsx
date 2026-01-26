@@ -118,6 +118,11 @@ export default function Home() {
           In the Guts Round, problems are released in sets of 3. Students must submit answers to the problems in each set before moving on to the next set. This year, we will have multiple activities in the afternoon for students to choose from, including an Estimathon. More details about the exact activities will be announced soon!
         </Paragraph>
 
+        <Heading2>Activities</Heading2>
+        <Paragraph>
+          For activities, we will hold a puzzle hunt and an Estimathon. 
+        </Paragraph>
+
       </div>
 
       <div className="flex flex-col items-center py-32">
@@ -126,12 +131,12 @@ export default function Home() {
         <ScheduleItem start="8:00" end="8:45" location="Bow gym">Registration and Check-in</ScheduleItem>
         <ScheduleItem start="8:45" end="9:00" location="Bow gym">Opening Ceremony</ScheduleItem>
         <ScheduleItem start="9:15" end="10:15" location="N-building">Individual Round </ScheduleItem>
-        <ScheduleItem start="9:15" end="10:15" location="Bow Gym"> Po-Shen Loh talk for parents</ScheduleItem>
+        {/* <ScheduleItem start="9:15" end="10:15" location="Bow Gym"> Guest speaker talk for parents</ScheduleItem> */}
         <ScheduleItem start="10:25" end="11:25" location="N-building">Team Round</ScheduleItem>
         <ScheduleItem start="11:30" end="12:15" location="Bow Gym">Lunch</ScheduleItem>
         <ScheduleItem start="12:30" end="14:00" location="Bow Gym">Guts Round</ScheduleItem>
         <ScheduleItem start="14:15" end="15:30" location="N-building">Activities / Tiebreaks</ScheduleItem>
-        <ScheduleItem start="15:45" end="16:15" location="Bow gym">Po-Shen Loh talk!</ScheduleItem>
+        <ScheduleItem start="15:45" end="16:15" location="Bow gym">Guest speaker talks!</ScheduleItem>
         <ScheduleItem start="16:15" end="16:45" location="Bow Gym">Awards Ceremony</ScheduleItem>
       </div>
 
@@ -167,6 +172,7 @@ export default function Home() {
         <div className="flex flex-wrap justify-center gap-20">
           <Sponsor src="/sponsors/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" /> 
           {/* <Sponsor src="/sponsors/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" /> */}
+          <Sponsor src="/sponsors/SRP.png" url="https://stanfordresearchpark.com//" alt="Stanford Research Park" /> 
         </div>
 
         <h1 className="font-bold text-3xl md:text-5xl my-5 text-[#AA7042] underline">Bronze Sponsors</h1>
