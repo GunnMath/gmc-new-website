@@ -82,7 +82,7 @@ export default function Home() {
       <div className="px-10 py-10 md:px-20">
         <Heading1>Registration</Heading1>
         <Paragraph>
-          Create an account on ContestDojo as a student. Then register for 'GMC 2026', 'register without a coach'. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code. 
+          Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code. 
         </Paragraph>
         <Heading1>About</Heading1>
         <Paragraph>
