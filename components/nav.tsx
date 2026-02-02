@@ -1,32 +1,77 @@
-import Link from "next/link";
-import { ReactNode } from "react";
-import RegisterButton from './reg';
+"use client";
 
-function NavOption ( props: { children: ReactNode, url: string } ) {
-    return (
-        <div>
-            <Link href={props.url}>
-                {props.children}
-            </Link>
-        </div>
-    )
-}
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function NavBar() {
-    return (
-        <div className="flex justify-between items-center p-5 italic relative">
-            {/* Left-aligned navigation options */}
-            <div className="flex gap-10">
-                <NavOption url="/">About</NavOption>
-                <NavOption url="/archive">Archive</NavOption>
-                <NavOption url="/guest-speaker">Guest Speaker: Coming soon!</NavOption>
-                <NavOption url="https://docs.google.com/document/d/1xVPsXSMIRpIVcHKfncZmQsb5UXslwHl74RNFR6OjrKw/edit?tab=t.0">Sponsor Packet</NavOption>
-            </div>
+  const [scrolled, setScrolled] = useState(false);
 
-            {/* Right-aligned Register Button */}
-            <div className="right-5 justify-between relative">
-            ghsmathcircle@gmail.com
-            </div>
+  // Add a background when scrolling down
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-[#0b0b45]/95 backdrop-blur-md shadow-md py-3" : "bg-transparent py-6"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
+        
+        {/* LOGO - Clicks to Home */}
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-10 h-10 md:w-12 md:h-12 transition-transform duration-300 group-hover:scale-110">
+            <Image 
+                src="/fsh.png" 
+                alt="GMC Logo" 
+                fill 
+                className="object-contain brightness-0 invert" 
+            />
+          </div>
+          <span className="font-bold text-white text-lg md:text-xl tracking-tight group-hover:text-gray-200 transition-colors">
+            GMC 2026
+          </span>
+        </Link>
+
+        {/* Navigation Links */}
+        <div className="hidden md:flex items-center gap-8">
+          {/* Note: "About" has been removed as requested */}
+          
+          <NavLink href="/organizers">Organizers</NavLink>
+          <NavLink href="/guest-speaker">Guest Speaker</NavLink>
+          <NavLink href="/archive">Archive</NavLink>
+          
+          {/* Call to Action Button */}
+          <a
+            href="https://contestdojo.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-[#0b0b45] px-5 py-2 rounded-full font-bold hover:bg-gray-100 hover:scale-105 transition-all shadow-sm"
+          >
+            Register
+          </a>
         </div>
-    );
+
+        {/* Mobile Menu Icon (Simple placeholder if needed) */}
+        <div className="md:hidden text-white text-2xl cursor-pointer">
+          ☰
+        </div>
+      </div>
+    </nav>
+  );
 }
+
+const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
+  <Link 
+    href={href} 
+    className="text-white/80 hover:text-white font-medium transition-colors text-sm uppercase tracking-wider"
+  >
+    {children}
+  </Link>
+);
