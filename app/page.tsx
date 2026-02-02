@@ -162,11 +162,11 @@ export default function Home() {
           {/* <Sponsor src="/sponsors/live.png" url="https://live.poshenloh.com/" alt="LIVE courses by Po-Shen Loh" /> */}
         </div>
         <div className="flex flex-wrap justify-center gap-20">
-          {/* <Sponsor src="/sponsors/DRW.png" url="https://www.drw.com/" alt="DRW" />  */}
         </div>
         
         <h1 className="font-bold text-3xl md:text-5xl my-5 text-[#B8B8B8] underline">Silver Sponsors</h1>
         <div className="flex flex-wrap justify-center gap-20">
+          <Sponsor src="/sponsors/DRW.png" url="https://www.drw.com/" alt="DRW" />
           <Sponsor src="/sponsors/janestreetblack.png" url="https://www.janestreet.com/" alt="Jane Street" />
           <Sponsor src="/sponsors/HRT.png" url="https://www.hudsonrivertrading.com/" alt="Hudson River Trading" /> 
           <Sponsor src="/sponsors/citadel.png" url="https://www.citadelsecurities.com/" alt="Citadel Securities" />
@@ -178,6 +178,8 @@ export default function Home() {
           <Sponsor src="/sponsors/awesomeMath.png" url="https://www.awesomemath.org/" alt="AwesomeMath" /> 
           <Sponsor src="/sponsors/aops.png" url="https://artofproblemsolving.com/" alt="Art of Problem Solving" />
           <Sponsor src="/sponsors/wolfram.png" url="https://www.wolfram.com/" alt="Wolfram" /> 
+          <Sponsor src="/sponsors/aopsAcademy.png" url="https://aopsacademy.org/campus/mountainview" alt="Art of Problem Solving - Mountain View campus" />
+          <Sponsor src="/sponsors/contestDojo.png" url="https://contestdojo.com/" alt="ContestDojo" />
           {/* <Sponsor src="/sponsors/DigiPen.png" url="https://www.digipen.edu/" alt="Digipen Institute of Technology" /> */}
           {/* <Sponsor src="/sponsors/desmos.png" url="https://www.desmos.com/" alt="Desmos" /> */}
           {/* <Sponsor src="/sponsors/iheartcustomshirts.jpg" url="https://www.iheartcustomshirts.com/" alt="I heart custom shirts - screen printing" /> */}
