@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function NavBar() {
@@ -23,14 +22,13 @@ export default function NavBar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
         
-        {/* LOGO - Path reverted to /fsh.png so Next.js handles the prefix */}
+        {/* LOGO - Standard IMG tag with manual prefix to guarantee loading */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 md:w-12 md:h-12 transition-transform duration-300 group-hover:scale-110">
-            <Image 
-                src="/fsh.png" 
+            <img 
+                src="/gmc-new-website/fsh.png" 
                 alt="GMC Logo" 
-                fill 
-                className="object-contain brightness-0 invert" 
+                className="w-full h-full object-contain brightness-0 invert" 
             />
           </div>
           <span className="font-bold text-white text-lg md:text-xl tracking-tight group-hover:text-gray-200 transition-colors">

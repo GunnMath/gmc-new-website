@@ -5,7 +5,6 @@ import { Heading1, Heading2 } from "@/components/headers";
 import NavBar from "@/components/nav";
 import Link from "next/link";
 import { Fragment } from "react";
-import Image from 'next/image';
 
 const divs = ["A", "B"];
 const tests = ["Individual", "Team", "Guts", "Tiebreak", "Awards"];
@@ -112,8 +111,14 @@ export default function Archive() {
                         className="relative opacity-10 invisible lg:visible"
                         style={{ transform: `translateY(${offset * -0.1}px)` }}
                     >
-                        {/* PATH UPDATED: /fsh.png */}
-                        <Image src="/fsh.png" width={300} height={240} alt="GMC logo" className="object-contain brightness-0 invert" />
+                        {/* NUCLEAR FIX: Standard IMG */}
+                        <img 
+                            src="/gmc-new-website/fsh.png" 
+                            width="300" 
+                            height="240" 
+                            alt="GMC logo" 
+                            className="object-contain brightness-0 invert" 
+                        />
                     </div>
                 </div>
             </div>

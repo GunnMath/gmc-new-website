@@ -2,7 +2,6 @@
 
 import { Heading1 } from "@/components/headers";
 import NavBar from "@/components/nav";
-import Image from 'next/image';
 
 const staff = [
     {
@@ -32,21 +31,21 @@ const StaffCard = ({ name }: { name: string }) => {
     const firstName = parts[0]; 
     const lastName = parts[1] || "";
 
-    // UPDATED: Reverted to just /staff/ (Next.js adds the repo name automatically)
-    let imagePath = `/staff/${firstName}.jpg`;
+    // NUCLEAR FIX: Manual Path Construction
+    let imagePath = `/gmc-new-website/staff/${firstName}.jpg`;
 
     if (firstName === "Alex") {
-        imagePath = `/staff/${firstName}${lastName.charAt(0)}.jpg`;
+        imagePath = `/gmc-new-website/staff/${firstName}${lastName.charAt(0)}.jpg`;
     }
 
     return (
         <div className="flex flex-col items-center group">
             <div className="w-48 h-48 relative mb-4 overflow-hidden rounded-full border-4 border-[#0b0b45] shadow-lg bg-gray-100">
-                <Image 
+                {/* Standard IMG tag with object-cover to match Next.js 'fill' behavior */}
+                <img 
                     src={imagePath}
                     alt={name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
             </div>
             <h3 className="text-xl font-bold text-[#0b0b45] text-center">{name}</h3>
@@ -75,8 +74,14 @@ export default function Organizers() {
                     </div>
                     
                     <div className="relative opacity-10 invisible lg:visible">
-                        {/* PATH UPDATED: /fsh.png */}
-                        <Image src="/fsh.png" width={300} height={240} alt="GMC logo" className="object-contain brightness-0 invert" />
+                        {/* Standard IMG tag for Logo */}
+                        <img 
+                            src="/gmc-new-website/fsh.png" 
+                            width="300" 
+                            height="240" 
+                            alt="GMC logo" 
+                            className="object-contain brightness-0 invert" 
+                        />
                     </div>
                 </div>
             </div>

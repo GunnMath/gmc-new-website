@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from 'next/image';
 import { Heading1, Heading2, Paragraph } from '../components/headers';
 import NavBar from '@/components/nav';
 import Sponsors from '@/components/Sponsors';
+
+// --- TYPEWRITER CONFIG ---
+const FULL_TEXT = "GUNN MATH\nCOMPETITION"; // \n represents the line break
+const TYPING_SPEED = 100; // ms per character
 
 const InfoBlock = (props: { header: string; children: string }) => {
   return (
@@ -38,25 +41,60 @@ const ScheduleItem = (props: { start: string, end: string, children: string, loc
 export default function Home() {
   const [offset, setOffset] = useState(0);
   const [showButton, setShowButton] = useState(false);
+  
+  // --- TYPING STATE ---
+  const [displayedText, setDisplayedText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+  const [showCursor, setShowCursor] = useState(true);
 
+  // 1. Handle Scroll Locking & Typing Animation
+  useEffect(() => {
+    // Lock scroll on mount
+    document.body.style.overflow = "hidden";
+
+    let currentIndex = 0;
+    const intervalId = setInterval(() => {
+      if (currentIndex < FULL_TEXT.length) {
+        setDisplayedText(FULL_TEXT.slice(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        // Typing finished
+        clearInterval(intervalId);
+        setIsTyping(false);
+        
+        // Wait 1 second after typing, then unlock scroll
+        setTimeout(() => {
+          document.body.style.overflow = "unset";
+        }, 1000);
+      }
+    }, TYPING_SPEED);
+
+    return () => {
+      clearInterval(intervalId);
+      document.body.style.overflow = "unset"; // Cleanup: ensure scroll is back
+    };
+  }, []);
+
+  // 2. Cursor Blinking Effect
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor((prev) => !prev);
+    }, 500);
+    return () => clearInterval(cursorInterval);
+  }, []);
+
+  // 3. Parallax & Back-to-Top Logic
   useEffect(() => {
     const handleScroll = () => {
       setOffset(window.scrollY);
-      if (window.scrollY > 300) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
+      setShowButton(window.scrollY > 300);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -92,37 +130,52 @@ export default function Home() {
       </div>
 
       {/* Parallax Hero Block in #0b0b45 */}
-      <div className="bg-[#0b0b45] pt-40 pb-20 px-10 md:px-20 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10">
+      {/* Added 'min-h-screen' to ensure it fills the view while locked */}
+      <div className="bg-[#0b0b45] pt-40 pb-20 px-10 md:px-20 relative overflow-hidden flex flex-col justify-center min-h-[80vh]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10 w-full">
           
           <div 
             className="relative z-10 max-w-2xl"
             style={{ transform: `translateY(${offset * 0.4}px)` }}
           >
-            <span className="text-gray-400 font-bold tracking-widest uppercase text-xs mb-3 block">Gunn High School Presents</span>
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1]">
-              GUNN MATH <br className="hidden md:block" /> COMPETITION
+            <span className="text-gray-400 font-bold tracking-widest uppercase text-xs mb-3 block font-mono">
+              &gt; initializing_event...
+            </span>
+            
+            {/* TYPING TITLE */}
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-[1.1] font-mono h-[160px] md:h-[180px]">
+              {displayedText}
+              {/* CURSOR IS NOW WHITE (text-white) */}
+              <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} text-white`}>_</span>
             </h1>
             
-            <div className="flex flex-wrap gap-4 items-center text-white">
-              <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
-                March 7th, 2026
-              </div>
-              <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
-                8:30 AM - 4:30 PM
-              </div>
-              <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
-                Gunn High School
-              </div>
+            <div className={`transition-opacity duration-1000 ${isTyping ? 'opacity-0' : 'opacity-100'}`}>
+                <div className="flex flex-wrap gap-4 items-center text-white">
+                <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
+                    March 7th, 2026
+                </div>
+                <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
+                    8:30 AM - 4:30 PM
+                </div>
+                <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
+                    Gunn High School
+                </div>
+                </div>
             </div>
           </div>
 
           <div 
-            className="relative opacity-10 invisible lg:visible pr-10"
+            className={`relative transition-all duration-1000 pr-10 ${isTyping ? 'opacity-0 translate-x-10' : 'opacity-100 translate-x-0'}`}
             style={{ transform: `translateY(${offset * -0.1}px)` }}
           >
-             {/* PATH UPDATED: /fsh.png */}
-             <Image src="/fsh.png" width={400} height={320} alt="GMC logo" className="object-contain brightness-0 invert" />
+             {/* Standard IMG tag with manual prefix */}
+             <img 
+               src="/gmc-new-website/fsh.png" 
+               alt="GMC logo" 
+               width="400" 
+               height="320" 
+               className="object-contain brightness-0 invert" 
+             />
           </div>
         </div>
       </div>

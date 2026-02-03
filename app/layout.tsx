@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Libre_Baskerville } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 
-const libre = Libre_Baskerville({ 
+// 1. Import Fira Code
+const fira = Fira_Code({ 
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-libre",
+  variable: "--font-fira",
 });
 
 export const metadata: Metadata = {
@@ -20,8 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* suppressHydrationWarning fixes errors caused by extensions like Grammarly */}
-      <body className={libre.className} suppressHydrationWarning>
+      {/* 2. Apply Fira Code class to the body */}
+      <body className={fira.className} suppressHydrationWarning>
         {children}
       </body>
     </html>
