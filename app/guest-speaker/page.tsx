@@ -44,6 +44,7 @@ export default function Guestspeaker() {
                         className="relative opacity-10 invisible lg:visible"
                         style={{ transform: `translateY(${offset * -0.1}px)` }}
                     >
+                        {/* PATH UPDATED: /fsh.png */}
                         <Image src="/fsh.png" width={300} height={240} alt="GMC logo" className="object-contain brightness-0 invert" />
                     </div>
                 </div>
@@ -106,6 +107,7 @@ export default function Guestspeaker() {
                         <div className="w-full lg:w-[400px] flex-shrink-0">
                             <div className="sticky top-24">
                                 <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#0b0b45]">
+                                    {/* PATH UPDATED: /Po-ShenLoh.jpg */}
                                     <Image 
                                         src="/Po-ShenLoh.jpg" 
                                         width={1024} 

@@ -32,8 +32,7 @@ const StaffCard = ({ name }: { name: string }) => {
     const firstName = parts[0]; 
     const lastName = parts[1] || "";
 
-    // LOGIC: Default to "Firstname.jpg"
-    // EXCEPTION: If the name is Alex, use "AlexT.jpg", "AlexB.jpg", etc.
+    // UPDATED: Reverted to just /staff/ (Next.js adds the repo name automatically)
     let imagePath = `/staff/${firstName}.jpg`;
 
     if (firstName === "Alex") {
@@ -76,6 +75,7 @@ export default function Organizers() {
                     </div>
                     
                     <div className="relative opacity-10 invisible lg:visible">
+                        {/* PATH UPDATED: /fsh.png */}
                         <Image src="/fsh.png" width={300} height={240} alt="GMC logo" className="object-contain brightness-0 invert" />
                     </div>
                 </div>

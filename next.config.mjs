@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // This tells Next.js to build a static site for GitHub Pages
+  output: 'export',
+  
+  // ADD THIS LINE BACK:
+  basePath: '/gmc-new-website', 
+  
   images: {
-    unoptimized: true, // This fixes the error by disabling the image server
+    unoptimized: true,
   },
 };
 

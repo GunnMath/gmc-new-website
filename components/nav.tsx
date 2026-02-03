@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
 
-  // Add a background when scrolling down
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -24,7 +23,7 @@ export default function NavBar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
         
-        {/* LOGO - Clicks to Home */}
+        {/* LOGO - Path reverted to /fsh.png so Next.js handles the prefix */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 md:w-12 md:h-12 transition-transform duration-300 group-hover:scale-110">
             <Image 
@@ -41,13 +40,10 @@ export default function NavBar() {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-8">
-          {/* Note: "About" has been removed as requested */}
-          
           <NavLink href="/organizers">Organizers</NavLink>
           <NavLink href="/guest-speaker">Guest Speaker</NavLink>
           <NavLink href="/archive">Archive</NavLink>
           
-          {/* Call to Action Button */}
           <a
             href="https://contestdojo.com/"
             target="_blank"
@@ -58,7 +54,7 @@ export default function NavBar() {
           </a>
         </div>
 
-        {/* Mobile Menu Icon (Simple placeholder if needed) */}
+        {/* Mobile Menu Icon */}
         <div className="md:hidden text-white text-2xl cursor-pointer">
           ☰
         </div>

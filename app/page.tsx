@@ -42,7 +42,6 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       setOffset(window.scrollY);
-      // Show button after scrolling down 300px
       if (window.scrollY > 300) {
         setShowButton(true);
       } else {
@@ -69,7 +68,7 @@ export default function Home() {
         
         {/* Register Now Floating Button */}
         <a 
-          href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" 
+          href="https://contestdojo.com/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="bg-[#0b0b45] text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-[#1a1a5e] hover:scale-105 transition-all flex items-center gap-2"
@@ -122,6 +121,7 @@ export default function Home() {
             className="relative opacity-10 invisible lg:visible pr-10"
             style={{ transform: `translateY(${offset * -0.1}px)` }}
           >
+             {/* PATH UPDATED: /fsh.png */}
              <Image src="/fsh.png" width={400} height={320} alt="GMC logo" className="object-contain brightness-0 invert" />
           </div>
         </div>
@@ -137,14 +137,14 @@ export default function Home() {
           <InfoBlock header="Guest Speaker">Insight on real-world math applications</InfoBlock>
         </div>
 
-        {/* Standard Buttons (Still keeping these as they are main page actions) */}
+        {/* Standard Buttons */}
         <div className="flex flex-col md:flex-row gap-6 mb-20">
           <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?usp=sharing" className="flex-1">
             <div className="text-center font-bold text-2xl py-6 rounded-2xl bg-[#0b0b45] text-white hover:bg-[#1a1a5e] hover:-translate-y-1 transition-all shadow-md">
               GMC Manual
             </div>
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing/" className="flex-1">
+          <a target="_blank" rel="noopener noreferrer" href="https://contestdojo.com/" className="flex-1">
             <div className="text-center font-bold text-2xl py-6 rounded-2xl border-4 border-[#0b0b45] text-[#0b0b45] hover:bg-gray-50 hover:-translate-y-1 transition-all shadow-md">
               Registration
             </div>

@@ -112,6 +112,7 @@ export default function Archive() {
                         className="relative opacity-10 invisible lg:visible"
                         style={{ transform: `translateY(${offset * -0.1}px)` }}
                     >
+                        {/* PATH UPDATED: /fsh.png */}
                         <Image src="/fsh.png" width={300} height={240} alt="GMC logo" className="object-contain brightness-0 invert" />
                     </div>
                 </div>
