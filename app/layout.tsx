@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Libre_Franklin } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 
-const libre = Libre_Franklin({ subsets: ["latin"] });
+// 1. Import Fira Code
+const fira = Fira_Code({ 
+  subsets: ["latin"],
+  variable: "--font-fira",
+});
 
 export const metadata: Metadata = {
   title: "Gunn Math Competition",
-  description: "Join us at Gunn High School on March 30th, 2025 to compete for prizes in teams of 4!",
+  description: "Annual math competition organized by Gunn High School students.",
 };
 
 export default function RootLayout({
@@ -16,7 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={libre.className}>
+      {/* 2. Apply Fira Code class to the body */}
+      <body className={fira.className} suppressHydrationWarning>
         {children}
       </body>
     </html>
