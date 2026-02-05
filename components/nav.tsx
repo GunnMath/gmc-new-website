@@ -22,11 +22,11 @@ export default function NavBar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
         
-        {/* LOGO - Standard IMG tag with manual prefix to guarantee loading */}
+        {/* LOGO - Standard IMG tag with clean path */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 md:w-12 md:h-12 transition-transform duration-300 group-hover:scale-110">
             <img 
-                src="/gmc-new-website/fsh.png" 
+                src="/fsh.png" 
                 alt="GMC Logo" 
                 className="w-full h-full object-contain brightness-0 invert" 
             />
