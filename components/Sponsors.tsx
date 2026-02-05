@@ -13,22 +13,22 @@ interface Sponsor {
 
 const sponsors: Sponsor[] = [
   // --- GOLD ---
-  { name: "Thinkfund", src: "/gmc-new-website/sponsors/thinkfund.png", url: "https://www.mitchellparkteenservices.org/thinkfund", tier: "Gold" },
-  { name: "City of Palo Alto", src: "/gmc-new-website/sponsors/PaloAlto.png", url: "https://www.cityofpaloalto.org/Home", tier: "Gold" },
+  { name: "Thinkfund", src: "/sponsors/thinkfund.png", url: "https://www.mitchellparkteenservices.org/thinkfund", tier: "Gold" },
+  { name: "City of Palo Alto", src: "/sponsors/PaloAlto.png", url: "https://www.cityofpaloalto.org/Home", tier: "Gold" },
   
   // --- SILVER ---
-  { name: "DRW", src: "/gmc-new-website/sponsors/DRW.png", url: "https://www.drw.com/", tier: "Silver" },
-  { name: "Jane Street", src: "/gmc-new-website/sponsors/janestreetblack.png", url: "https://www.janestreet.com/", tier: "Silver" },
-  { name: "Hudson River Trading", src: "/gmc-new-website/sponsors/HRT.png", url: "https://www.hudsonrivertrading.com/", tier: "Silver" },
-  { name: "Citadel Securities", src: "/gmc-new-website/sponsors/citadel.png", url: "https://www.citadelsecurities.com/", tier: "Silver" },
-  { name: "Stanford Research Park", src: "/gmc-new-website/sponsors/SRP.png", url: "https://stanfordresearchpark.com/", tier: "Silver" },
+  { name: "DRW", src: "/sponsors/DRW.png", url: "https://www.drw.com/", tier: "Silver" },
+  { name: "Jane Street", src: "/sponsors/janestreetblack.png", url: "https://www.janestreet.com/", tier: "Silver" },
+  { name: "Hudson River Trading", src: "/sponsors/HRT.png", url: "https://www.hudsonrivertrading.com/", tier: "Silver" },
+  { name: "Citadel Securities", src: "/sponsors/citadel.png", url: "https://www.citadelsecurities.com/", tier: "Silver" },
+  { name: "Stanford Research Park", src: "/sponsors/SRP.png", url: "https://stanfordresearchpark.com/", tier: "Silver" },
 
   // --- BRONZE ---
-  { name: "ContestDojo", src: "/gmc-new-website/sponsors/contestdojo.png", url: "https://contestdojo.com/", tier: "Bronze" },
-  { name: "AoPS Academy", src: "/gmc-new-website/sponsors/aopsacademy.png", url: "https://aopsacademy.org/", tier: "Bronze" },
-  { name: "AwesomeMath", src: "/gmc-new-website/sponsors/awesomeMath.png", url: "https://www.awesomemath.org/", tier: "Bronze" },
-  { name: "Art of Problem Solving", src: "/gmc-new-website/sponsors/aops.png", url: "https://artofproblemsolving.com/", tier: "Bronze" },
-  { name: "Wolfram", src: "/gmc-new-website/sponsors/wolfram.png", url: "https://www.wolfram.com/", tier: "Bronze" },
+  { name: "ContestDojo", src: "/sponsors/contestdojo.png", url: "https://contestdojo.com/", tier: "Bronze" },
+  { name: "AoPS Academy", src: "/sponsors/aopsacademy.png", url: "https://aopsacademy.org/", tier: "Bronze" },
+  { name: "AwesomeMath", src: "/sponsors/awesomeMath.png", url: "https://www.awesomemath.org/", tier: "Bronze" },
+  { name: "Art of Problem Solving", src: "/sponsors/aops.png", url: "https://artofproblemsolving.com/", tier: "Bronze" },
+  { name: "Wolfram", src: "/sponsors/wolfram.png", url: "https://www.wolfram.com/", tier: "Bronze" },
 ];
 
 const TierSection = ({ tier, color, data }: { tier: SponsorTier; color: string; data: Sponsor[] }) => {
