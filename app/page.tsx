@@ -18,26 +18,6 @@ const InfoBlock = (props: { header: string; children: string }) => {
   );
 };
 
-const ScheduleItem = (props: { start: string, end: string, children: string, location?: string }) => {
-  return (
-    <div className="flex gap-8 pb-10 last:pb-0 relative">
-      <div className="absolute left-[11px] top-2 bottom-0 w-[2px] bg-gray-100" />
-      <div className="z-10 w-6 h-6 rounded-full bg-white border-4 border-[#0b0b45] mt-1 flex-shrink-0" />
-      <div className="flex-1">
-        <div className="text-sm font-bold text-[#0b0b45] mb-1 uppercase tracking-wider">
-          {props.start} — {props.end}
-        </div>
-        <div className="text-xl font-bold text-gray-800 leading-tight">{props.children}</div>
-        {props.location && (
-          <div className="text-gray-500 text-sm mt-1 font-medium tracking-wide">
-             {props.location}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
-
 export default function Home() {
   const [offset, setOffset] = useState(0);
   const [showButton, setShowButton] = useState(false);
@@ -130,7 +110,6 @@ export default function Home() {
       </div>
 
       {/* Parallax Hero Block in #0b0b45 */}
-      {/* Added 'min-h-screen' to ensure it fills the view while locked */}
       <div className="bg-[#0b0b45] pt-40 pb-20 px-10 md:px-20 relative overflow-hidden flex flex-col justify-center min-h-[80vh]">
         <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10 w-full">
           
@@ -145,17 +124,16 @@ export default function Home() {
             {/* TYPING TITLE */}
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-[1.1] font-mono h-[160px] md:h-[180px]">
               {displayedText}
-              {/* CURSOR IS NOW WHITE (text-white) */}
               <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} text-white`}>_</span>
             </h1>
             
             <div className={`transition-opacity duration-1000 ${isTyping ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="flex flex-wrap gap-4 items-center text-white">
                 <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
-                    March 7th, 2026
+                    Sunday, March 29th, 2026
                 </div>
                 <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
-                    8:30 AM - 4:30 PM
+                    8:00 AM - 6:00 PM
                 </div>
                 <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
                     Gunn High School
@@ -239,20 +217,76 @@ export default function Home() {
 
         {/* Schedule */}
         <div className="py-32 border-t border-gray-100">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <Heading1>Schedule</Heading1>
               <div className="italic text-gray-400 mt-2">Subject to change</div>
             </div>
-            <ScheduleItem start="8:00" end="8:45" location="Bow Gym">Registration and Check-in</ScheduleItem>
-            <ScheduleItem start="8:45" end="9:00" location="Bow Gym">Opening Ceremony</ScheduleItem>
-            <ScheduleItem start="9:15" end="10:15" location="N-building">Individual Round</ScheduleItem>
-            <ScheduleItem start="10:25" end="11:25" location="N-building">Team Round</ScheduleItem>
-            <ScheduleItem start="11:30" end="12:15" location="Bow Gym">Lunch</ScheduleItem>
-            <ScheduleItem start="12:30" end="14:00" location="Bow Gym">Guts Round</ScheduleItem>
-            <ScheduleItem start="14:15" end="15:30" location="N-building">Activities / Tiebreaks</ScheduleItem>
-            <ScheduleItem start="15:45" end="16:15" location="Bow Gym">Guest Speaker Talk</ScheduleItem>
-            <ScheduleItem start="16:15" end="16:45" location="Bow Gym">Awards Ceremony</ScheduleItem>
+            
+            {/* Table Format */}
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-md">
+                <table className="w-full text-left border-collapse bg-white">
+                    <thead className="bg-[#0b0b45] text-white uppercase tracking-wider text-sm">
+                        <tr>
+                            <th className="p-5 font-bold border-b border-[#1a1a5e]">Time</th>
+                            <th className="p-5 font-bold border-b border-[#1a1a5e]">Event</th>
+                            <th className="p-5 font-bold border-b border-[#1a1a5e]">Location</th>
+                        </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100 text-gray-700">
+                        <tr className="hover:bg-gray-50 transition-colors">
+                            <td className="p-5 font-mono text-[#0b0b45] font-bold">8:00 - 8:45</td>
+                            <td className="p-5 font-bold">Registration / Check-In</td>
+                            <td className="p-5 text-gray-500">Bow Gym</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50 transition-colors">
+                            <td className="p-5 font-mono text-[#0b0b45] font-bold">8:45 - 9:00</td>
+                            <td className="p-5 font-bold">Opening Ceremony</td>
+                            <td className="p-5 text-gray-500">Bow Gym</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50 transition-colors">
+                            <td className="p-5 font-mono text-[#0b0b45] font-bold">9:15 - 10:15</td>
+                            <td className="p-5 font-bold">Individual Round</td>
+                            <td className="p-5 text-gray-500">N-Building</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50 transition-colors bg-blue-50/50">
+                            <td className="p-5 font-mono text-[#0b0b45] font-bold">9:15 - 10:00</td>
+                            <td className="p-5 font-bold text-blue-800">Guest Speaker for Parents</td>
+                            <td className="p-5 text-gray-500">Bow Gym</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50 transition-colors">
+                            <td className="p-5 font-mono text-[#0b0b45] font-bold">10:25 - 11:25</td>
+                            <td className="p-5 font-bold">Team Round</td>
+                            <td className="p-5 text-gray-500">N-Building</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50 transition-colors">
+                            <td className="p-5 font-mono text-[#0b0b45] font-bold">11:30 - 12:15</td>
+                            <td className="p-5 font-bold">Lunch</td>
+                            <td className="p-5 text-gray-500">Bow Gym</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50 transition-colors">
+                            <td className="p-5 font-mono text-[#0b0b45] font-bold">12:30 - 14:00</td>
+                            <td className="p-5 font-bold">Guts Round</td>
+                            <td className="p-5 text-gray-500">Bow Gym</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50 transition-colors">
+                            <td className="p-5 font-mono text-[#0b0b45] font-bold">14:15 - 15:30</td>
+                            <td className="p-5 font-bold">Activities / Tiebreakers Block 1</td>
+                            <td className="p-5 text-gray-500">N-Building</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50 transition-colors">
+                            <td className="p-5 font-mono text-[#0b0b45] font-bold">15:45 - 17:30</td>
+                            <td className="p-5 font-bold">Activities Block 2</td>
+                            <td className="p-5 text-gray-500">Bow Gym</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50 transition-colors">
+                            <td className="p-5 font-mono text-[#0b0b45] font-bold">17:30 - 18:00</td>
+                            <td className="p-5 font-bold">Awards Ceremony</td>
+                            <td className="p-5 text-gray-500">Bow Gym</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
           </div>
         </div>
 
