@@ -31,17 +31,17 @@ const StaffCard = ({ name }: { name: string }) => {
     const firstName = parts[0]; 
     const lastName = parts[1] || "";
 
-    // NUCLEAR FIX: Manual Path Construction
-    let imagePath = `/gmc-new-website/staff/${firstName}.jpg`;
+    // CLEAN FIX: Removed /gmc-new-website prefix
+    let imagePath = `/staff/${firstName}.jpg`;
 
     if (firstName === "Alex") {
-        imagePath = `/gmc-new-website/staff/${firstName}${lastName.charAt(0)}.jpg`;
+        imagePath = `/staff/${firstName}${lastName.charAt(0)}.jpg`;
     }
 
     return (
         <div className="flex flex-col items-center group">
             <div className="w-48 h-48 relative mb-4 overflow-hidden rounded-full border-4 border-[#0b0b45] shadow-lg bg-gray-100">
-                {/* Standard IMG tag with object-cover to match Next.js 'fill' behavior */}
+                {/* Standard IMG tag with object-cover */}
                 <img 
                     src={imagePath}
                     alt={name}
@@ -76,7 +76,7 @@ export default function Organizers() {
                     <div className="relative opacity-10 invisible lg:visible">
                         {/* Standard IMG tag for Logo */}
                         <img 
-                            src="/gmc-new-website/fsh.png" 
+                            src="/fsh.png" 
                             width="300" 
                             height="240" 
                             alt="GMC logo" 
