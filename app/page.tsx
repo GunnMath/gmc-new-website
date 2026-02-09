@@ -152,7 +152,7 @@ export default function Home() {
             <div className={`transition-opacity duration-1000 ${isTyping ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="flex flex-wrap gap-4 items-center text-white">
                 <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
-                    March 7th, 2026
+                    March 29th, 2026
                 </div>
                 <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
                     8:30 AM - 4:30 PM
