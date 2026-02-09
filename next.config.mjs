@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // Required for GitHub Pages routing
-  basePath: '/gmc-new-website',
+  // basePath removed for custom domain (compete.gunnmathcircle.org)
   images: {
     unoptimized: true,
   },

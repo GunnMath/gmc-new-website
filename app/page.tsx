@@ -168,9 +168,9 @@ export default function Home() {
             className={`relative transition-all duration-1000 pr-10 ${isTyping ? 'opacity-0 translate-x-10' : 'opacity-100 translate-x-0'}`}
             style={{ transform: `translateY(${offset * -0.1}px)` }}
           >
-             {/* Standard IMG tag with manual prefix */}
+             {/* Standard IMG tag with clean path */}
              <img 
-               src="/gmc-new-website/fsh.png" 
+               src="/fsh.png" 
                alt="GMC logo" 
                width="400" 
                height="320" 

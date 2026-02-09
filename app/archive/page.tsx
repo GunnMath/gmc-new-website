@@ -113,7 +113,7 @@ export default function Archive() {
                     >
                         {/* NUCLEAR FIX: Standard IMG */}
                         <img 
-                            src="/gmc-new-website/fsh.png" 
+                            src="/fsh.png" 
                             width="300" 
                             height="240" 
                             alt="GMC logo" 

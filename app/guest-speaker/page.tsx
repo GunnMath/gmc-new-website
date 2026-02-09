@@ -45,7 +45,7 @@ export default function Guestspeaker() {
                     >
                         {/* Standard IMG tag for Logo */}
                         <img 
-                            src="/gmc-new-website/fsh.png" 
+                            src="/fsh.png" 
                             width="300" 
                             height="240" 
                             alt="GMC logo" 
@@ -114,7 +114,7 @@ export default function Guestspeaker() {
                                 <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#0b0b45]">
                                     {/* Standard IMG tag for Speaker Photo */}
                                     <img 
-                                        src="/gmc-new-website/Po-ShenLoh.jpg" 
+                                        src="/Po-ShenLoh.jpg" 
                                         alt="Po-Shen Loh" 
                                         className="w-full h-auto object-cover"
                                     />
