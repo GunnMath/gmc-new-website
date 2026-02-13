@@ -15,13 +15,15 @@ const sponsors: Sponsor[] = [
   // --- GOLD ---
   { name: "Thinkfund", src: "/sponsors/thinkfund.png", url: "https://www.mitchellparkteenservices.org/thinkfund", tier: "Gold" },
   { name: "City of Palo Alto", src: "/sponsors/PaloAlto.png", url: "https://www.cityofpaloalto.org/Home", tier: "Gold" },
+  { name: "National Math Camps", src: "/sponsors/nationalmathcamps.png", url: "https://www.nationalmathcamps.org/", tier: "Gold" },
   
   // --- SILVER ---
   { name: "DRW", src: "/sponsors/DRW.png", url: "https://www.drw.com/", tier: "Silver" },
-  { name: "Jane Street", src: "/sponsors/janestreetblack.png", url: "https://www.janestreet.com/", tier: "Silver" },
+  { name: "Jane Street", src: "/sponsors/janestreet.png", url: "https://www.janestreet.com/", tier: "Silver" },
   { name: "Hudson River Trading", src: "/sponsors/HRT.png", url: "https://www.hudsonrivertrading.com/", tier: "Silver" },
   { name: "Citadel Securities", src: "/sponsors/citadel.png", url: "https://www.citadelsecurities.com/", tier: "Silver" },
   { name: "Stanford Research Park", src: "/sponsors/SRP.png", url: "https://stanfordresearchpark.com/", tier: "Silver" },
+  { name: "Susquehanna International Group", src: "/sponsors/sig.png", url: "https://sig.com/", tier: "Silver" },
 
   // --- BRONZE ---
   { name: "ContestDojo", src: "/sponsors/contestdojo.png", url: "https://contestdojo.com/", tier: "Bronze" },
