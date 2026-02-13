@@ -62,7 +62,7 @@ export default function GuestSpeaker() {
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#002e66]/5 opacity-70 hover:opacity-100 transition-opacity">
                     <div className="font-black text-lg text-[#002e66]">Po-Shen Loh</div>
                     <div className="text-sm text-[#002e66]/60">Carnegie Mellon University</div>
-                    <div className="text-xs font-bold text-[#002e66]/40 mt-1">2024 Speaker</div>
+                    <div className="text-xs font-bold text-[#002e66]/40 mt-1">2025 Speaker</div>
                 </div>
             </div>
         </div>

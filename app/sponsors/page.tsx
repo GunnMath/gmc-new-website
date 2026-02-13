@@ -2,6 +2,8 @@
 
 import React from "react";
 import NavBar from '@/components/nav';
+// FIX: Use absolute import
+import { Heading1, Heading2, Paragraph } from '@/components/headers'; 
 
 const SPONSORS_DATA = [
     {
