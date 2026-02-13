@@ -75,10 +75,10 @@ export default function Sponsors() {
   const bronzeSponsors = sponsors.filter((s) => s.tier === "Bronze");
 
   return (
-    <div className="flex flex-col items-center py-10 px-5 bg-white">
+    <div className="flex flex-col items-center py-10 px-5 w-full">
       
-      {/* Clean Navy Header */}
-      <h2 className="text-3xl md:text-4xl font-bold text-[#0b0b45] mb-16 tracking-tight text-center">
+      {/* Updated Header Color to match New Navy */}
+      <h2 className="text-3xl md:text-4xl font-black text-[#002e66] mb-16 tracking-tight text-center">
         Thank you to our sponsors
       </h2>
 
@@ -86,8 +86,8 @@ export default function Sponsors() {
       <TierSection tier="Silver" color="#C0C0C0" data={silverSponsors} />
       <TierSection tier="Bronze" color="#CD7F32" data={bronzeSponsors} />
       
-      <div className="mt-4 text-gray-400 text-sm italic">
-        Interested in sponsoring? Contact us at <a href="mailto:ghsmathcircle@gmail.com" className="underline hover:text-[#0b0b45] transition-colors">ghsmathcircle@gmail.com</a>
+      <div className="mt-4 text-[#002e66]/50 text-sm font-bold">
+        Interested in sponsoring? Contact us at <a href="mailto:ghsmathcircle@gmail.com" className="underline hover:text-[#002e66] transition-colors">ghsmathcircle@gmail.com</a>
       </div>
     </div>
   );

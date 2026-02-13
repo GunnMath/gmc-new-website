@@ -5,15 +5,11 @@ import { Heading1, Heading2, Paragraph } from '../components/headers';
 import NavBar from '@/components/nav';
 import Sponsors from '@/components/Sponsors';
 
-// --- TYPEWRITER CONFIG ---
-const FULL_TEXT = "GUNN MATH\nCOMPETITION"; // \n represents the line break
-const TYPING_SPEED = 100; // ms per character
-
 const InfoBlock = (props: { header: string; children: string }) => {
   return (
-    <div className="flex-1 min-w-[200px] p-6 rounded-2xl border border-gray-100 bg-white hover:border-[#0b0b45] transition-colors shadow-sm">
-      <div className="text-xl font-bold text-gray-800 mb-1">{props.header}</div>
-      <div className="text-gray-500 text-sm leading-tight">{props.children}</div>
+    <div className="flex-1 min-w-[200px] p-6 rounded-2xl border-2 border-navy/10 bg-white hover:border-navy transition-all shadow-sm text-center md:text-left group">
+      <div className="text-xl font-black text-navy mb-1 group-hover:scale-105 transition-transform origin-left">{props.header}</div>
+      <div className="text-navy/70 text-sm font-bold leading-tight">{props.children}</div>
     </div>
   );
 };
@@ -21,50 +17,10 @@ const InfoBlock = (props: { header: string; children: string }) => {
 export default function Home() {
   const [offset, setOffset] = useState(0);
   const [showButton, setShowButton] = useState(false);
-  
-  // --- TYPING STATE ---
-  const [displayedText, setDisplayedText] = useState("");
-  const [isTyping, setIsTyping] = useState(true);
-  const [showCursor, setShowCursor] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // 1. Handle Scroll Locking & Typing Animation
   useEffect(() => {
-    // Lock scroll on mount
-    document.body.style.overflow = "hidden";
-
-    let currentIndex = 0;
-    const intervalId = setInterval(() => {
-      if (currentIndex < FULL_TEXT.length) {
-        setDisplayedText(FULL_TEXT.slice(0, currentIndex + 1));
-        currentIndex++;
-      } else {
-        // Typing finished
-        clearInterval(intervalId);
-        setIsTyping(false);
-        
-        // Wait 1 second after typing, then unlock scroll
-        setTimeout(() => {
-          document.body.style.overflow = "unset";
-        }, 1000);
-      }
-    }, TYPING_SPEED);
-
-    return () => {
-      clearInterval(intervalId);
-      document.body.style.overflow = "unset"; // Cleanup: ensure scroll is back
-    };
-  }, []);
-
-  // 2. Cursor Blinking Effect
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 500);
-    return () => clearInterval(cursorInterval);
-  }, []);
-
-  // 3. Parallax & Back-to-Top Logic
-  useEffect(() => {
+    setIsLoaded(true);
     const handleScroll = () => {
       setOffset(window.scrollY);
       setShowButton(window.scrollY > 300);
@@ -78,220 +34,183 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-white min-h-screen text-gray-900 relative">
+    <main className="bg-lightblue min-h-screen text-navy relative overflow-x-hidden">
       <NavBar />
       
       {/* FLOATING ACTION BUTTONS */}
-      <div className={`fixed bottom-8 right-8 z-50 flex flex-col gap-4 transition-all duration-300 ${showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
-        
-        {/* Register Now Floating Button */}
+      <div className={`fixed bottom-8 right-8 z-50 flex flex-col gap-4 transition-all duration-500 ease-out ${showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
         <a 
           href="https://contestdojo.com/" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-[#0b0b45] text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-[#1a1a5e] hover:scale-105 transition-all flex items-center gap-2"
+          className="bg-navy text-white font-bold py-3 px-6 rounded-full shadow-xl hover:bg-[#001a3d] hover:scale-105 transition-all flex items-center gap-2 border-2 border-transparent"
         >
           <span>Register Now</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
           </svg>
         </a>
-
-        {/* Back to Top Button */}
         <button 
           onClick={scrollToTop}
-          className="self-end bg-white text-[#0b0b45] p-3 rounded-full shadow-lg border border-gray-200 hover:bg-gray-50 hover:border-[#0b0b45] transition-all"
+          className="self-end bg-white text-navy p-3 rounded-full shadow-xl border-2 border-navy/10 hover:border-navy transition-all"
           aria-label="Back to top"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
           </svg>
         </button>
       </div>
 
-      {/* Parallax Hero Block in #0b0b45 */}
-      <div className="bg-[#0b0b45] pt-40 pb-20 px-10 md:px-20 relative overflow-hidden flex flex-col justify-center min-h-[80vh]">
-        <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10 w-full">
+      {/* HERO SECTION - FLYER STYLE */}
+      <div className="bg-navy min-h-[95vh] relative overflow-hidden flex flex-col justify-center px-6 md:px-20 pt-20">
+        
+        {/* Background Elements */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-white rounded-full blur-[100px]" />
+            <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500 rounded-full blur-[100px]" />
+        </div>
+
+        <div className="max-w-8xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
           
+          {/* TEXT BLOCK */}
           <div 
-            className="relative z-10 max-w-2xl"
-            style={{ transform: `translateY(${offset * 0.4}px)` }}
+            className={`flex flex-col gap-6 transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+            style={{ transform: `translateY(${offset * 0.2}px)` }}
           >
-            <span className="text-gray-400 font-bold tracking-widest uppercase text-xs mb-3 block font-mono">
-              &gt; initializing_event...
-            </span>
+            <div className="inline-block">
+              <span className="bg-white/10 text-blue-200 font-bold px-4 py-1 rounded-full text-xs tracking-widest uppercase mb-4 inline-block border border-white/20">
+                Fifth Annual
+              </span>
+            </div>
             
-            {/* TYPING TITLE */}
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-[1.1] font-mono h-[160px] md:h-[180px]">
-              {displayedText}
-              <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} text-white`}>_</span>
+            {/* UPDATED TITLE FORMATTING */}
+            <h1 className="text-6xl md:text-8xl font-black text-white leading-none tracking-tighter">
+              GUNN MATH<br />
+              COMPETITION
             </h1>
-            
-            <div className={`transition-opacity duration-1000 ${isTyping ? 'opacity-0' : 'opacity-100'}`}>
-                <div className="flex flex-wrap gap-4 items-center text-white">
-                <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
-                    Sunday, March 29th, 2026
-                </div>
-                <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
-                    8:00 AM - 6:00 PM
-                </div>
-                <div className="bg-white/10 px-6 py-3 rounded-full border border-white/20 font-bold text-sm md:text-base backdrop-blur-sm">
-                    Gunn High School
-                </div>
-                </div>
+
+            <div className="flex flex-col gap-2 text-white/80 font-bold text-lg md:text-xl mt-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-1 bg-blue-400 rounded-full"></div>
+                <span>Sunday, March 29th, 2026</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-1 bg-white/50 rounded-full"></div>
+                <span>Gunn High School</span>
+              </div>
+            </div>
+
+            <div className="flex gap-4 mt-8">
+               <a href="https://contestdojo.com/" className="bg-white text-navy font-black text-lg py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all">
+                 Register Now
+               </a>
+               <a href="#info" className="border-2 border-white/30 text-white font-bold text-lg py-4 px-8 rounded-xl hover:bg-white/10 transition-all">
+                 Learn More
+               </a>
             </div>
           </div>
 
+          {/* IMAGE BLOCK */}
           <div 
-            className={`relative transition-all duration-1000 pr-10 ${isTyping ? 'opacity-0 translate-x-10' : 'opacity-100 translate-x-0'}`}
+            className={`relative flex justify-center md:justify-end transition-all duration-1000 delay-300 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{ transform: `translateY(${offset * -0.1}px)` }}
           >
-             {/* Standard IMG tag with clean path */}
-             <img 
-               src="/fsh.png" 
-               alt="GMC logo" 
-               width="400" 
-               height="320" 
-               className="object-contain brightness-0 invert" 
-             />
+             <div className="relative w-[350px] md:w-[500px] aspect-square">
+                <div className="absolute inset-0 bg-white/5 rounded-full blur-2xl transform scale-90"></div>
+                <img 
+                  src="/fsh.png" 
+                  alt="GMC logo" 
+                  className="w-full h-full object-contain brightness-0 invert drop-shadow-2xl relative z-10" 
+                />
+             </div>
           </div>
         </div>
       </div>
 
-      <div className="px-10 pb-16 pt-20 md:px-20 max-w-7xl mx-auto relative z-20 bg-white">
-        {/* Info Blocks */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-20">
-          <InfoBlock header="2 Divisions">Beginner & Advanced (AIME Qualifiers)</InfoBlock>
+      {/* INFO CARDS STRIP */}
+      <div id="info" className="relative z-20 -mt-10 px-6 md:px-20 max-w-8xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <InfoBlock header="2 Divisions">Beginner & Advanced</InfoBlock>
           <InfoBlock header="Free Lunch">For all competitors</InfoBlock>
           <InfoBlock header="3 Rounds">Individual, Guts, & Team</InfoBlock>
-          <InfoBlock header="Over $7500">In prizes for top teams and individuals</InfoBlock>
-          <InfoBlock header="Guest Speaker">Insight on real-world math applications</InfoBlock>
+          <InfoBlock header="Over $7500">In prizes for top teams</InfoBlock>
+          <InfoBlock header="Guest Speaker">Real-world math applications</InfoBlock>
+        </div>
+      </div>
+
+      {/* MAIN CONTENT */}
+      <div className="px-6 md:px-20 py-24 max-w-7xl mx-auto space-y-24">
+        
+        {/* Registration Section */}
+        <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div className="space-y-8">
+                <Heading1>Registration</Heading1>
+                <Paragraph>
+                    Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
+                </Paragraph>
+                <div className="flex gap-4">
+                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?usp=sharing" className="flex-1">
+                        <div className="text-center font-bold text-xl py-4 rounded-xl bg-navy text-white hover:bg-[#001a3d] hover:-translate-y-1 transition-all shadow-lg">
+                        Read Manual
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div className="bg-white p-8 rounded-3xl shadow-xl border border-white/50">
+                <Heading2>Divisions</Heading2>
+                <div className="space-y-6 mt-6">
+                    <div className="p-4 bg-lightblue rounded-xl border border-navy/5">
+                        <h3 className="font-black text-xl mb-2 text-navy">Division A</h3>
+                        <p className="text-navy/70 font-medium">For experienced competitors. Difficulty ranges from early AMC 10 to late AIME. (Required for AIME qualifiers)</p>
+                    </div>
+                    <div className="p-4 bg-lightblue rounded-xl border border-navy/5">
+                        <h3 className="font-black text-xl mb-2 text-navy">Division B</h3>
+                        <p className="text-navy/70 font-medium">For students newer to competition math. Difficulty ranges from AMC 8 to late AMC 10.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        {/* Standard Buttons */}
-        <div className="flex flex-col md:flex-row gap-6 mb-20">
-          <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?usp=sharing" className="flex-1">
-            <div className="text-center font-bold text-2xl py-6 rounded-2xl bg-[#0b0b45] text-white hover:bg-[#1a1a5e] hover:-translate-y-1 transition-all shadow-md">
-              GMC Manual
-            </div>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://contestdojo.com/" className="flex-1">
-            <div className="text-center font-bold text-2xl py-6 rounded-2xl border-4 border-[#0b0b45] text-[#0b0b45] hover:bg-gray-50 hover:-translate-y-1 transition-all shadow-md">
-              Registration
-            </div>
-          </a>
-        </div>
-
-        {/* Content Sections */}
-        <div className="grid md:grid-cols-2 gap-20 py-20 border-t border-gray-100">
-          <div className="space-y-12">
-            <div>
-              <Heading1>Registration</Heading1>
-              <Paragraph>
-                Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code. 
-              </Paragraph>
-            </div>
-            <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
-              <Heading2>Divisions</Heading2>
-              <Paragraph>
-                The competition has 2 divisions, A and B. Division B will be for those who are relatively new to competition math. Division A will be for those who are familiar with competition math, and will thus have harder problems. Participants who have participated in the AIME must compete in Division A.
-              </Paragraph>
-            </div>
-          </div>
-
-          <div className="space-y-12">
-            <div>
-              <Heading2>Difficulty & Format</Heading2>
-              <Paragraph>
-                For Div. A, the difficulty ranges from early AMC 10 to late AIME. For Div. B, it ranges from AMC 8 to late AMC 10. Problems and test format will be finalized on Thursday, March 27th.
-              </Paragraph>
-              <ul className="space-y-4 font-bold text-[#0b0b45] mt-4">
-                <li className="flex items-center gap-3 underline decoration-gray-200">Individual Round: 60 mins, 10 problems</li>
-                <li className="flex items-center gap-3 underline decoration-gray-200">Team Round: 60 mins, 10 problems</li>
-                <li className="flex items-center gap-3 underline decoration-gray-200">Guts Round: 75 mins, 30 problems total</li>
-                <li className="flex items-center gap-3 underline decoration-gray-200">Tiebreaker: 15 mins, 3 problems</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Schedule */}
-        <div className="py-32 border-t border-gray-100">
-          <div className="max-w-4xl mx-auto">
+        {/* Schedule Section */}
+        <div>
             <div className="text-center mb-16">
-              <Heading1>Schedule</Heading1>
-              <div className="italic text-gray-400 mt-2">Subject to change</div>
+              <h1 className="font-black text-5xl md:text-6xl text-navy">Schedule</h1>
+              <div className="font-bold text-navy/40 mt-3 uppercase tracking-widest text-sm">Subject to change</div>
             </div>
             
-            {/* Table Format */}
-            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-md">
-                <table className="w-full text-left border-collapse bg-white">
-                    <thead className="bg-[#0b0b45] text-white uppercase tracking-wider text-sm">
-                        <tr>
-                            <th className="p-5 font-bold border-b border-[#1a1a5e]">Time</th>
-                            <th className="p-5 font-bold border-b border-[#1a1a5e]">Event</th>
-                            <th className="p-5 font-bold border-b border-[#1a1a5e]">Location</th>
-                        </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-100 text-gray-700">
-                        <tr className="hover:bg-gray-50 transition-colors">
-                            <td className="p-5 font-mono text-[#0b0b45] font-bold">8:00 - 8:45</td>
-                            <td className="p-5 font-bold">Registration / Check-In</td>
-                            <td className="p-5 text-gray-500">Bow Gym</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50 transition-colors">
-                            <td className="p-5 font-mono text-[#0b0b45] font-bold">8:45 - 9:00</td>
-                            <td className="p-5 font-bold">Opening Ceremony</td>
-                            <td className="p-5 text-gray-500">Bow Gym</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50 transition-colors">
-                            <td className="p-5 font-mono text-[#0b0b45] font-bold">9:15 - 10:15</td>
-                            <td className="p-5 font-bold">Individual Round</td>
-                            <td className="p-5 text-gray-500">N-Building</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50 transition-colors bg-blue-50/50">
-                            <td className="p-5 font-mono text-[#0b0b45] font-bold">9:15 - 10:00</td>
-                            <td className="p-5 font-bold text-blue-800">Guest Speaker for Parents</td>
-                            <td className="p-5 text-gray-500">Bow Gym</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50 transition-colors">
-                            <td className="p-5 font-mono text-[#0b0b45] font-bold">10:25 - 11:25</td>
-                            <td className="p-5 font-bold">Team Round</td>
-                            <td className="p-5 text-gray-500">N-Building</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50 transition-colors">
-                            <td className="p-5 font-mono text-[#0b0b45] font-bold">11:30 - 12:15</td>
-                            <td className="p-5 font-bold">Lunch</td>
-                            <td className="p-5 text-gray-500">Bow Gym</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50 transition-colors">
-                            <td className="p-5 font-mono text-[#0b0b45] font-bold">12:30 - 14:00</td>
-                            <td className="p-5 font-bold">Guts Round</td>
-                            <td className="p-5 text-gray-500">Bow Gym</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50 transition-colors">
-                            <td className="p-5 font-mono text-[#0b0b45] font-bold">14:15 - 15:30</td>
-                            <td className="p-5 font-bold">Activities / Tiebreakers Block 1</td>
-                            <td className="p-5 text-gray-500">N-Building</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50 transition-colors">
-                            <td className="p-5 font-mono text-[#0b0b45] font-bold">15:45 - 17:30</td>
-                            <td className="p-5 font-bold">Activities Block 2</td>
-                            <td className="p-5 text-gray-500">Bow Gym</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50 transition-colors">
-                            <td className="p-5 font-mono text-[#0b0b45] font-bold">17:30 - 18:00</td>
-                            <td className="p-5 font-bold">Awards Ceremony</td>
-                            <td className="p-5 text-gray-500">Bow Gym</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-white/50">
+                <div className="grid grid-cols-1 md:grid-cols-[150px_1fr_200px] border-b border-gray-100 bg-navy text-white font-bold p-4 md:px-8 hidden md:grid">
+                    <div>TIME</div>
+                    <div>EVENT</div>
+                    <div className="text-right">LOCATION</div>
+                </div>
+                
+                {/* Schedule Rows */}
+                <div className="divide-y divide-gray-100">
+                    {[
+                        { time: "8:00 - 8:45", event: "Registration / Check-In", loc: "Bow Gym" },
+                        { time: "8:45 - 9:00", event: "Opening Ceremony", loc: "Bow Gym" },
+                        { time: "9:15 - 10:15", event: "Individual Round", loc: "N-Building" },
+                        { time: "9:15 - 10:00", event: "Guest Speaker for Parents", loc: "Bow Gym", highlight: true },
+                        { time: "10:25 - 11:25", event: "Team Round", loc: "N-Building" },
+                        { time: "11:30 - 12:15", event: "Lunch", loc: "Bow Gym" },
+                        { time: "12:30 - 14:00", event: "Guts Round", loc: "Bow Gym" },
+                        { time: "14:15 - 15:30", event: "Activities / Tiebreakers", loc: "N-Building" },
+                        { time: "15:45 - 17:30", event: "Activities Block 2", loc: "Bow Gym" },
+                        { time: "17:30 - 18:00", event: "Awards Ceremony", loc: "Bow Gym" },
+                    ].map((item, i) => (
+                        <div key={i} className={`p-6 md:px-8 grid grid-cols-1 md:grid-cols-[150px_1fr_200px] gap-2 items-center hover:bg-blue-50 transition-colors ${item.highlight ? 'bg-blue-50/50' : ''}`}>
+                            <div className="font-mono font-bold text-navy opacity-80">{item.time}</div>
+                            <div className={`font-bold text-lg ${item.highlight ? 'text-blue-600' : 'text-navy'}`}>{item.event}</div>
+                            <div className="text-navy/50 font-medium md:text-right">{item.loc}</div>
+                        </div>
+                    ))}
+                </div>
             </div>
-          </div>
         </div>
 
         {/* Sponsors */}
-        <div className="border-t border-gray-100 pt-32">
+        <div className="pt-10">
           <Sponsors />
         </div>
       </div>

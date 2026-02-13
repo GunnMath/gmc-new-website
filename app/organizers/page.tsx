@@ -1,110 +1,101 @@
 "use client";
 
-import { Heading1 } from "@/components/headers";
-import NavBar from "@/components/nav";
+import React from "react";
+import NavBar from '@/components/nav';
 
-const staff = [
-    {
-        role: "Director",
-        members: ["Chanew Kim"]
-    },
-    {
-        role: "Problem Czars",
-        members: ["Neil Dixit", "Alex Tsagaan"]
-    },
-    {
-        role: "Problem Writers",
-        members: ["Alex Bae", "Elliot Boyce", "Inhoo Chang", "Olivia Kim", "Grace Liu", "Aarush Rachakonda", "Reed Truong", "Albert Xu", "Aiden Yuan"]
-    },
-    {
-        role: "Organizers",
-        members: ["Daphne Chen", "Haridas Chowdhury", "James Dong", "Michael Ma", "Alex Peng", "Vineet Petlur", "Sami Rahim", "Cameron Rampell", "Nicholas Weng"]
-    },
-    {
-        role: "Webmaster",
-        members: ["Mary Yu"]
-    }
-];
-
-const StaffCard = ({ name }: { name: string }) => {
-    const parts = name.split(" ");
-    const firstName = parts[0]; 
-    const lastName = parts[1] || "";
-
-    // CLEAN FIX: Removed /gmc-new-website prefix
-    let imagePath = `/staff/${firstName}.jpg`;
-
-    if (firstName === "Alex") {
-        imagePath = `/staff/${firstName}${lastName.charAt(0)}.jpg`;
-    }
-
-    return (
-        <div className="flex flex-col items-center group">
-            <div className="w-48 h-48 relative mb-4 overflow-hidden rounded-full border-4 border-[#0b0b45] shadow-lg bg-gray-100">
-                {/* Standard IMG tag with object-cover */}
-                <img 
-                    src={imagePath}
-                    alt={name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-            </div>
-            <h3 className="text-xl font-bold text-[#0b0b45] text-center">{name}</h3>
-        </div>
-    );
+// Staff Data based on your specific hierarchy
+const STAFF = {
+  director: [
+    { name: "Chanew", realName: "Chanew Kim" }
+  ],
+  czars: [
+    { name: "Neil", realName: "Neil Dixit" },
+    { name: "AlexT", realName: "Alex Tsagaan" }
+  ],
+  writers: [
+    { name: "AlexB", realName: "Alex Bae" },
+    { name: "Elliot", realName: "Elliot Boyce" },
+    { name: "Inhoo", realName: "Inhoo Chang" },
+    { name: "Olivia", realName: "Olivia Kim" },
+    { name: "Grace", realName: "Grace Liu" },
+    { name: "Aarush", realName: "Aarush Rachakonda" },
+    { name: "Reed", realName: "Reed Truong" },
+    { name: "Albert", realName: "Albert Xu" },
+    { name: "Aiden", realName: "Aiden Yuan" }
+  ],
+  organizers: [
+    { name: "Daphne", realName: "Daphne Chen" },
+    { name: "Haridas", realName: "Haridas Chowdhury" },
+    { name: "James", realName: "James Dong" },
+    { name: "Michael", realName: "Michael Ma" },
+    { name: "AlexP", realName: "Alex Peng" },
+    { name: "Vineet", realName: "Vineet Petlur" },
+    { name: "Sami", realName: "Sami Rahim" },
+    { name: "Cameron", realName: "Cameron Rampell" },
+    { name: "Nicholas", realName: "Nicholas Weng" },
+    { name: "Mary", realName: "Mary Yu" }
+  ]
 };
 
-export default function Organizers() {
-    return (
-        <main className="bg-white min-h-screen">
-            <NavBar />
-            
-            {/* Navy Hero Section */}
-            <div className="bg-[#0b0b45] pt-40 pb-16 px-10 md:px-20 relative overflow-hidden">
-                <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10">
-                    <div className="max-w-2xl">
-                        <span className="text-gray-400 font-bold tracking-widest uppercase text-xs mb-3 block">
-                            Meet the Team
-                        </span>
-                        <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight">
-                            ORGANIZERS
-                        </h1>
-                        <p className="text-gray-300 mt-4 text-lg max-w-lg">
-                            The dedicated students behind the Gunn Math Competition.
-                        </p>
-                    </div>
-                    
-                    <div className="relative opacity-10 invisible lg:visible">
-                        {/* Standard IMG tag for Logo */}
-                        <img 
-                            src="/fsh.png" 
-                            width="300" 
-                            height="240" 
-                            alt="GMC logo" 
-                            className="object-contain brightness-0 invert" 
-                        />
-                    </div>
-                </div>
-            </div>
+const StaffCard = ({ item }: { item: { name: string, realName: string } }) => {
+  return (
+    <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-[#002e66]/10 flex flex-col h-full">
+      <div className="aspect-square bg-gray-100 overflow-hidden relative">
+        <img 
+          src={`/staff/${item.name}.jpg`} 
+          alt={item.realName}
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          onError={(e) => {
+            e.currentTarget.src = `https://placehold.co/400x400/004184/FFF?text=${item.name[0]}`;
+          }}
+        />
+      </div>
+      <div className="p-4 text-center bg-white flex-1 flex items-center justify-center">
+        <h3 className="text-lg font-black text-[#002e66] leading-tight">{item.realName}</h3>
+      </div>
+    </div>
+  );
+};
 
-            {/* Staff Grid */}
-            <div className="px-10 md:px-20 py-20 max-w-7xl mx-auto space-y-24">
-                {staff.map((group, idx) => (
-                    <div key={idx}>
-                        <div className="flex items-center gap-4 mb-12">
-                            <h2 className="text-3xl font-bold text-[#0b0b45] uppercase tracking-wide">
-                                {group.role}
-                            </h2>
-                            <div className="h-1 bg-gray-100 flex-1 rounded-full"></div>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16 justify-items-center">
-                            {group.members.map((person) => (
-                                <StaffCard key={person} name={person} />
-                            ))}
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </main>
-    )
+const RoleSection = ({ title, members }: { title: string, members: { name: string, realName: string }[] }) => (
+  <div className="mb-16">
+    <div className="flex items-center gap-4 mb-8">
+        <h2 className="text-3xl font-black text-[#002e66] whitespace-nowrap">
+        {title}
+        </h2>
+        <div className="h-[2px] w-full bg-[#002e66]/10 rounded-full"></div>
+    </div>
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      {members.map((member, idx) => (
+        <StaffCard key={idx} item={member} />
+      ))}
+    </div>
+  </div>
+);
+
+export default function Organizers() {
+  return (
+    <main className="bg-[#e4efff] min-h-screen text-[#002e66] relative overflow-x-hidden">
+      <NavBar />
+
+      <div className="px-6 md:px-20 pt-40 pb-20 max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+            <span className="bg-[#004184] text-white font-bold px-4 py-1 rounded-full text-xs tracking-widest uppercase mb-4 inline-block shadow-md">
+                The Team
+            </span>
+            <h1 className="text-5xl md:text-7xl font-black text-[#002e66] mb-6 tracking-tight">
+                Meet the Staff
+            </h1>
+            <p className="text-xl text-[#002e66]/70 max-w-2xl mx-auto font-medium">
+                The Gunn Math Competition is entirely student-run by a dedicated team of problem solvers, developers, and logistics coordinators.
+            </p>
+        </div>
+
+        <RoleSection title="Director" members={STAFF.director} />
+        <RoleSection title="Problem Czars" members={STAFF.czars} />
+        <RoleSection title="Problem Writers" members={STAFF.writers} />
+        <RoleSection title="Organizers" members={STAFF.organizers} />
+      </div>
+    </main>
+  );
 }
