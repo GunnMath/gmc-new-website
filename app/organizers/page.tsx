@@ -31,7 +31,6 @@ const StaffCard = ({ name }: { name: string }) => {
     const firstName = parts[0]; 
     const lastName = parts[1] || "";
 
-    // CLEAN FIX: Removed /gmc-new-website prefix
     let imagePath = `/staff/${firstName}.jpg`;
 
     if (firstName === "Alex") {
@@ -40,41 +39,39 @@ const StaffCard = ({ name }: { name: string }) => {
 
     return (
         <div className="flex flex-col items-center group">
-            <div className="w-48 h-48 relative mb-4 overflow-hidden rounded-full border-4 border-[#0b0b45] shadow-lg bg-gray-100">
-                {/* Standard IMG tag with object-cover */}
+            <div className="w-48 h-48 relative mb-4 overflow-hidden rounded-full border-4 border-[#002E67] shadow-lg bg-gray-100">
                 <img 
                     src={imagePath}
                     alt={name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
             </div>
-            <h3 className="text-xl font-bold text-[#0b0b45] text-center">{name}</h3>
+            <h3 className="text-xl font-bold text-[#002E67] text-center">{name}</h3>
         </div>
     );
 };
 
 export default function Organizers() {
     return (
-        <main className="bg-white min-h-screen">
+        <main className="bg-[#e4efff] min-h-screen">
             <NavBar />
             
-            {/* Navy Hero Section */}
-            <div className="bg-[#0b0b45] pt-40 pb-16 px-10 md:px-20 relative overflow-hidden">
+            <div className="bg-[#002E67] pt-40 pb-16 px-10 md:px-20 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10">
                     <div className="max-w-2xl">
-                        <span className="text-gray-400 font-bold tracking-widest uppercase text-xs mb-3 block">
+                        <span className="text-blue-300 font-bold tracking-widest uppercase text-xs mb-3 block">
                             Meet the Team
                         </span>
                         <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight">
                             ORGANIZERS
                         </h1>
-                        <p className="text-gray-300 mt-4 text-lg max-w-lg">
-                            The dedicated students behind the Gunn Math Competition.
+                        {/* UPDATED DESCRIPTION */}
+                        <p className="text-gray-300 mt-4 text-lg max-w-lg font-bold">
+                            The Gunn Math Competition is entirely student-run by a dedicated team of problem solvers, developers, and logistics coordinators.
                         </p>
                     </div>
                     
                     <div className="relative opacity-10 invisible lg:visible">
-                        {/* Standard IMG tag for Logo */}
                         <img 
                             src="/fsh.png" 
                             width="300" 
@@ -86,15 +83,14 @@ export default function Organizers() {
                 </div>
             </div>
 
-            {/* Staff Grid */}
             <div className="px-10 md:px-20 py-20 max-w-7xl mx-auto space-y-24">
                 {staff.map((group, idx) => (
                     <div key={idx}>
                         <div className="flex items-center gap-4 mb-12">
-                            <h2 className="text-3xl font-bold text-[#0b0b45] uppercase tracking-wide">
+                            <h2 className="text-3xl font-bold text-[#002E67] uppercase tracking-wide">
                                 {group.role}
                             </h2>
-                            <div className="h-1 bg-gray-100 flex-1 rounded-full"></div>
+                            <div className="h-1 bg-[#002E67]/10 flex-1 rounded-full"></div>
                         </div>
                         
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16 justify-items-center">

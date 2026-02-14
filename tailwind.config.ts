@@ -8,6 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        navy: "#002e66",
+        lightblue: "#e4efff",
+      },
+      fontFamily: {
+        // This sets Mont as the default font for the whole site
+        sans: ["Mont", "sans-serif"], 
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

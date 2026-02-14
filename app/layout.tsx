@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
 import "./globals.css";
-
-// 1. Import Fira Code
-const fira = Fira_Code({ 
-  subsets: ["latin"],
-  variable: "--font-fira",
-});
 
 export const metadata: Metadata = {
   title: "Gunn Math Competition",
-  description: "Annual math competition organized by Gunn High School students.",
+  description: "Fifth annual math competition organized by Gunn High School students.",
 };
 
 export default function RootLayout({
@@ -20,8 +13,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* 2. Apply Fira Code class to the body */}
-      <body className={fira.className} suppressHydrationWarning>
+      <head>
+        {/* Load Mont Font globally */}
+        <link href="https://fonts.cdnfonts.com/css/mont" rel="stylesheet" />
+      </head>
+      <body className="font-sans antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>

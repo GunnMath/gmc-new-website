@@ -1,134 +1,98 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { Heading1, Heading2 } from "@/components/headers";
-import NavBar from "@/components/nav";
-import Link from "next/link";
-import { Fragment } from "react";
+import React from "react";
+import NavBar from '@/components/nav';
 
-const divs = ["A", "B"];
-const tests = ["Individual", "Team", "Guts", "Tiebreak", "Awards"];
-
-const years = [
-  { year: 2024, solutions: true },
-  { year: 2023, solutions: true },
-  { year: 2022, solutions: true }
+const YEARS = [
+  {
+    year: "2024",
+    exams: [
+      { name: "Individual A", link: "/2024/Individual_A.pdf" },
+      { name: "Individual B", link: "/2024/Individual_B.pdf" },
+      { name: "Team A", link: "/2024/Team_A.pdf" },
+      { name: "Team B", link: "/2024/Team_B.pdf" },
+      { name: "Guts A", link: "/2024/Guts_A.pdf" },
+      { name: "Guts B", link: "/2024/Guts_B.pdf" },
+      { name: "Tiebreaks A", link: "/2024/Tiebreaks_A.pdf" },
+      { name: "Tiebreaks B", link: "/2024/Tiebreaks_B.pdf" },
+      { name: "Awards A", link: "/2024/Awards_A.pdf" },
+      { name: "Awards B", link: "/2024/Awards_B.pdf" },
+    ]
+  },
+  {
+    year: "2023",
+    exams: [
+      { name: "Individual A", link: "/2023/Individual_A.pdf" },
+      { name: "Individual B", link: "/2023/Individual_B.pdf" },
+      { name: "Team A", link: "/2023/Team_A.pdf" },
+      { name: "Team B", link: "/2023/Team_B.pdf" },
+      { name: "Guts A", link: "/2023/Guts_A.pdf" },
+      { name: "Guts B", link: "/2023/Guts_B.pdf" },
+      { name: "Tiebreaks A", link: "/2023/Tiebreak_A.pdf" },
+      { name: "Tiebreaks B", link: "/2023/Tiebreak_B.pdf" },
+    ]
+  },
+  {
+    year: "2022",
+    exams: [
+        { name: "Individual A", link: "/2022/Individual_A.pdf" },
+        { name: "Individual B", link: "/2022/Individual_B.pdf" },
+        { name: "Team A", link: "/2022/Team_A.pdf" },
+        { name: "Team B", link: "/2022/Team_B.pdf" },
+        { name: "Guts A", link: "/2022/Guts_A.pdf" },
+        { name: "Guts B", link: "/2022/Guts_B.pdf" },
+    ]
+  }
 ];
 
-const YearArchive = (props: { year: number, solutions: boolean }) => {
-    return (
-        <div className="mb-16">
-            <hr className="mb-8 border-t-4 border-[#0b0b45] w-24 opacity-20" />
-            
-            <div className="flex items-baseline gap-4 mb-2">
-                <Heading1>{props.year}</Heading1>
-                <span className="text-gray-500 font-medium text-lg">Year {props.year - 2021}</span>
-            </div>
+export default function Archive() {
+  return (
+    <main className="bg-[#e4efff] min-h-screen text-[#002e66] relative overflow-x-hidden">
+      <NavBar />
 
-            <div className="grid md:grid-cols-2 gap-12">
-                {divs.map(division => (
-                    <div key={division} className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#0b0b45] transition-colors">
-                        <div className="mb-4">
-                            <Heading2>Division {division}</Heading2>
-                        </div>
+      <div className="px-6 md:px-20 pt-40 pb-20 max-w-7xl mx-auto">
+        <div className="mb-20">
+            <h1 className="text-5xl md:text-7xl font-black text-[#002e66] mb-6 tracking-tight">
+                Archive
+            </h1>
+            <p className="text-xl text-[#002e66]/70 max-w-2xl font-medium">
+                Review problems and solutions from previous years of the Gunn Math Competition.
+            </p>
+        </div>
 
-                        <div className={`grid ${props.solutions ? "grid-cols-[1.5fr_1fr_1fr]" : "grid-cols-[2fr_1fr]"} gap-y-3 gap-x-4`}>
-                            <div className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">Test</div>
-                            <div className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">File</div>
-                            {props.solutions && <div className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">Sol</div>}
-
-                            {tests.map(test => (
-                                <Fragment key={test}>
-                                    <div className="font-bold text-[#0b0b45]">{test}</div>
-                                    <div>
-                                        <Link 
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
-                                            href={`/${props.year}/${test === "Tiebreak" ? "Tiebreaks" : test}_${division}.pdf`}
-                                            className="text-blue-600 hover:text-[#0b0b45] hover:underline"
-                                        >
-                                            PDF
-                                        </Link>
+        <div className="space-y-16">
+            {YEARS.map((yearGroup) => (
+                <div key={yearGroup.year} className="relative">
+                    <div className="relative z-10">
+                        <h2 className="text-3xl font-black text-[#002e66] mb-8 border-b-2 border-[#155EA5]/30 pb-4 inline-block">
+                            {yearGroup.year}
+                        </h2>
+                        
+                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                            {yearGroup.exams.map((exam, idx) => (
+                                <a 
+                                    key={idx} 
+                                    href={exam.link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="bg-white p-4 rounded-xl shadow-sm hover:shadow-lg border border-[#002e66]/5 hover:border-[#155EA5] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-[100px] group"
+                                >
+                                    <div className="font-bold text-[#002e66] text-lg leading-tight group-hover:text-[#155EA5] transition-colors">
+                                        {exam.name.replace("Individual", "Indiv.")}
                                     </div>
-                                    {props.solutions ? (
-                                        <div>
-                                            <Link 
-                                                target="_blank" 
-                                                rel="noopener noreferrer" 
-                                                href={`/${props.year}/${test === "Tiebreak" ? "Tiebreaks" : test}_${division}_Solutions.pdf`}
-                                                className="text-green-600 hover:text-[#0b0b45] hover:underline"
-                                            >
-                                                Sol
-                                            </Link>
-                                        </div>
-                                    ) : null}
-                                </Fragment>
+                                    <div className="flex justify-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-5 h-5 text-[#002e66]/30 group-hover:text-[#155EA5]">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                        </svg>
+                                    </div>
+                                </a>
                             ))}
                         </div>
                     </div>
-                ))}
-            </div>
-        </div>
-    )
-}
-
-export default function Archive() {
-    // Parallax Logic
-    const [offset, setOffset] = useState(0);
-
-    useEffect(() => {
-        const handleScroll = () => setOffset(window.scrollY);
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    return (
-        <main className="bg-white min-h-screen">
-            <NavBar />
-            
-            {/* Parallax Hero Section */}
-            <div className="bg-[#0b0b45] pt-40 pb-16 px-10 md:px-20 relative overflow-hidden">
-                <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10">
-                    
-                    {/* Text moves slower (0.4 speed) */}
-                    <div 
-                        className="max-w-2xl relative z-10"
-                        style={{ transform: `translateY(${offset * 0.4}px)` }}
-                    >
-                        <span className="text-gray-400 font-bold tracking-widest uppercase text-xs mb-3 block">
-                            Past Problems
-                        </span>
-                        <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight">
-                            ARCHIVE
-                        </h1>
-                        <p className="text-gray-300 mt-4 text-lg max-w-lg">
-                            Browse problems and solutions from previous years of the Gunn Math Competition (2022-Present).
-                        </p>
-                    </div>
-
-                    {/* Logo moves reverse/slower (-0.1 speed) */}
-                    <div 
-                        className="relative opacity-10 invisible lg:visible"
-                        style={{ transform: `translateY(${offset * -0.1}px)` }}
-                    >
-                        {/* NUCLEAR FIX: Standard IMG */}
-                        <img 
-                            src="/fsh.png" 
-                            width="300" 
-                            height="240" 
-                            alt="GMC logo" 
-                            className="object-contain brightness-0 invert" 
-                        />
-                    </div>
                 </div>
-            </div>
-
-            {/* Content Container (z-20 and bg-white needed to cover the parallax content as it scrolls up) */}
-            <div className="px-10 md:px-20 py-20 max-w-7xl mx-auto relative z-20 bg-white">
-                {years.map(({ year, solutions }) => (
-                    <YearArchive key={year} year={year} solutions={solutions} />
-                ))}
-            </div>
-        </main>
-    )
+            ))}
+        </div>
+      </div>
+    </main>
+  );
 }
