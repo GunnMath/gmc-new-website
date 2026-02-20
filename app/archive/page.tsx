@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from '@/components/nav';
 
 const YEARS = [
@@ -46,20 +46,52 @@ const YEARS = [
 ];
 
 export default function Archive() {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+      const handleScroll = () => setOffset(window.scrollY);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <main className="bg-[#e4efff] min-h-screen text-[#002e66] relative overflow-x-hidden">
       <NavBar />
 
-      <div className="px-6 md:px-20 pt-40 pb-20 max-w-7xl mx-auto">
-        <div className="mb-20">
-            <h1 className="text-5xl md:text-7xl font-black text-[#002e66] mb-6 tracking-tight">
-                Archive
-            </h1>
-            <p className="text-xl text-[#002e66]/70 max-w-2xl font-medium">
-                Review problems and solutions from previous years of the Gunn Math Competition.
-            </p>
-        </div>
+      <div className="bg-[#002E67] pt-40 pb-16 px-6 md:px-20 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
+              
+              <div 
+                  className="max-w-2xl relative z-10 text-center md:text-left"
+                  style={{ transform: `translateY(${offset * 0.4}px)` }}
+              >
+                  <span className="text-blue-300 font-bold tracking-widest uppercase text-xs mb-3 block">
+                      Past Problems & Solutions
+                  </span>
+                  <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight">
+                      ARCHIVE
+                  </h1>
+                  <p className="text-gray-300 mt-4 text-lg font-bold">
+                      Review problems and solutions from previous years of the Gunn Math Competition.
+                  </p>
+              </div>
 
+              <div 
+                  className="relative opacity-10 hidden md:block"
+                  style={{ transform: `translateY(${offset * -0.1}px)` }}
+              >
+                  <img 
+                      src="/fsh.png" 
+                      width="300" 
+                      height="240" 
+                      alt="GMC logo" 
+                      className="object-contain brightness-0 invert" 
+                  />
+              </div>
+          </div>
+      </div>
+
+      <div className="px-6 md:px-20 py-20 max-w-7xl mx-auto space-y-16">
         <div className="space-y-16">
             {YEARS.map((yearGroup) => (
                 <div key={yearGroup.year} className="relative">

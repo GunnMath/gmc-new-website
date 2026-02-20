@@ -28,7 +28,7 @@ const SPONSORS_DATA = [
     {
         name: "LIVE by Po-Shen Loh",
         tier: "Silver",
-        desc: "LIVE, by Po-Shen Loh is a revolutionary online math course taught by instructors skilled in improvisational comedy. The curriculum focuses on non-standard problems from competitions like MATHCOUNTS and the AMC, teaching students to invent their own solutions through dynamic, live-streamed brainstorming sessions.",
+        desc: "LIVE, by Po-Shen Loh is the first and only online math course that captivates, entertains, and inspires. Invented by legendary math coach Po-Shen Loh. Taught by instructors who are not only brilliant at math but also skilled in performance arts. Sign up for a trial class to shatter your expectations for mathematics at their website.",
         img: "/sponsors/live.png",
         url: "https://live.poshenloh.com/"
     },
