@@ -137,15 +137,16 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 w-full">
-               <a href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-black text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 w-full flex-wrap">
+               <a href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-black text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all flex items-center justify-center">
                  Register Now
                </a>
-               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-bold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all">
+               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-bold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center">
                  Event Manual
                </a>
-               <a href="#info" className="w-full sm:w-auto border-2 border-white/30 text-[#E4EFFF] font-bold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all">
-                 Learn More
+               <a href="https://discord.gg/7EBjsHUppM" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-[#5865F2]/20 border-2 border-[#5865F2]/50 text-[#E4EFFF] font-bold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-[#5865F2]/40 transition-all flex items-center justify-center gap-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 127.14 96.36"><path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.08 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.73 56.6 .37 80.39a105.73 105.73 0 0 0 32.15 15.97 77.7 77.7 0 0 0 6.89-11.1 66.25 66.25 0 0 1-10.85-5.18c.9-.66 1.8-1.34 2.66-2a75.5 75.5 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a66.28 66.28 0 0 1-10.88 5.15 77.34 77.34 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-15.97c2.5-27.11-3.6-51.05-18.7-72.29Zm-64.84 57.1c-5.83 0-10.63-5.32-10.63-11.83 0-6.55 4.7-11.87 10.63-11.87 6.03 0 10.73 5.37 10.63 11.87 0 6.51-4.7 11.83-10.63 11.83Zm41.42 0c-5.83 0-10.63-5.32-10.63-11.83 0-6.55 4.7-11.87 10.63-11.87 6.03 0 10.73 5.37 10.63 11.87 0 6.51-4.6 11.83-10.63 11.83Z"/></svg>
+                 Discord
                </a>
             </div>
         </div>
