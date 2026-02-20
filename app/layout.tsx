@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Gunn Math Competition",
@@ -14,11 +15,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Load Mont Font globally */}
         <link href="https://fonts.cdnfonts.com/css/mont" rel="stylesheet" />
       </head>
-      <body className="font-sans antialiased" suppressHydrationWarning>
-        {children}
+      <body className="font-sans antialiased flex flex-col min-h-screen" suppressHydrationWarning>
+        <div className="flex-grow">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );

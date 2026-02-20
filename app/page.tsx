@@ -62,7 +62,7 @@ export default function Home() {
         </button>
       </div>
 
-      {/* HERO SECTION - Improved Mobile Layout */}
+      {/* HERO SECTION */}
       <div className="bg-[#002E67] min-h-[85vh] md:min-h-[75vh] relative overflow-hidden flex flex-col justify-center px-6 md:px-20 pt-28 pb-20">
         
         {/* Background Elements */}
@@ -123,7 +123,7 @@ export default function Home() {
         />
       </div>
 
-      {/* NEW SECTION: Event Info & Registration - Mobile Friendly */}
+      {/* Event Info & Registration */}
       <div className="bg-[#001332] py-16 px-6 md:px-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
             <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 text-[#E4EFFF] font-bold text-lg md:text-2xl">
@@ -249,11 +249,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-20">
           <Sponsors />
         </div>
-      </div>
-
-      {/* FOOTER */}
-      <div className="bg-[#002E67] text-[#E4EFFF] py-6 text-center font-bold text-sm tracking-wider">
-        Copyright Gunn Math Circle 2026
       </div>
     </main>
   );
