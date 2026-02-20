@@ -2,8 +2,6 @@
 
 import React from "react";
 import NavBar from '@/components/nav';
-// FIX: Use absolute import
-import { Heading1, Heading2, Paragraph } from '@/components/headers'; 
 
 const SPONSORS_DATA = [
     {
@@ -28,23 +26,30 @@ const SPONSORS_DATA = [
         url: "https://www.nationalmathcamps.org/"
     },
     {
+        name: "LIVE by Po-Shen Loh",
+        tier: "Silver",
+        desc: "LIVE, by Po-Shen Loh is a revolutionary online math course taught by instructors skilled in improvisational comedy. The curriculum focuses on non-standard problems from competitions like MATHCOUNTS and the AMC, teaching students to invent their own solutions through dynamic, live-streamed brainstorming sessions.",
+        img: "/sponsors/live.png",
+        url: "https://live.poshenloh.com/"
+    },
+    {
         name: "Jane Street",
         tier: "Silver",
-        desc: "Jane Street is a global quantitative trading firm and liquidity provider trading a wide range of financial products, including ETFs, equities, futures, commodities, options, bonds, digital assets, and currencies. We have offices in New York, London, Hong Kong, and Amsterdam which allow us to make markets continually on more than 200 trading venues in over 40 countries around the world. We excel at providing liquidity in complex markets, especially during periods of dislocation and volatility. While our committed capital and firmwide risk book provides us with the capacity, our technology and flat structure fosters a culture of collaboration that facilitates these complex trades.",
+        desc: "Jane Street is a global quantitative trading firm and liquidity provider trading a wide range of financial products, including ETFs, equities, futures, commodities, options, bonds, digital assets, and currencies. We excel at providing liquidity in complex markets, especially during periods of dislocation and volatility.",
         img: "/sponsors/janestreet.png",
         url: "https://www.janestreet.com/"
     },
     {
         name: "Hudson River Trading",
         tier: "Silver",
-        desc: "Hudson River Trading brings a scientific approach to trading financial products. We have built one of the world’s most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. At HRT we come from all sorts of backgrounds: mathematics, computer science, statistics, physics, and engineering. We’re a community of self-starters, motivated by the excitement of being at the cutting edge of automated trading. We’re friends and colleagues, whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.",
+        desc: "Hudson River Trading brings a scientific approach to trading financial products. We have built one of the world’s most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading.",
         img: "/sponsors/HRT.png",
         url: "https://www.hudsonrivertrading.com/"
     },
     {
         name: "Citadel",
         tier: "Silver",
-        desc: "Citadel is an American multinational hedge fund and financial services company. Founded in 1990 by Ken Griffin, it has more than $63 billion in assets under management as of June 2024. The company has over 2,800 employees, with corporate headquarters in Miami, Florida, and offices throughout North America, Asia, and Europe. We drive capital to the world’s most impactful and compelling investments, leveraging our combination of talent, technology, analytics and global scale.",
+        desc: "Citadel is an American multinational hedge fund and financial services company. We drive capital to the world’s most impactful and compelling investments, leveraging our combination of talent, technology, analytics and global scale.",
         img: "/sponsors/citadel.png",
         url: "https://www.citadel.com/"
     },
@@ -58,35 +63,42 @@ const SPONSORS_DATA = [
     {
         name: "Susquehanna International Group",
         tier: "Silver",
-        desc: "Susquehanna is a global quantitative trading firm powered by scientific rigor, curiosity, and innovation. Our culture is intellectually driven and highly collaborative, bringing together researchers, engineers, and traders to design and deploy impactful strategies in our systematic trading environment.  To meet the unique challenges of global markets, Susquehanna applies machine learning and advanced quantitative research to vast datasets in order to uncover actionable insights and build effective strategies. By uniting deep market expertise with cutting-edge technology, we excel in solving complex problems and pushing boundaries together.",
+        desc: "Susquehanna is a global quantitative trading firm powered by scientific rigor, curiosity, and innovation. Our culture is intellectually driven and highly collaborative, bringing together researchers, engineers, and traders.",
         img: "/sponsors/sig.png",
         url: "https://sig.com/"
     },
     {
         name: "Stanford Research Park",
         tier: "Silver",
-        desc: "From startup incubation, to the innovation arms and campuses of global powerhouses, Stanford Research Park is the home to cutting-edge business and a top destination for people who want to shape the future.",
+        desc: "From startup incubation to the innovation arms of global powerhouses, Stanford Research Park is the home to cutting-edge business and a top destination for people who want to shape the future.",
         img: "/sponsors/SRP.png",
         url: "https://stanfordresearchpark.com/"
+    },
+    {
+        name: "Euler Circle",
+        tier: "Bronze",
+        desc: "Euler Circle is a mathematics institute for advanced students who love mathematics. It offers college-level mathematics classes specifically tailored to high-school students who have exhausted their school's curriculum, providing a pathway to deeper understanding and independent research.",
+        img: "/sponsors/eulercircle.png",
+        url: "https://eulercircle.com/"
     },
     {
         name: "AoPS Academy",
         tier: "Bronze",
         desc: "AoPS Academy is an after-school enrichment program with a mission to teach problem solving skills through advanced math, language arts, and science courses. GMC is supported by the Mountain View Campus.",
         img: "/sponsors/aopsacademy.png",
-        url: "https://aopsacademy.org/"
+        url: "https://aopsacademy.org/campus/mountainview"
     },
     {
         name: "Wolfram",
         tier: "Bronze",
-        desc: "Founded by Stephen Wolfram in 1987, Wolfram Research is one of the world's most respected computer, web and cloud software companies—as well as a powerhouse of scientific and technical innovation. As a pioneer in computation and computational knowledge, we have pursued a long-term vision to develop the science, technology and tools to make computation an ever-more-potent force in today's and tomorrow's world.",
+        desc: "Founded by Stephen Wolfram in 1987, Wolfram Research is one of the world's most respected computer, web and cloud software companies—as well as a powerhouse of scientific and technical innovation.",
         img: "/sponsors/wolfram.png",
         url: "https://www.wolfram.com/"
     },
     {
         name: "ContestDojo",
         tier: "Bronze",
-        desc: "ContestDojo is an online math competition platform built and used for tournaments such as the Stanford Math Tournament and the Berkeley Math Tournament. The aim of the project is to be a powerful and customizable site to handle registration, payment, test-taking, and other aspects of any math contest, eliminating the need for each event to build custom software.",
+        desc: "ContestDojo is an online math competition platform built and used for tournaments such as the Stanford Math Tournament and the Berkeley Math Tournament.",
         img: "/sponsors/contestdojo.png",
         url: "https://contestdojo.com/"
     },

@@ -22,12 +22,14 @@ const sponsors: Sponsor[] = [
   { name: "Jane Street", src: "/sponsors/janestreet.png", url: "https://www.janestreet.com/", tier: "Silver" },
   { name: "Hudson River Trading", src: "/sponsors/HRT.png", url: "https://www.hudsonrivertrading.com/", tier: "Silver" },
   { name: "Citadel Securities", src: "/sponsors/citadel.png", url: "https://www.citadelsecurities.com/", tier: "Silver" },
-  { name: "Susquehanna International Group", src: "/sponsors/sig.png", url: "https://sig.com/", tier: "Silver" },
+  { name: "LIVE by Po-Shen Loh", src: "/sponsors/live.png", url: "https://live.poshenloh.com/", tier: "Silver" },
   { name: "Stanford Research Park", src: "/sponsors/SRP.png", url: "https://stanfordresearchpark.com/", tier: "Silver" },
+  { name: "Susquehanna International Group", src: "/sponsors/sig.png", url: "https://sig.com/", tier: "Silver" },
 
   // --- BRONZE ---
+  { name: "Euler Circle", src: "/sponsors/eulercircle.png", url: "https://eulercircle.com/", tier: "Bronze" },
   { name: "ContestDojo", src: "/sponsors/contestdojo.png", url: "https://contestdojo.com/", tier: "Bronze" },
-  { name: "AoPS Academy", src: "/sponsors/aopsacademy.png", url: "https://aopsacademy.org/", tier: "Bronze" },
+  { name: "AoPS Academy", src: "/sponsors/aopsacademy.png", url: "https://aopsacademy.org/campus/mountainview", tier: "Bronze" },
   { name: "AwesomeMath", src: "/sponsors/awesomeMath.png", url: "https://www.awesomemath.org/", tier: "Bronze" },
   { name: "Art of Problem Solving", src: "/sponsors/aops.png", url: "https://artofproblemsolving.com/", tier: "Bronze" },
   { name: "Wolfram", src: "/sponsors/wolfram.png", url: "https://www.wolfram.com/", tier: "Bronze" },
@@ -44,14 +46,14 @@ const TierSection = ({ tier, color, data }: { tier: SponsorTier; color: string; 
           href={s.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex items-center justify-center bg-white p-6 rounded-xl transition-all duration-300 border border-gray-200 shadow-sm hover:-translate-y-2"
+          className="group relative flex items-center justify-center bg-white p-6 rounded-xl transition-all duration-300 border border-gray-100 hover:-translate-y-2"
           style={{ 
             width: tier === "Gold" ? "300px" : tier === "Silver" ? "260px" : "220px",
             height: tier === "Gold" ? "180px" : tier === "Silver" ? "140px" : "120px",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.borderColor = color;
-            e.currentTarget.style.borderWidth = "2px"; 
+            e.currentTarget.style.borderWidth = "2px";
             e.currentTarget.style.boxShadow = `0 0 25px ${color}66`;
           }}
           onMouseLeave={(e) => {
@@ -80,7 +82,7 @@ export default function Sponsors() {
 
   return (
     <div className="flex flex-col items-center py-10 px-5 w-full">
-      <h2 className="text-3xl md:text-4xl font-black text-[#E4EFFF] mb-16 tracking-tight text-center">
+      <h2 className="text-3xl md:text-4xl font-black text-[#002e66] mb-16 tracking-tight text-center">
         Thank you to our sponsors
       </h2>
 
@@ -88,8 +90,8 @@ export default function Sponsors() {
       <TierSection tier="Silver" color="#C0C0C0" data={silverSponsors} />
       <TierSection tier="Bronze" color="#CD7F32" data={bronzeSponsors} />
       
-      <div className="mt-4 text-[#E4EFFF]/50 text-sm font-bold">
-        Interested in sponsoring? Contact us at <a href="mailto:ghsmathcircle@gmail.com" className="underline hover:text-[#E4EFFF] transition-colors">ghsmathcircle@gmail.com</a>
+      <div className="mt-4 text-[#002e66]/50 text-sm font-bold">
+        Interested in sponsoring? Contact us at <a href="mailto:ghsmathcircle@gmail.com" className="underline hover:text-[#002e66] transition-colors">ghsmathcircle@gmail.com</a>
       </div>
     </div>
   );
