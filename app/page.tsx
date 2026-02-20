@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-// FIX: Use absolute import
 import { Heading1, Heading2, Paragraph } from '@/components/headers';
 import NavBar from '@/components/nav';
 import Sponsors from '@/components/Sponsors';
@@ -138,11 +137,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-6 pt-4">
-               <a href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-white text-[#002E67] font-black text-xl py-4 px-10 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+               <a href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-white text-[#002E67] font-black text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all">
                  Register Now
                </a>
-               <a href="#info" className="border-2 border-white/30 text-[#E4EFFF] font-bold text-xl py-4 px-10 rounded-xl hover:bg-white/10 transition-all">
+               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-bold text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all">
+                 Event Manual
+               </a>
+               <a href="#info" className="border-2 border-white/30 text-[#E4EFFF] font-bold text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all">
                  Learn More
                </a>
             </div>
@@ -171,7 +173,7 @@ export default function Home() {
                     Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
                 </Paragraph>
                 <div className="flex gap-4">
-                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" className="flex-1">
+                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" className="flex-1">
                         <div className="text-center font-bold text-xl py-4 rounded-xl bg-[#002E67] text-white hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg">
                         Read Manual
                         </div>
@@ -184,12 +186,10 @@ export default function Home() {
                 <div className="space-y-6 mt-6">
                     <div className="p-4 bg-[#001332]/5 rounded-xl border border-[#002E67]/5">
                         <h3 className="font-black text-xl mb-2">Division A</h3>
-                        {/* BOLDED TEXT HERE */}
                         <p className="opacity-90 font-bold leading-relaxed">For experienced competitors. Difficulty ranges from mid-AMC 10 to late AIME. (Required for AIME qualifiers)</p>
                     </div>
                     <div className="p-4 bg-[#001332]/5 rounded-xl border border-[#002E67]/5">
                         <h3 className="font-black text-xl mb-2">Division B</h3>
-                        {/* BOLDED TEXT HERE */}
                         <p className="opacity-90 font-bold leading-relaxed">For students newer to competition math. Difficulty ranges from AMC 8 to late AMC 10.</p>
                     </div>
                 </div>
@@ -232,10 +232,27 @@ export default function Home() {
                 </div>
             </div>
         </div>
+      </div>
 
-        <div className="pt-10">
+      {/* REVERSE WAVE TRANSITION */}
+      <div className="w-full bg-[#001332]">
+        <img 
+          src="/reversewave.png" 
+          alt="Wave Transition" 
+          className="w-full h-auto block select-none" 
+        />
+      </div>
+
+      {/* SPONSORS SECTION */}
+      <div className="bg-[#E3EEFE] pt-10 pb-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-20">
           <Sponsors />
         </div>
+      </div>
+
+      {/* FOOTER */}
+      <div className="bg-[#002E67] text-[#E4EFFF] py-6 text-center font-bold text-sm tracking-wider">
+        © 2026 Gunn Math Circle. All Rights Reserved.
       </div>
     </main>
   );
