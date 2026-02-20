@@ -46,7 +46,7 @@ const TierSection = ({ tier, color, data }: { tier: SponsorTier; color: string; 
           href={s.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex items-center justify-center bg-white p-6 rounded-xl transition-all duration-300 border border-gray-100 hover:-translate-y-2"
+          className="group relative flex items-center justify-center bg-white p-6 rounded-xl transition-all duration-300 border border-gray-100 shadow-sm hover:-translate-y-2"
           style={{ 
             width: tier === "Gold" ? "300px" : tier === "Silver" ? "260px" : "220px",
             height: tier === "Gold" ? "180px" : tier === "Silver" ? "140px" : "120px",
@@ -57,7 +57,7 @@ const TierSection = ({ tier, color, data }: { tier: SponsorTier; color: string; 
             e.currentTarget.style.boxShadow = `0 0 25px ${color}66`;
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.borderColor = "#e5e7eb";
+            e.currentTarget.style.borderColor = "#f3f4f6"; // Light gray
             e.currentTarget.style.borderWidth = "1px";
             e.currentTarget.style.boxShadow = "0 1px 2px 0 rgb(0 0 0 / 0.05)";
           }}
@@ -82,7 +82,7 @@ export default function Sponsors() {
 
   return (
     <div className="flex flex-col items-center py-10 px-5 w-full">
-      <h2 className="text-3xl md:text-4xl font-black text-[#002e66] mb-16 tracking-tight text-center">
+      <h2 className="text-3xl md:text-4xl font-black text-[#002E67] mb-16 tracking-tight text-center">
         Thank you to our sponsors
       </h2>
 
@@ -90,8 +90,8 @@ export default function Sponsors() {
       <TierSection tier="Silver" color="#C0C0C0" data={silverSponsors} />
       <TierSection tier="Bronze" color="#CD7F32" data={bronzeSponsors} />
       
-      <div className="mt-4 text-[#002e66]/50 text-sm font-bold">
-        Interested in sponsoring? Contact us at <a href="mailto:ghsmathcircle@gmail.com" className="underline hover:text-[#002e66] transition-colors">ghsmathcircle@gmail.com</a>
+      <div className="mt-4 text-[#002E67]/60 text-sm font-bold">
+        Interested in sponsoring? Contact us at <a href="mailto:ghsmathcircle@gmail.com" className="underline hover:text-[#002E67] transition-colors">ghsmathcircle@gmail.com</a>
       </div>
     </div>
   );

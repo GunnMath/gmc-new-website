@@ -9,20 +9,18 @@ const navLinks = [
     { name: "Speaker", href: "/guest-speaker" },
     { name: "Archive", href: "/archive" },
     { name: "Sponsors", href: "/sponsors" },
+    { name: "Manual", href: "https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay", external: true },
 ];
 
 export default function NavBar() {
-    // Removed scroll listener since we want it always solid
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        // Fixed background color #002E67, always visible
         <nav className="fixed top-0 left-0 w-full z-50 bg-[#002E67] shadow-lg py-3 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
                 
                 {/* Logo Area */}
                 <Link href="/" className="font-black text-2xl tracking-tighter text-white flex items-center gap-3 group">
-                    {/* Added FSH Logo */}
                     <img 
                         src="/fsh.png" 
                         alt="GMC Logo" 
@@ -40,6 +38,8 @@ export default function NavBar() {
                         <Link 
                             key={link.name} 
                             href={link.href}
+                            target={link.external ? "_blank" : undefined}
+                            rel={link.external ? "noopener noreferrer" : undefined}
                             className="text-sm font-bold text-white/80 hover:text-white uppercase tracking-wider transition-colors"
                         >
                             {link.name}
@@ -79,6 +79,8 @@ export default function NavBar() {
                         <Link 
                             key={link.name} 
                             href={link.href}
+                            target={link.external ? "_blank" : undefined}
+                            rel={link.external ? "noopener noreferrer" : undefined}
                             className="text-lg font-bold text-white block py-3 border-b border-white/5 hover:text-blue-200 transition-colors"
                             onClick={() => setMobileMenuOpen(false)}
                         >
