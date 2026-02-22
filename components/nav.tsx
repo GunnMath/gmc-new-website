@@ -9,7 +9,9 @@ const navLinks = [
     { name: "Speaker", href: "/guest-speaker" },
     { name: "Archive", href: "/archive" },
     { name: "Sponsors", href: "/sponsors" },
+    { name: "FAQ", href: "/faq" },
     { name: "Manual", href: "https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay", external: true },
+    { name: "Discord", href: "https://discord.gg/7EBjsHUppM", external: true },
 ];
 
 export default function NavBar() {

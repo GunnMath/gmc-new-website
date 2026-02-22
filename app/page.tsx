@@ -38,14 +38,15 @@ export default function Home() {
       <NavBar />
       
       {/* FLOATING ACTION BUTTONS */}
-      <div className={`fixed bottom-8 right-8 z-50 flex flex-col gap-4 transition-all duration-500 ease-out ${showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
+      <div className={`fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 flex flex-col gap-4 transition-all duration-500 ease-out ${showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
         <a 
           href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-[#002E67] text-white font-bold py-3 px-6 rounded-full shadow-xl hover:bg-[#004080] hover:scale-105 transition-all flex items-center gap-2 border-2 border-transparent"
+          className="bg-[#002E67] text-white font-bold py-3 px-6 rounded-full shadow-xl hover:bg-[#004080] hover:scale-105 transition-all flex items-center justify-center gap-2 border-2 border-transparent"
         >
-          <span>Register Now</span>
+          <span className="hidden md:inline">Register Now</span>
+          <span className="md:hidden">Register</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
           </svg>
@@ -62,39 +63,38 @@ export default function Home() {
       </div>
 
       {/* HERO SECTION */}
-      <div className="bg-[#002E67] min-h-[75vh] relative overflow-hidden flex flex-col justify-center px-6 md:px-20 pt-20 pb-20">
+      <div className="bg-[#002E67] min-h-[85vh] md:min-h-[75vh] relative overflow-hidden flex flex-col justify-center px-6 md:px-20 pt-28 pb-20">
         
         {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-            <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-white rounded-full blur-[100px]" />
-            <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500 rounded-full blur-[100px]" />
+            <div className="absolute top-[-10%] right-[-10%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-white rounded-full blur-[100px]" />
+            <div className="absolute bottom-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-blue-500 rounded-full blur-[100px]" />
         </div>
 
-        <div className="max-w-8xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="max-w-8xl mx-auto w-full flex flex-col-reverse md:grid md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
           
           {/* TEXT BLOCK */}
           <div 
-            className={`flex flex-col gap-6 transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+            className={`flex flex-col gap-6 transition-all duration-1000 ease-out items-center text-center md:items-start md:text-left ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
             style={{ transform: `translateY(${offset * 0.2}px)` }}
           >
             <div className="inline-block">
-              <span className="bg-white/10 text-[#E4EFFF] font-bold px-4 py-1 rounded-full text-xs tracking-widest uppercase mb-4 inline-block border border-white/20">
+              <span className="bg-white/10 text-[#E4EFFF] font-bold px-4 py-1.5 rounded-full text-xs md:text-sm tracking-widest uppercase mb-2 inline-block border border-white/20">
                 Fifth Annual
               </span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-black text-[#E4EFFF] leading-none tracking-tighter">
-              GUNN MATH<br />
-              COMPETITION
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-[#E4EFFF] leading-[1.1] tracking-tighter">
+              GUNN MATH<br className="hidden md:block" /> COMPETITION
             </h1>
           </div>
 
           {/* IMAGE BLOCK */}
           <div 
-            className={`relative flex justify-center md:justify-end transition-all duration-1000 delay-300 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            className={`relative flex justify-center md:justify-end transition-all duration-1000 delay-300 ease-out w-full ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{ transform: `translateY(${offset * -0.1}px)` }}
           >
-             <div className="relative w-[350px] md:w-[500px] aspect-square">
+             <div className="relative w-[220px] sm:w-[280px] md:w-[500px] aspect-square mx-auto md:mr-0">
                 <div className="absolute inset-0 bg-white/2 rounded-full blur-2xl transform scale-90"></div>
                 <img 
                   src="/fsh.png" 
@@ -106,7 +106,7 @@ export default function Home() {
         </div>
 
         {/* SCROLL INDICATOR */}
-        <div className={`absolute bottom-8 left-0 right-0 flex flex-col items-center justify-center pointer-events-none transition-opacity duration-500 ${offset > 50 ? 'opacity-0' : 'opacity-100 animate-bounce'}`}>
+        <div className={`absolute bottom-8 left-0 right-0 flex flex-col items-center justify-center pointer-events-none transition-opacity duration-500 hidden md:flex ${offset > 50 ? 'opacity-0' : 'opacity-100 animate-bounce'}`}>
             <span className="text-[#E4EFFF]/50 text-xs font-bold uppercase tracking-[0.2em] mb-2">Scroll</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="rgba(228, 239, 255, 0.5)" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -123,10 +123,10 @@ export default function Home() {
         />
       </div>
 
-      {/* NEW SECTION: Event Info & Registration */}
+      {/* Event Info & Registration */}
       <div className="bg-[#001332] py-16 px-6 md:px-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 text-[#E4EFFF] font-bold text-xl md:text-2xl">
+            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 text-[#E4EFFF] font-bold text-lg md:text-2xl">
               <div className="flex items-center justify-center gap-3">
                 <div className="w-10 h-1 bg-blue-400 rounded-full"></div>
                 <span>Sunday, March 29th, 2026</span>
@@ -137,15 +137,16 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-               <a href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-white text-[#002E67] font-black text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 w-full flex-wrap">
+               <a href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-black text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all flex items-center justify-center">
                  Register Now
                </a>
-               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-bold text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all">
+               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-bold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center">
                  Event Manual
                </a>
-               <a href="#info" className="border-2 border-white/30 text-[#E4EFFF] font-bold text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all">
-                 Learn More
+               <a href="https://discord.gg/7EBjsHUppM" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-[#5865F2]/20 border-2 border-[#5865F2]/50 text-[#E4EFFF] font-bold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-[#5865F2]/40 transition-all flex items-center justify-center gap-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 127.14 96.36"><path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.08 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.73 56.6 .37 80.39a105.73 105.73 0 0 0 32.15 15.97 77.7 77.7 0 0 0 6.89-11.1 66.25 66.25 0 0 1-10.85-5.18c.9-.66 1.8-1.34 2.66-2a75.5 75.5 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a66.28 66.28 0 0 1-10.88 5.15 77.34 77.34 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-15.97c2.5-27.11-3.6-51.05-18.7-72.29Zm-64.84 57.1c-5.83 0-10.63-5.32-10.63-11.83 0-6.55 4.7-11.87 10.63-11.87 6.03 0 10.73 5.37 10.63 11.87 0 6.51-4.7 11.83-10.63 11.83Zm41.42 0c-5.83 0-10.63-5.32-10.63-11.83 0-6.55 4.7-11.87 10.63-11.87 6.03 0 10.73 5.37 10.63 11.87 0 6.51-4.6 11.83-10.63 11.83Z"/></svg>
+                 Discord
                </a>
             </div>
         </div>
@@ -153,7 +154,7 @@ export default function Home() {
 
       {/* INFO CARDS */}
       <div id="info" className="px-6 md:px-20 max-w-8xl mx-auto mt-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           <InfoBlock header="2 Divisions">Beginner & Advanced</InfoBlock>
           <InfoBlock header="Free Lunch">For all competitors</InfoBlock>
           <InfoBlock header="3 Rounds">Individual, Guts, & Team</InfoBlock>
@@ -248,11 +249,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-20">
           <Sponsors />
         </div>
-      </div>
-
-      {/* FOOTER */}
-      <div className="bg-[#002E67] text-[#E4EFFF] py-6 text-center font-bold text-sm tracking-wider">
-        © 2026 Gunn Math Circle. All Rights Reserved.
       </div>
     </main>
   );
