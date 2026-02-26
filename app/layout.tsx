@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
-// Configure your local Mont fonts including the new SemiBold!
+// Configure your local Mont fonts and CREATE A CSS VARIABLE
 const mont = localFont({
   src: [
     {
@@ -27,6 +27,7 @@ const mont = localFont({
       style: 'normal',
     }
   ],
+  variable: '--font-mont', // THIS IS CRITICAL
 });
 
 export const metadata: Metadata = {
@@ -40,8 +41,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${mont.className} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
+    <html lang="en" className={`${mont.variable}`}>
+      <body className="font-sans antialiased flex flex-col min-h-screen" suppressHydrationWarning>
         <div className="flex-grow">
           {children}
         </div>

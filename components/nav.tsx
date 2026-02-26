@@ -65,7 +65,7 @@ export default function NavBar() {
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
                 
                 {/* Logo Area */}
-                <Link href="/" onClick={() => setActiveDropdown(null)} className="font-bold text-2xl tracking-tighter text-white flex items-center gap-3 group">
+                <Link href="/" onClick={() => setActiveDropdown(null)} className="font-semibold text-2xl tracking-tighter text-white flex items-center gap-3 group">
                     <img 
                         src="/fsh.png" 
                         alt="GMC Logo" 
@@ -153,7 +153,7 @@ export default function NavBar() {
                         item.dropdown ? (
                             <div key={item.name} className="py-3 border-b border-white/5">
                                 <button 
-                                    className="w-full text-left flex justify-between items-center text-xs font-bold text-blue-300 uppercase tracking-widest mb-3 pl-2"
+                                    className="w-full text-left flex justify-between items-center text-xs font-semibold text-blue-300 uppercase tracking-widest mb-3 pl-2"
                                     onClick={() => toggleDropdown(`mobile-${item.name}`)}
                                 >
                                     {item.name}

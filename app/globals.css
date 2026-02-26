@@ -7,25 +7,10 @@
   --background: #e4efff;
 }
 
-/* THE NUCLEAR OPTION: Force Mont on absolutely everything */
-* {
-  font-family: 'Mont', sans-serif !important;
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Mont', sans-serif;
-  
-  /* UPDATED: Increased to 600 (SemiBold) for thicker letters */
-  font-weight: 600 !important; 
-  
   /* Improves text rendering for thicker fonts */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Headings get the heaviest weight */
-h1, h2, h3, h4, h5, h6, .font-bold, .font-black {
-  font-weight: 800 !important;
 }

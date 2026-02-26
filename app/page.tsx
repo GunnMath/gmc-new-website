@@ -8,7 +8,7 @@ import Sponsors from '@/components/Sponsors';
 const InfoBlock = (props: { header: string; children: string }) => {
   return (
     <div className="flex-1 min-w-[200px] p-6 rounded-2xl border-2 border-[#002E67]/10 bg-white hover:border-[#002E67] transition-all shadow-sm text-center md:text-left group">
-      <div className="text-xl font-bold text-[#002E67] mb-1 group-hover:scale-105 transition-transform origin-left">{props.header}</div>
+      <div className="text-xl font-black text-[#002E67] mb-1 group-hover:scale-105 transition-transform origin-left">{props.header}</div>
       <div className="text-[#002E67]/70 text-sm font-semibold leading-tight">{props.children}</div>
     </div>
   );
@@ -43,7 +43,7 @@ export default function Home() {
           href="https://contestdojo.com/register" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-[#002E67] text-white font-semibold py-3 px-6 rounded-full shadow-xl hover:bg-[#004080] hover:scale-105 transition-all flex items-center justify-center gap-2 border-2 border-transparent"
+          className="bg-[#002E67] text-white font-bold py-3 px-6 rounded-full shadow-xl hover:bg-[#004080] hover:scale-105 transition-all flex items-center justify-center gap-2 border-2 border-transparent"
         >
           <span className="hidden md:inline">Register Now</span>
           <span className="md:hidden">Register</span>
@@ -79,7 +79,7 @@ export default function Home() {
             style={{ transform: `translateY(${offset * 0.2}px)` }}
           >
             <div className="inline-block">
-              <span className="bg-white/10 text-[#E4EFFF] font-semibold px-4 py-1.5 rounded-full text-xs md:text-sm tracking-widest uppercase mb-2 inline-block border border-white/20">
+              <span className="bg-white/10 text-[#E4EFFF] font-bold px-4 py-1.5 rounded-full text-xs md:text-sm tracking-widest uppercase mb-2 inline-block border border-white/20">
                 Fifth Annual
               </span>
             </div>
@@ -107,7 +107,7 @@ export default function Home() {
 
         {/* SCROLL INDICATOR */}
         <div className={`absolute bottom-8 left-0 right-0 flex flex-col items-center justify-center pointer-events-none transition-opacity duration-500 hidden md:flex ${offset > 50 ? 'opacity-0' : 'opacity-100 animate-bounce'}`}>
-            <span className="text-[#E4EFFF]/50 text-xs font-semibold uppercase tracking-[0.2em] mb-2">Scroll</span>
+            <span className="text-[#E4EFFF]/50 text-xs font-bold uppercase tracking-[0.2em] mb-2">Scroll</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="rgba(228, 239, 255, 0.5)" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
             </svg>
@@ -126,7 +126,7 @@ export default function Home() {
       {/* Event Info & Registration */}
       <div className="bg-[#001332] py-16 px-6 md:px-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 text-[#E4EFFF] font-semibold text-lg md:text-2xl">
+            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 text-[#E4EFFF] font-bold text-lg md:text-2xl">
               <div className="flex items-center justify-center gap-3">
                 <div className="w-10 h-1 bg-blue-400 rounded-full"></div>
                 <span>Sunday, March 29th, 2026</span>
@@ -138,13 +138,13 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 w-full flex-wrap">
-               <a href="https://contestdojo.com/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all flex items-center justify-center">
+               <a href="https://contestdojo.com/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-black text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all flex items-center justify-center">
                  Register Now
                </a>
-               <a href="/registration-info" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center">
+               <a href="/registration-info" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-bold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center">
                  How to Register
                </a>
-               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto border-2 border-white/30 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all">
+               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto border-2 border-white/30 text-[#E4EFFF] font-bold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all">
                  Event Manual
                </a>
             </div>
@@ -174,7 +174,7 @@ export default function Home() {
                 </div>
                 <div className="flex gap-4">
                     <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" className="flex-1">
-                        <div className="text-center font-semibold text-xl py-4 rounded-xl bg-[#002E67] text-white hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg">
+                        <div className="text-center font-bold text-xl py-4 rounded-xl bg-[#002E67] text-white hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg">
                         Read Manual
                         </div>
                     </a>
@@ -182,7 +182,7 @@ export default function Home() {
             </div>
             
             <div className="bg-white p-8 rounded-3xl shadow-xl border border-white/50 text-[#002E67]">
-                <h2 className="text-3xl font-bold mb-4">Divisions</h2>
+                <h2 className="text-3xl font-black mb-4">Divisions</h2>
                 <div className="space-y-6 mt-6">
                     <div className="p-4 bg-[#001332]/5 rounded-xl border border-[#002E67]/5">
                         <h3 className="font-bold text-xl mb-2">Division A</h3>
@@ -200,11 +200,11 @@ export default function Home() {
         <div>
             <div className="text-center mb-16">
               <h1 className="font-black text-5xl md:text-6xl text-[#E4EFFF]">Schedule</h1>
-              <div className="font-semibold text-[#E4EFFF]/40 mt-3 uppercase tracking-widest text-sm">Subject to change</div>
+              <div className="font-bold text-[#E4EFFF]/40 mt-3 uppercase tracking-widest text-sm">Subject to change</div>
             </div>
             
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-white/50">
-                <div className="grid grid-cols-1 md:grid-cols-[150px_1fr_200px] border-b border-gray-100 bg-[#002E67] text-white font-semibold p-4 md:px-8 hidden md:grid">
+                <div className="grid grid-cols-1 md:grid-cols-[150px_1fr_200px] border-b border-gray-100 bg-[#002E67] text-white font-bold p-4 md:px-8 hidden md:grid">
                     <div>TIME</div>
                     <div>EVENT</div>
                     <div className="text-right">LOCATION</div>
@@ -224,9 +224,9 @@ export default function Home() {
                         { time: "17:30 - 18:00", event: "Awards Ceremony", loc: "Bow Gym" },
                     ].map((item, i) => (
                         <div key={i} className={`p-6 md:px-8 grid grid-cols-1 md:grid-cols-[150px_1fr_200px] gap-2 items-center hover:bg-blue-50 transition-colors ${item.highlight ? 'bg-blue-50/50' : ''}`}>
-                            <div className="font-mono font-semibold text-[#002E67] opacity-80">{item.time}</div>
-                            <div className={`font-semibold text-lg ${item.highlight ? 'text-blue-600' : 'text-[#002E67]'}`}>{item.event}</div>
-                            <div className="font-semibold text-[#002E67]/60 md:text-right">{item.loc}</div>
+                            <div className="font-mono font-bold text-[#002E67] opacity-80">{item.time}</div>
+                            <div className={`font-black text-lg ${item.highlight ? 'text-blue-600' : 'text-[#002E67]'}`}>{item.event}</div>
+                            <div className="font-bold text-[#002E67]/60 md:text-right">{item.loc}</div>
                         </div>
                     ))}
                 </div>
