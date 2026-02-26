@@ -1,14 +1,23 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 
 const faqs = [
+  {
+    q: "How do I sign up?",
+    a: (
+      <>
+        You can register your team through ContestDojo. For a step-by-step guide, please visit our <Link href="/registration-info" className="text-[#155EA5] font-bold underline hover:text-[#002E67] transition-colors">Registration Information</Link> page.
+      </>
+    )
+  },
   {
     q: "How much does it cost to participate?",
     a: "The tournament is completely free! However, an optional $20 donation is greatly appreciated to help support Gunn Math Circle."
   },
   {
     q: "What materials are allowed during the competition?",
-    a: "You may only use writing utensils and protractors. All scratch paper will be provided by the proctors, so please do not bring your own. Calculators and all electronic devices are strictly prohibited across all rounds (including the Estimathon and tiebreakers)."
+    a: "You may only use writing utensils. All scratch paper will be provided by the proctors, so please do not bring your own. Protractors, calculators, and all electronic devices are strictly prohibited across all rounds (including the Estimathon and tiebreakers)."
   },
   {
     q: "Do I need a full team of 4 to compete?",
@@ -60,7 +69,7 @@ export default function FAQ() {
             </svg>
           </button>
           <div 
-            className={`px-6 text-[#002E67]/80 font-medium overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-40 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}
+            className={`px-6 text-[#002E67]/80 font-medium overflow-hidden transition-all duration-500 ${openIndex === index ? 'max-h-[1000px] pb-5 opacity-100' : 'max-h-0 opacity-0'}`}
           >
             {faq.a}
           </div>
