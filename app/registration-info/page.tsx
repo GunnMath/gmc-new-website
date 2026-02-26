@@ -23,7 +23,7 @@ export default function RegistrationInfoPage() {
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#002E67]/10">
                 <div className="font-black text-2xl mb-2">Cost</div>
-                <div className="font-medium opacity-80">Completely FREE!<br/>(Optional $5 donation appreciated)</div>
+                <div className="font-medium opacity-80">Completely FREE!<br/>(Optional $20 donation appreciated)</div>
             </div>
         </div>
 

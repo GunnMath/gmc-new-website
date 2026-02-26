@@ -10,7 +10,8 @@ const navLinks = [
         dropdown: [
             { name: "Registration Info", href: "/registration-info" },
             { name: "Manual", href: "https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay", external: true },
-            { name: "Speaker", href: "/guest-speaker" }
+            { name: "Speaker", href: "/guest-speaker" },
+            { name: "Campus Map", href: "/map" }
         ]
     },
     {
@@ -65,7 +66,7 @@ export default function NavBar() {
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
                 
                 {/* Logo Area */}
-                <Link href="/" onClick={() => setActiveDropdown(null)} className="font-semibold text-2xl tracking-tighter text-white flex items-center gap-3 group">
+                <Link href="/" onClick={() => setActiveDropdown(null)} className="font-black text-2xl tracking-tighter text-white flex items-center gap-3 group">
                     <img 
                         src="/fsh.png" 
                         alt="GMC Logo" 
@@ -84,7 +85,7 @@ export default function NavBar() {
                             <div key={item.name} className="relative">
                                 <button 
                                     onClick={() => toggleDropdown(item.name)}
-                                    className="text-sm font-semibold text-white/80 hover:text-white uppercase tracking-wider transition-colors flex items-center gap-1 py-4"
+                                    className="text-base font-semibold text-white/80 hover:text-white transition-colors flex items-center gap-1 py-4"
                                 >
                                     {item.name}
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className={`w-3 h-3 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`}>
@@ -100,7 +101,7 @@ export default function NavBar() {
                                                 href={subItem.href}
                                                 target={subItem.external ? "_blank" : undefined}
                                                 rel={subItem.external ? "noopener noreferrer" : undefined}
-                                                className="block px-5 py-2.5 text-sm font-semibold text-[#002E67] hover:bg-blue-50 hover:text-[#155EA5] transition-colors"
+                                                className="block px-5 py-2.5 text-base font-semibold text-[#002E67] hover:bg-blue-50 hover:text-[#155EA5] transition-colors"
                                                 onClick={() => setActiveDropdown(null)}
                                             >
                                                 {subItem.name}
@@ -114,7 +115,7 @@ export default function NavBar() {
                                 key={item.name} 
                                 href={item.href}
                                 onClick={() => setActiveDropdown(null)}
-                                className="text-sm font-semibold text-white/80 hover:text-white uppercase tracking-wider transition-colors py-4"
+                                className="text-base font-semibold text-white/80 hover:text-white transition-colors py-4"
                             >
                                 {item.name}
                             </Link>
@@ -125,7 +126,7 @@ export default function NavBar() {
                         href="https://contestdojo.com/register"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white text-[#002E67] px-5 py-2 rounded-full font-semibold text-sm hover:bg-blue-50 transition-all hover:scale-105 shadow-md ml-2"
+                        className="bg-white text-[#002E67] px-5 py-2 rounded-full font-semibold text-base hover:bg-blue-50 transition-all hover:scale-105 shadow-md ml-2"
                     >
                         Register
                     </a>
@@ -153,7 +154,7 @@ export default function NavBar() {
                         item.dropdown ? (
                             <div key={item.name} className="py-3 border-b border-white/5">
                                 <button 
-                                    className="w-full text-left flex justify-between items-center text-xs font-semibold text-blue-300 uppercase tracking-widest mb-3 pl-2"
+                                    className="w-full text-left flex justify-between items-center text-base font-semibold text-blue-300 mb-3 pl-2"
                                     onClick={() => toggleDropdown(`mobile-${item.name}`)}
                                 >
                                     {item.name}

@@ -19,13 +19,6 @@ const SPONSORS_DATA = [
         url: "https://www.cityofpaloalto.org/Home"
     },
     {
-        name: "National Math Camps",
-        tier: "Gold",
-        desc: "NMC is an organization that runs immersive summer math enrichment camps where mathematically talented students explore advanced concepts with expert instructors, build community with peers, and grow their problem-solving skills in a supportive, residential setting.",
-        img: "/sponsors/nationalmathcamps.png",
-        url: "https://www.nationalmathcamps.org/"
-    },
-    {
         name: "LIVE by Po-Shen Loh",
         tier: "Silver",
         desc: "LIVE, by Po-Shen Loh is the first and only online math course that captivates, entertains, and inspires. Invented by legendary math coach Po-Shen Loh. Taught by instructors who are not only brilliant at math but also skilled in performance arts. Sign up for a trial class to shatter your expectations for mathematics at their website.",
