@@ -2,7 +2,32 @@
 
 import React, { useState, useEffect } from "react";
 import NavBar from '@/components/nav';
-import { ORGANIZERS_DATA } from './ORGANIZERS_DATA';
+
+// We put the data directly in the file to prevent the "Module not found" error!
+const ORGANIZERS_DATA = [
+  { name: "Aarush", image: "/staff/Aarush.jpg" },
+  { name: "Aiden", image: "/staff/Aiden.jpg" },
+  { name: "Albert", image: "/staff/Albert.jpg" },
+  { name: "Alex B", image: "/staff/AlexB.jpg" },
+  { name: "Alex P", image: "/staff/AlexP.jpg" },
+  { name: "Alex T", image: "/staff/AlexT.jpg" },
+  { name: "Cameron", image: "/staff/Cameron.jpg" },
+  { name: "Chanew", image: "/staff/Chanew.jpg" },
+  { name: "Daphne", image: "/staff/Daphne.jpg" },
+  { name: "Elliot", image: "/staff/Elliot.jpg" },
+  { name: "Grace", image: "/staff/Grace.jpg" },
+  { name: "Haridas", image: "/staff/Haridas.jpg" },
+  { name: "Inhoo", image: "/staff/Inhoo.jpg" },
+  { name: "James", image: "/staff/James.jpg" },
+  { name: "Mary", image: "/staff/Mary.jpg" },
+  { name: "Michael", image: "/staff/Michael.jpg" },
+  { name: "Neil", image: "/staff/Neil.jpg" },
+  { name: "Nicholas", image: "/staff/Nicholas.jpg" },
+  { name: "Olivia", image: "/staff/Olivia.jpg" },
+  { name: "Reed", image: "/staff/Reed.jpg" },
+  { name: "Sami", image: "/staff/Sami.jpg" },
+  { name: "Vineet", image: "/staff/Vineet.jpg" },
+];
 
 export default function Organizers() {
   const [offset, setOffset] = useState(0);
@@ -12,9 +37,6 @@ export default function Organizers() {
       window.addEventListener("scroll", handleScroll);
       return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Combine everyone into a single list
-  const allPeople = ORGANIZERS_DATA.flatMap(group => group.people);
 
   return (
     <main className="bg-[#e4efff] min-h-screen text-[#002e66] relative overflow-x-hidden">
@@ -55,27 +77,21 @@ export default function Organizers() {
 
       <div className="px-6 md:px-20 py-24 max-w-7xl mx-auto">
         <div className="space-y-20">
-            {/* All organizers under one heading */}
             <div>
                 <h2 className="text-3xl font-black text-[#002E67] mb-10 border-b-2 border-[#155EA5]/30 pb-4 inline-block">
                     Organizers
                 </h2>
                 
-                {/* Adjusted grid for just images (grid-cols-2 sm:grid-cols-4 lg:grid-cols-5) */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-8">
-                    {allPeople.map(p => (
+                    {ORGANIZERS_DATA.map(p => (
                         <div key={p.name} className="flex flex-col items-center text-center group">
                             <img 
                                 src={p.image} 
                                 alt={p.name} 
                                 className="w-32 h-32 rounded-full object-cover border-4 border-[#002E67]/10 group-hover:border-[#002E67] transition-all duration-300 shadow-lg" 
                             />
-                            
-                            {/* COMMENTED OUT CODE as requested */}
-                            {/* <h3 className="font-bold text-xl text-[#002E67] mt-5">{p.name}</h3>
-                            <p className="text-sm text-[#155EA5] font-semibold mb-3">{p.role}</p>
-                            <p className="text-sm text-[#002E67]/70 font-medium leading-relaxed">{p.bio}</p>
-                            */}
+                            {/* Uncommented the name so it shows up now! */}
+                            <h3 className="font-bold text-xl text-[#002E67] mt-4">{p.name}</h3>
                         </div>
                     ))}
                 </div>
