@@ -24,12 +24,15 @@ const sponsors: Sponsor[] = [
   { name: "DRW", src: "/sponsors/DRW.png", url: "https://www.drw.com/", tier: "Silver" },
   { name: "Stanford Research Park", src: "/sponsors/SRP.png", url: "https://stanfordresearchpark.com/", tier: "Silver" },
   { name: "Susquehanna International Group", src: "/sponsors/SIG.png", url: "https://sig.com/", tier: "Silver" },
+  { name: "Jump Trading", src: "/sponsors/jump.png", url: "https://jumptrading.com/", tier: "Silver" },
 
   // --- BRONZE ---
   { name: "AoPS Academy", src: "/sponsors/aopsacademy.png", url: "https://aopsacademy.org/campus/mountainview", tier: "Bronze" },
   { name: "Euler Circle", src: "/sponsors/eulercircle.png", url: "https://eulercircle.com/", tier: "Bronze" },
   { name: "Wolfram", src: "/sponsors/wolfram.png", url: "https://www.wolfram.com/", tier: "Bronze" },
   { name: "ContestDojo", src: "/sponsors/contestdojo.png", url: "https://contestdojo.com/", tier: "Bronze" },
+  { name: "AoPS Online", src: "/sponsors/aops.png", url: "https://aops.com", tier: "Bronze" },
+  { name: "AwesomeMath", src: "/sponsors/awesomeMath.png", url: "https://awesomemath.org/", tier: "Bronze" },
 ];
 
 const TierSection = ({ tier, color, data }: { tier: SponsorTier; color: string; data: Sponsor[] }) => {
