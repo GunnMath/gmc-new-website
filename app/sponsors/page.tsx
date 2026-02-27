@@ -7,7 +7,7 @@ const SPONSORS_DATA = [
     {
         name: "Thinkfund",
         tier: "Gold",
-        desc: "The City of Palo Alto’s Think Fund is a youth mini-grant program that provides high school students with funding, mentorship, and City support to turn their ideas into community programs, events, or long-term initiatives, using revenue originally dedicated to teen services through the former Bryant Street Garage Fund.",
+        desc: "The City of Palo Alto’s Think Fund is a youth mini-grant program that provides high school students with funding, mentorship, and City support to turn their ideas into community programs, events, or long-term initiatives.",
         img: "/sponsors/thinkfund.png",
         url: "https://www.mitchellparkteenservices.org/thinkfund"
     },
@@ -21,30 +21,30 @@ const SPONSORS_DATA = [
     {
         name: "LIVE by Po-Shen Loh",
         tier: "Silver",
-        desc: "LIVE, by Po-Shen Loh is the first and only online math course that captivates, entertains, and inspires. Invented by legendary math coach Po-Shen Loh. Taught by instructors who are not only brilliant at math but also skilled in performance arts. Sign up for a trial class to shatter your expectations for mathematics at their website.",
+        desc: "LIVE, by Po-Shen Loh is the first and only online math course that captivates, entertains, and inspires. Invented by legendary math coach Po-Shen Loh.",
         img: "/sponsors/live.png",
         url: "https://live.poshenloh.com/"
     },
     {
         name: "Jane Street",
         tier: "Silver",
-        desc: "Jane Street is a global quantitative trading firm and liquidity provider trading a wide range of financial products, including ETFs, equities, futures, commodities, options, bonds, digital assets, and currencies. We excel at providing liquidity in complex markets, especially during periods of dislocation and volatility.",
+        desc: "Jane Street is a global quantitative trading firm and liquidity provider trading a wide range of financial products.",
         img: "/sponsors/janestreet.png",
         url: "https://www.janestreet.com/"
     },
     {
         name: "Hudson River Trading",
         tier: "Silver",
-        desc: "Hudson River Trading brings a scientific approach to trading financial products. We have built one of the world’s most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading.",
+        desc: "Hudson River Trading brings a scientific approach to trading financial products. We have built one of the world’s most sophisticated computing environments for research and development.",
         img: "/sponsors/HRT.png",
         url: "https://www.hudsonrivertrading.com/"
     },
     {
-        name: "Citadel",
+        name: "Citadel Securities",
         tier: "Silver",
-        desc: "Citadel is an American multinational hedge fund and financial services company. We drive capital to the world’s most impactful and compelling investments, leveraging our combination of talent, technology, analytics and global scale.",
+        desc: "Citadel Securities is a leading global market maker, delivering a broad suite of fixed income and equity products to clients around the world.",
         img: "/sponsors/citadel.png",
-        url: "https://www.citadel.com/"
+        url: "https://www.citadelsecurities.com/"
     },
     {
         name: "DRW",
@@ -56,35 +56,35 @@ const SPONSORS_DATA = [
     {
         name: "Susquehanna International Group",
         tier: "Silver",
-        desc: "Susquehanna is a global quantitative trading firm powered by scientific rigor, curiosity, and innovation. Our culture is intellectually driven and highly collaborative, bringing together researchers, engineers, and traders.",
+        desc: "Susquehanna is a global quantitative trading firm powered by scientific rigor, curiosity, and innovation.",
         img: "/sponsors/sig.png",
         url: "https://sig.com/"
     },
     {
         name: "Stanford Research Park",
         tier: "Silver",
-        desc: "From startup incubation to the innovation arms of global powerhouses, Stanford Research Park is the home to cutting-edge business and a top destination for people who want to shape the future.",
+        desc: "From startup incubation to the innovation arms of global powerhouses, Stanford Research Park is the home to cutting-edge business.",
         img: "/sponsors/SRP.png",
         url: "https://stanfordresearchpark.com/"
     },
     {
-        name: "Euler Circle",
-        tier: "Bronze",
-        desc: "Euler Circle is a mathematics institute for advanced students who love mathematics. It offers college-level mathematics classes specifically tailored to high-school students who have exhausted their school's curriculum, providing a pathway to deeper understanding and independent research.",
-        img: "/sponsors/eulercircle.png",
-        url: "https://eulercircle.com/"
-    },
-    {
         name: "AoPS Academy",
         tier: "Bronze",
-        desc: "AoPS Academy is an after-school enrichment program with a mission to teach problem solving skills through advanced math, language arts, and science courses. GMC is supported by the Mountain View Campus.",
+        desc: "AoPS Academy is an after-school enrichment program with a mission to teach problem solving skills through advanced math, language arts, and science courses.",
         img: "/sponsors/aopsacademy.png",
         url: "https://aopsacademy.org/campus/mountainview"
     },
     {
+        name: "Euler Circle",
+        tier: "Bronze",
+        desc: "Euler Circle is a mathematics institute for advanced students who love mathematics. It offers college-level mathematics classes specifically tailored to high-school students.",
+        img: "/sponsors/eulercircle.png",
+        url: "https://eulercircle.com/"
+    },
+    {
         name: "Wolfram",
         tier: "Bronze",
-        desc: "Founded by Stephen Wolfram in 1987, Wolfram Research is one of the world's most respected computer, web and cloud software companies—as well as a powerhouse of scientific and technical innovation.",
+        desc: "Wolfram Research is one of the world's most respected computer, web and cloud software companies—as well as a powerhouse of scientific and technical innovation.",
         img: "/sponsors/wolfram.png",
         url: "https://www.wolfram.com/"
     },
