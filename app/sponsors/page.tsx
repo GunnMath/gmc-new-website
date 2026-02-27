@@ -57,7 +57,7 @@ const SPONSORS_DATA = [
         name: "Susquehanna International Group",
         tier: "Silver",
         desc: "Susquehanna is a global quantitative trading firm powered by scientific rigor, curiosity, and innovation.",
-        img: "/sponsors/sig.png",
+        img: "/sponsors/SIG.png",
         url: "https://sig.com/"
     },
     {
