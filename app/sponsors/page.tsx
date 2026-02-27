@@ -54,7 +54,7 @@ const SPONSORS_DATA = [
         url: "https://www.drw.com/"
     },
     {
-        name: "Susquehanna International Group",
+        name: "Susquehanna",
         tier: "Silver",
         desc: "Susquehanna is a global quantitative trading firm powered by scientific rigor, curiosity, and innovation.",
         img: "/sponsors/SIG.png",
@@ -66,6 +66,13 @@ const SPONSORS_DATA = [
         desc: "From startup incubation to the innovation arms of global powerhouses, Stanford Research Park is the home to cutting-edge business.",
         img: "/sponsors/SRP.png",
         url: "https://stanfordresearchpark.com/"
+    },
+    {
+        name: "Jump Trading",
+        tier: "Silver",
+        desc: "Jump Trading is a global trading firm where smart people build remarkable things. We’ve spent over two decades developing the research, infrastructure, and culture necessary to create a home for people who believe trading is the most interesting problem in the world and want to solve it from every angle. We’re traders, builders, engineers, and researchers obsessed with improving the models, tools, and systems that power everything we do. From raw silicon through order execution, we tackle problems few ever get to see.",
+        img: "/sponsors/jump.png",
+        url: "https://jumptrading.com/"
     },
     {
         name: "AoPS Academy",
