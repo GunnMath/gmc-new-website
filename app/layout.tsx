@@ -1,6 +1,34 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
+
+// Configure your local Mont fonts and CREATE A CSS VARIABLE
+const mont = localFont({
+  src: [
+    {
+      path: './fonts/Mont-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Mont-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Mont-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Mont-Black.woff2',
+      weight: '900',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-mont', // THIS IS CRITICAL
+});
 
 export const metadata: Metadata = {
   title: "Gunn Math Competition",
@@ -13,10 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link href="https://fonts.cdnfonts.com/css/mont" rel="stylesheet" />
-      </head>
+    <html lang="en" className={`${mont.variable}`}>
       <body className="font-sans antialiased flex flex-col min-h-screen" suppressHydrationWarning>
         <div className="flex-grow">
           {children}

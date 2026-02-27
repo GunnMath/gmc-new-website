@@ -30,6 +30,30 @@ const YEARS = [
       },
     
   {
+    year: "2025",
+    exams: [
+      { name: "Individual A", link: "/2025/Individual_A.pdf" },
+      { name: "Individual A Solutions", link: "/2025/Individual_A_Solutions.pdf" },
+      { name: "Individual B", link: "/2025/Individual_B.pdf" },
+      { name: "Individual B Solutions", link: "/2025/Individual_B_Solutions.pdf" },
+      { name: "Team A", link: "/2025/Team_A.pdf" },
+      { name: "Team A Solutions", link: "/2025/Team_A_Solutions.pdf" },
+      { name: "Team B", link: "/2025/Team_B.pdf" },
+      { name: "Team B Solutions", link: "/2025/Team_B_Solutions.pdf" },
+      { name: "Guts A", link: "/2025/Guts_A.pdf" },
+      { name: "Guts A Solutions", link: "/2025/Guts_A_Solutions.pdf" },
+      { name: "Guts B", link: "/2025/Guts_B.pdf" },
+      { name: "Guts B Solutions", link: "/2025/Guts_B_Solutions.pdf" },
+      { name: "Tiebreaks A", link: "/2025/Tiebreaks_A.pdf" },
+      { name: "Tiebreaks A Solutions", link: "/2025/Tiebreaks_A_Solutions.pdf" },
+      { name: "Tiebreaks B", link: "/2025/Tiebreaks_B.pdf" },
+      { name: "Tiebreaks B Solutions", link: "/2025/Tiebreaks_B_Solutions.pdf" },
+      { name: "Estimathon", link: "/2025/Estimathon.pdf" },
+      { name: "Estimathon Solutions", link: "/2025/Estimathon_Solutions.pdf" },
+      { name: "Awards", link: "/2025/Awards.pdf" },
+    ]
+  },
+  {
     year: "2024",
     exams: [
       { name: "Individual A", link: "/2024/Individual_A.pdf" },

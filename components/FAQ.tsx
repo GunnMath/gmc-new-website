@@ -1,14 +1,23 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 
 const faqs = [
+  {
+    q: "How do I sign up?",
+    a: (
+      <>
+        You can register your team through ContestDojo. For a step-by-step guide, please visit our <Link href="/registration-info" className="text-[#155EA5] underline font-semibold hover:text-[#002E67] transition-colors">Registration Information</Link> page.
+      </>
+    )
+  },
   {
     q: "How much does it cost to participate?",
     a: "The tournament is completely free! However, an optional $20 donation is greatly appreciated to help support Gunn Math Circle."
   },
   {
     q: "What materials are allowed during the competition?",
-    a: "You may only use writing utensils and protractors. All scratch paper will be provided by the proctors, so please do not bring your own. Calculators and all electronic devices are strictly prohibited across all rounds (including the Estimathon and tiebreakers)."
+    a: "You may only use writing utensils. All scratch paper will be provided by the proctors, so please do not bring your own. Protractors, calculators, and all electronic devices are strictly prohibited across all rounds (including the Estimathon and tiebreakers)."
   },
   {
     q: "Do I need a full team of 4 to compete?",
@@ -28,7 +37,11 @@ const faqs = [
   },
   {
     q: "Where should attendees park?",
-    a: "Attendees should park in the main parking lot next to the front office, as it is the closest lot to the main locations for the competition (Bow Gym and N-Building)."
+    a: (
+      <>
+        Attendees should park in the main parking lot next to the front office, as it is the closest lot to the main locations for the competition (Bow/Titan Gym and N-Building). For more details and directions, please check out our <Link href="/map" className="text-[#155EA5] underline font-semibold hover:text-[#002E67] transition-colors">Campus Map</Link> page.
+      </>
+    )
   }
 ];
 
@@ -37,7 +50,7 @@ export default function FAQ() {
 
   return (
     <div className="w-full max-w-4xl mx-auto space-y-4">
-      <h2 className="text-3xl md:text-4xl font-black text-[#002E67] mb-8 text-center tracking-tight">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#002E67] mb-8 text-center tracking-tight">
         Frequently Asked Questions
       </h2>
       {faqs.map((faq, index) => (
@@ -49,7 +62,7 @@ export default function FAQ() {
             className="w-full px-6 py-5 text-left flex justify-between items-center bg-white"
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
           >
-            <span className="font-black text-[#002E67] text-lg pr-4">{faq.q}</span>
+            <span className="font-semibold text-[#002E67] text-lg pr-4">{faq.q}</span>
             <svg 
               className={`w-6 h-6 text-[#002E67] flex-shrink-0 transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} 
               fill="none" 
@@ -60,7 +73,7 @@ export default function FAQ() {
             </svg>
           </button>
           <div 
-            className={`px-6 text-[#002E67]/80 font-medium overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-40 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}
+            className={`px-6 text-[#002E67]/80 font-medium overflow-hidden transition-all duration-500 ${openIndex === index ? 'max-h-[1000px] pb-5 opacity-100' : 'max-h-0 opacity-0'}`}
           >
             {faq.a}
           </div>

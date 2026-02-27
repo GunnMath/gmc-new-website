@@ -5,7 +5,7 @@ import NavBar from "@/components/nav";
 
 const staff = [
     {
-        role: "Director",
+        role: "Head of Operations",
         members: ["Chanew Kim"]
     },
     {

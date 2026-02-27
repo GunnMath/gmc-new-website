@@ -13,8 +13,8 @@ const config: Config = {
         lightblue: "#e4efff",
       },
       fontFamily: {
-        // This sets Mont as the default font for the whole site
-        sans: ["Mont", "sans-serif"], 
+        // Link the default Tailwind font to the CSS variable
+        sans: ['var(--font-mont)', 'sans-serif'], 
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

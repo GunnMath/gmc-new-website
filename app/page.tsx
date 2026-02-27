@@ -1,15 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Heading1, Heading2, Paragraph } from '@/components/headers';
 import NavBar from '@/components/nav';
 import Sponsors from '@/components/Sponsors';
 
 const InfoBlock = (props: { header: string; children: string }) => {
   return (
     <div className="flex-1 min-w-[200px] p-6 rounded-2xl border-2 border-[#002E67]/10 bg-white hover:border-[#002E67] transition-all shadow-sm text-center md:text-left group">
-      <div className="text-xl font-black text-[#002E67] mb-1 group-hover:scale-105 transition-transform origin-left">{props.header}</div>
-      <div className="text-[#002E67]/70 text-sm font-bold leading-tight">{props.children}</div>
+      <div className="text-xl font-bold text-[#002E67] mb-1 group-hover:scale-105 transition-transform origin-left">{props.header}</div>
+      <div className="text-[#002E67]/80 text-sm font-medium leading-tight">{props.children}</div>
     </div>
   );
 };
@@ -40,10 +39,10 @@ export default function Home() {
       {/* FLOATING ACTION BUTTONS */}
       <div className={`fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 flex flex-col gap-4 transition-all duration-500 ease-out ${showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
         <a 
-          href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" 
+          href="https://contestdojo.com/register" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-[#002E67] text-white font-bold py-3 px-6 rounded-full shadow-xl hover:bg-[#004080] hover:scale-105 transition-all flex items-center justify-center gap-2 border-2 border-transparent"
+          className="bg-[#002E67] text-white font-semibold py-3 px-6 rounded-full shadow-xl hover:bg-[#004080] hover:scale-105 transition-all flex items-center justify-center gap-2 border-2 border-transparent"
         >
           <span className="hidden md:inline">Register Now</span>
           <span className="md:hidden">Register</span>
@@ -79,11 +78,12 @@ export default function Home() {
             style={{ transform: `translateY(${offset * 0.2}px)` }}
           >
             <div className="inline-block">
-              <span className="bg-white/10 text-[#E4EFFF] font-bold px-4 py-1.5 rounded-full text-xs md:text-sm tracking-widest uppercase mb-2 inline-block border border-white/20">
+              <span className="bg-white/10 text-[#E4EFFF] font-semibold px-4 py-1.5 rounded-full text-sm md:text-base mb-2 inline-block border border-white/20">
                 Fifth Annual
               </span>
             </div>
             
+            {/* The ONLY font-black header */}
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-[#E4EFFF] leading-[1.1] tracking-tighter">
               GUNN MATH<br className="hidden md:block" /> COMPETITION
             </h1>
@@ -107,7 +107,7 @@ export default function Home() {
 
         {/* SCROLL INDICATOR */}
         <div className={`absolute bottom-8 left-0 right-0 flex flex-col items-center justify-center pointer-events-none transition-opacity duration-500 hidden md:flex ${offset > 50 ? 'opacity-0' : 'opacity-100 animate-bounce'}`}>
-            <span className="text-[#E4EFFF]/50 text-xs font-bold uppercase tracking-[0.2em] mb-2">Scroll</span>
+            <span className="text-[#E4EFFF]/50 text-base font-semibold mb-2">Scroll</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="rgba(228, 239, 255, 0.5)" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
             </svg>
@@ -126,7 +126,7 @@ export default function Home() {
       {/* Event Info & Registration */}
       <div className="bg-[#001332] py-16 px-6 md:px-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 text-[#E4EFFF] font-bold text-lg md:text-2xl">
+            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 text-[#E4EFFF] font-semibold text-lg md:text-2xl">
               <div className="flex items-center justify-center gap-3">
                 <div className="w-10 h-1 bg-blue-400 rounded-full"></div>
                 <span>Sunday, March 29th, 2026</span>
@@ -138,15 +138,14 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 w-full flex-wrap">
-               <a href="https://docs.google.com/document/d/1qopZbE5LUcpiWEU_osvv0JdezB_i2LFfhR9zKfjFtks/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-black text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all flex items-center justify-center">
+               <a href="https://contestdojo.com/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all flex items-center justify-center">
                  Register Now
                </a>
-               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-bold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center">
-                 Event Manual
+               <a href="/registration-info" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center">
+                 How to Register
                </a>
-               <a href="https://discord.gg/7EBjsHUppM" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-[#5865F2]/20 border-2 border-[#5865F2]/50 text-[#E4EFFF] font-bold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-[#5865F2]/40 transition-all flex items-center justify-center gap-2">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 127.14 96.36"><path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.08 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.73 56.6 .37 80.39a105.73 105.73 0 0 0 32.15 15.97 77.7 77.7 0 0 0 6.89-11.1 66.25 66.25 0 0 1-10.85-5.18c.9-.66 1.8-1.34 2.66-2a75.5 75.5 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a66.28 66.28 0 0 1-10.88 5.15 77.34 77.34 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-15.97c2.5-27.11-3.6-51.05-18.7-72.29Zm-64.84 57.1c-5.83 0-10.63-5.32-10.63-11.83 0-6.55 4.7-11.87 10.63-11.87 6.03 0 10.73 5.37 10.63 11.87 0 6.51-4.7 11.83-10.63 11.83Zm41.42 0c-5.83 0-10.63-5.32-10.63-11.83 0-6.55 4.7-11.87 10.63-11.87 6.03 0 10.73 5.37 10.63 11.87 0 6.51-4.6 11.83-10.63 11.83Z"/></svg>
-                 Discord
+               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto border-2 border-white/30 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all">
+                 Event Manual
                </a>
             </div>
         </div>
@@ -169,13 +168,13 @@ export default function Home() {
         {/* Registration Section */}
         <div className="grid md:grid-cols-2 gap-16 items-start">
             <div className="space-y-8">
-                <Heading1>Registration</Heading1>
-                <Paragraph>
+                <h2 className="text-3xl md:text-4xl font-bold mb-2">Registration</h2>
+                <div className="text-lg opacity-90 leading-relaxed font-medium">
                     Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
-                </Paragraph>
+                </div>
                 <div className="flex gap-4">
                     <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" className="flex-1">
-                        <div className="text-center font-bold text-xl py-4 rounded-xl bg-[#002E67] text-white hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg">
+                        <div className="text-center font-semibold text-xl py-4 rounded-xl bg-[#002E67] text-white hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg">
                         Read Manual
                         </div>
                     </a>
@@ -186,12 +185,12 @@ export default function Home() {
                 <h2 className="text-3xl font-bold mb-4">Divisions</h2>
                 <div className="space-y-6 mt-6">
                     <div className="p-4 bg-[#001332]/5 rounded-xl border border-[#002E67]/5">
-                        <h3 className="font-black text-xl mb-2">Division A</h3>
-                        <p className="opacity-90 font-bold leading-relaxed">For experienced competitors. Difficulty ranges from mid-AMC 10 to late AIME. (Required for AIME qualifiers)</p>
+                        <h3 className="font-bold text-2xl mb-2">Division A</h3>
+                        <p className="font-medium opacity-80 leading-relaxed">For experienced competitors. Difficulty ranges from mid-AMC 10 to late AIME. (Required for AIME qualifiers)</p>
                     </div>
                     <div className="p-4 bg-[#001332]/5 rounded-xl border border-[#002E67]/5">
-                        <h3 className="font-black text-xl mb-2">Division B</h3>
-                        <p className="opacity-90 font-bold leading-relaxed">For students newer to competition math. Difficulty ranges from AMC 8 to late AMC 10.</p>
+                        <h3 className="font-bold text-2xl mb-2">Division B</h3>
+                        <p className="font-medium opacity-80 leading-relaxed">For students newer to competition math. Difficulty ranges from AMC 8 to late AMC 10.</p>
                     </div>
                 </div>
             </div>
@@ -200,15 +199,15 @@ export default function Home() {
         {/* Schedule Section */}
         <div>
             <div className="text-center mb-16">
-              <h1 className="font-black text-5xl md:text-6xl text-[#E4EFFF]">Schedule</h1>
-              <div className="font-bold text-[#E4EFFF]/40 mt-3 uppercase tracking-widest text-sm">Subject to change</div>
+              <h2 className="font-bold text-5xl md:text-6xl text-[#E4EFFF]">Schedule</h2>
+              <div className="font-semibold text-[#E4EFFF]/50 mt-3 text-lg">Subject to change</div>
             </div>
             
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-white/50">
-                <div className="grid grid-cols-1 md:grid-cols-[150px_1fr_200px] border-b border-gray-100 bg-[#002E67] text-white font-bold p-4 md:px-8 hidden md:grid">
-                    <div>TIME</div>
-                    <div>EVENT</div>
-                    <div className="text-right">LOCATION</div>
+                <div className="grid grid-cols-1 md:grid-cols-[150px_1fr_200px] border-b border-gray-100 bg-[#002E67] text-white font-semibold p-4 md:px-8 hidden md:grid text-lg">
+                    <div>Time</div>
+                    <div>Event</div>
+                    <div className="text-right">Location</div>
                 </div>
                 
                 <div className="divide-y divide-gray-100">
@@ -219,15 +218,15 @@ export default function Home() {
                         { time: "9:15 - 10:00", event: "Guest Speaker for Parents", loc: "Bow Gym", highlight: true },
                         { time: "10:25 - 11:25", event: "Team Round", loc: "N-Building" },
                         { time: "11:30 - 12:15", event: "Lunch", loc: "Bow Gym" },
-                        { time: "12:30 - 14:00", event: "Guts Round", loc: "Bow Gym" },
+                        { time: "12:30 - 14:00", event: "Guts Round", loc: "Bow/Titan Gym" },
                         { time: "14:15 - 15:30", event: "Activities / Tiebreakers", loc: "N-Building" },
-                        { time: "15:45 - 17:30", event: "Activities Block 2", loc: "Bow Gym" },
-                        { time: "17:30 - 18:00", event: "Awards Ceremony", loc: "Bow Gym" },
+                        { time: "15:45 - 17:30", event: "Activities Block 2", loc: "Bow/Titan Gym" },
+                        { time: "17:30 - 18:00", event: "Awards Ceremony", loc: "Bow/Titan Gym" },
                     ].map((item, i) => (
                         <div key={i} className={`p-6 md:px-8 grid grid-cols-1 md:grid-cols-[150px_1fr_200px] gap-2 items-center hover:bg-blue-50 transition-colors ${item.highlight ? 'bg-blue-50/50' : ''}`}>
-                            <div className="font-mono font-bold text-[#002E67] opacity-80">{item.time}</div>
-                            <div className={`font-bold text-lg ${item.highlight ? 'text-blue-600' : 'text-[#002E67]'}`}>{item.event}</div>
-                            <div className="text-[#002E67]/50 font-medium md:text-right">{item.loc}</div>
+                            <div className="font-semibold text-[#002E67] opacity-80 text-lg md:text-xl">{item.time}</div>
+                            <div className={`font-semibold text-lg md:text-xl ${item.highlight ? 'text-blue-600' : 'text-[#002E67]'}`}>{item.event}</div>
+                            <div className="font-semibold text-[#002E67]/60 md:text-right text-lg">{item.loc}</div>
                         </div>
                     ))}
                 </div>
