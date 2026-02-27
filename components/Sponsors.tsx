@@ -23,7 +23,7 @@ const sponsors: Sponsor[] = [
   { name: "Citadel Securities", src: "/sponsors/citadel.png", url: "https://www.citadelsecurities.com/", tier: "Silver" },
   { name: "DRW", src: "/sponsors/DRW.png", url: "https://www.drw.com/", tier: "Silver" },
   { name: "Stanford Research Park", src: "/sponsors/SRP.png", url: "https://stanfordresearchpark.com/", tier: "Silver" },
-  { name: "Susquehanna International Group", src: "/sponsors/sig.png", url: "https://sig.com/", tier: "Silver" },
+  { name: "Susquehanna International Group", src: "/sponsors/SIG.png", url: "https://sig.com/", tier: "Silver" },
 
   // --- BRONZE ---
   { name: "AoPS Academy", src: "/sponsors/aopsacademy.png", url: "https://aopsacademy.org/campus/mountainview", tier: "Bronze" },
