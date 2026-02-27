@@ -17,22 +17,19 @@ const sponsors: Sponsor[] = [
   { name: "City of Palo Alto", src: "/sponsors/PaloAlto.png", url: "https://www.cityofpaloalto.org/Home", tier: "Gold" },
   
   // --- SILVER ---
-  { name: "DRW", src: "/sponsors/DRW.png", url: "https://www.drw.com/", tier: "Silver" },
+  { name: "LIVE by Po-Shen Loh", src: "/sponsors/live.png", url: "https://live.poshenloh.com/", tier: "Silver" },
   { name: "Jane Street", src: "/sponsors/janestreet.png", url: "https://www.janestreet.com/", tier: "Silver" },
   { name: "Hudson River Trading", src: "/sponsors/HRT.png", url: "https://www.hudsonrivertrading.com/", tier: "Silver" },
   { name: "Citadel Securities", src: "/sponsors/citadel.png", url: "https://www.citadelsecurities.com/", tier: "Silver" },
-  { name: "LIVE by Po-Shen Loh", src: "/sponsors/live.png", url: "https://live.poshenloh.com/", tier: "Silver" },
-  { name: "Susquehanna International Group", src: "/sponsors/SIG.png", url: "https://sig.com/", tier: "Silver" },
+  { name: "DRW", src: "/sponsors/DRW.png", url: "https://www.drw.com/", tier: "Silver" },
   { name: "Stanford Research Park", src: "/sponsors/SRP.png", url: "https://stanfordresearchpark.com/", tier: "Silver" },
   { name: "Susquehanna International Group", src: "/sponsors/sig.png", url: "https://sig.com/", tier: "Silver" },
 
   // --- BRONZE ---
-  { name: "Euler Circle", src: "/sponsors/eulercircle.png", url: "https://eulercircle.com/", tier: "Bronze" },
-  { name: "ContestDojo", src: "/sponsors/contestdojo.png", url: "https://contestdojo.com/", tier: "Bronze" },
   { name: "AoPS Academy", src: "/sponsors/aopsacademy.png", url: "https://aopsacademy.org/campus/mountainview", tier: "Bronze" },
-  { name: "AwesomeMath", src: "/sponsors/awesomeMath.png", url: "https://www.awesomemath.org/", tier: "Bronze" },
-  { name: "Art of Problem Solving", src: "/sponsors/aops.png", url: "https://artofproblemsolving.com/", tier: "Bronze" },
+  { name: "Euler Circle", src: "/sponsors/eulercircle.png", url: "https://eulercircle.com/", tier: "Bronze" },
   { name: "Wolfram", src: "/sponsors/wolfram.png", url: "https://www.wolfram.com/", tier: "Bronze" },
+  { name: "ContestDojo", src: "/sponsors/contestdojo.png", url: "https://contestdojo.com/", tier: "Bronze" },
 ];
 
 const TierSection = ({ tier, color, data }: { tier: SponsorTier; color: string; data: Sponsor[] }) => {
