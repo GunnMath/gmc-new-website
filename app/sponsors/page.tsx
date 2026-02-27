@@ -95,6 +95,20 @@ const SPONSORS_DATA = [
         img: "/sponsors/contestdojo.png",
         url: "https://contestdojo.com/"
     },
+    {
+        name: "AoPS Online",
+        tier: "Bronze",
+        desc: "Art of Problem Solving (AoPS) is an educational organization founded in 2003 by mathematician Richard Rusczyk. It provides textbooks, online courses, and community resources designed to help middle and high school students strengthen their mathematics and problem-solving skills, particularly in preparation for mathematics competitions.",
+        img: "/sponsors/aops.png",
+        url: "https://aops.com/"
+    },
+    {
+        name: "AwesomeMath",
+        tier: "Bronze",
+        desc: "AwesomeMath is devoted to providing enriching experiences in mathematics and physics for intellectually curious learners. Through our summer programs, year-round academy, online journal, and publications, AwesomeMath fosters a community that values creativity, passionate problem-solving, and lifetime learning.",
+        img: "/sponsors/awesomeMath.png",
+        url: "https://awesomemath.org/"
+    },
 ];
 
 export default function SponsorsPage() {
