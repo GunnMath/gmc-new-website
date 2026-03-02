@@ -83,7 +83,6 @@ export default function Home() {
               </span>
             </div>
             
-            {/* The ONLY font-black header */}
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-[#E4EFFF] leading-[1.1] tracking-tighter">
               GUNN MATH<br className="hidden md:block" /> COMPETITION
             </h1>
@@ -125,8 +124,14 @@ export default function Home() {
 
       {/* Event Info & Registration */}
       <div className="bg-[#001332] py-16 px-6 md:px-20 text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
-            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 text-[#E4EFFF] font-semibold text-lg md:text-2xl">
+        <div className="max-w-5xl mx-auto space-y-10">
+            
+            {/* BIGGER TAGLINE */}
+            <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#E4EFFF] opacity-95 leading-tight px-4">
+               The premier high school-run math contest on the West Coast, with 250+ annual attendees.
+            </p>
+
+            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 text-[#E4EFFF] font-semibold text-lg md:text-2xl pt-4">
               <div className="flex items-center justify-center gap-3">
                 <div className="w-10 h-1 bg-blue-400 rounded-full"></div>
                 <span>Sunday, March 29th, 2026</span>
