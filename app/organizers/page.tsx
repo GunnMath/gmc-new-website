@@ -56,7 +56,7 @@ export default function Organizers() {
                       MEET THE TEAM
                   </h1>
                   <p className="text-gray-300 mt-4 text-lg font-bold">
-                      GMC is entirely organized by students from Henry M. Gunn High School in Palo Alto.
+                      GMC is entirely organized by high school students in Palo Alto, including Henry M. Gunn High School, and Palo Alto High School.
                   </p>
               </div>
 
