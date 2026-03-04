@@ -105,7 +105,7 @@ const SPONSORS_DATA = [
     {
         name: "AoPS Online",
         tier: "Bronze",
-        desc: "Art of Problem Solving (AoPS) is an educational organization founded in 2003 by mathematician Richard Rusczyk. It provides textbooks, online courses, and community resources designed to help middle and high school students strengthen their mathematics and problem-solving skills, particularly in preparation for mathematics competitions.",
+        desc: "Art of Problem Solving creates educational materials for motivated students in grades 1–12. Our books, classes, and online resources help students become creative, successful problem solvers.",
         img: "/sponsors/aops.png",
         url: "https://aops.com/"
     },
@@ -115,6 +115,13 @@ const SPONSORS_DATA = [
         desc: "AwesomeMath is devoted to providing enriching experiences in mathematics and physics for intellectually curious learners. Through our summer programs, year-round academy, online journal, and publications, AwesomeMath fosters a community that values creativity, passionate problem-solving, and lifetime learning.",
         img: "/sponsors/awesomeMath.png",
         url: "https://awesomemath.org/"
+    },
+    {
+        name: "blackpenredpen",
+        tier: "Bronze",
+        desc: "With a youtube following of 1.4 million subscribers, blackpenredpen is a youtube channel dedicated to a math professor solving math problems; particularly integrals, as seen in his 100 integrals video. His name comes from his usage of whiteboard markers in black and red.",
+        img: "/sponsors/bprp.png",
+        url: "https://www.youtube.com/c/blackpenredpen"
     },
 ];
 
