@@ -33,6 +33,7 @@ const sponsors: Sponsor[] = [
   { name: "ContestDojo", src: "/sponsors/contestdojo.png", url: "https://contestdojo.com/", tier: "Bronze" },
   { name: "AoPS Online", src: "/sponsors/aops.png", url: "https://aops.com", tier: "Bronze" },
   { name: "AwesomeMath", src: "/sponsors/awesomeMath.png", url: "https://awesomemath.org/", tier: "Bronze" },
+  { name: "blackpenredpen", src: "/sponsors/bprp.png", url: "https://www.youtube.com/c/blackpenredpen", tier: "Bronze" },
 ];
 
 const TierSection = ({ tier, color, data }: { tier: SponsorTier; color: string; data: Sponsor[] }) => {
