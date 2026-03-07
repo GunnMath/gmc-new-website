@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
-// Added TypeScript definitions so it knows 'external' is a valid, optional property
 type DropdownItem = {
     name: string;
     href: string;
@@ -77,14 +76,14 @@ export default function NavBar() {
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b border-white/20 shadow-md 
             ${scrolled ? 'bg-[#002E67]/80 backdrop-blur-xl' : 'bg-[#002E67]/10 backdrop-blur-md'}`}
         >
-            <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex justify-between lg:justify-center items-center">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between lg:justify-center items-center py-2 md:py-0">
                 
                 {/* Mobile Logo */}
-                <Link href="/" onClick={() => setActiveDropdown(null)} className="lg:hidden flex items-center group">
+                <Link href="/" onClick={() => setActiveDropdown(null)} className="lg:hidden flex items-center group py-1">
                     <img 
                         src="/fsh.png" 
                         alt="GMC Logo" 
-                        className="h-9 w-auto brightness-0 invert group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all" 
+                        className="h-[32px] w-auto brightness-0 invert group-hover:scale-105 transition-all" 
                     />
                 </Link>
 
@@ -95,7 +94,7 @@ export default function NavBar() {
                         <img 
                             src="/fsh.png" 
                             alt="GMC Logo" 
-                            className="h-9 w-auto brightness-0 invert group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all" 
+                            className="h-[40px] w-auto brightness-0 invert group-hover:scale-105 transition-all" 
                         />
                     </Link>
 
@@ -104,7 +103,7 @@ export default function NavBar() {
                             <div key={item.name} className="relative">
                                 <button 
                                     onClick={() => toggleDropdown(item.name)}
-                                    className="text-sm xl:text-base font-semibold text-[#E4EFFF] hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all flex items-center gap-1.5 py-4"
+                                    className="text-sm xl:text-base font-semibold text-[#E4EFFF] hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all flex items-center gap-1.5 py-5"
                                 >
                                     {item.name}
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className={`w-3 h-3 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`}>
@@ -112,7 +111,7 @@ export default function NavBar() {
                                     </svg>
                                 </button>
                                 
-                                <div className={`absolute left-1/2 -translate-x-1/2 top-full mt-0 w-56 bg-white/95 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 transition-all duration-200 transform origin-top overflow-hidden ${activeDropdown === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+                                <div className={`absolute left-1/2 -translate-x-1/2 top-[90%] w-56 bg-white/95 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 transition-all duration-200 transform origin-top overflow-hidden ${activeDropdown === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
                                     <div className="py-2">
                                         {item.dropdown.map(subItem => (
                                             <Link 
@@ -134,7 +133,7 @@ export default function NavBar() {
                                 key={item.name} 
                                 href={item.href || "#"}
                                 onClick={() => setActiveDropdown(null)}
-                                className="text-sm xl:text-base font-semibold text-[#E4EFFF] hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all py-4"
+                                className="text-sm xl:text-base font-semibold text-[#E4EFFF] hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all py-5"
                             >
                                 {item.name}
                             </Link>
@@ -156,7 +155,7 @@ export default function NavBar() {
                     className="lg:hidden text-white p-2 hover:scale-105 transition-transform"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-7 h-7">
                         {mobileMenuOpen ? (
                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                         ) : (
