@@ -49,7 +49,7 @@ const SPONSORS_DATA = [
     {
         name: "DRW",
         tier: "Silver",
-        desc: "We are a diversified trading firm innovating across both traditional and cutting-edge markets.",
+        desc: "DRW is a diversified trading firm with over 3 decades of experience bringing sophisticated technology and exceptional people together to operate in markets around the world. We value autonomy and the ability to quickly pivot to capture opportunities, so we operate using our own capital and trading at our own risk. At DRW, we seek the best and then get out of their way. We foster a low-ego environment with minimal hierarchy and a strong commitment to continuous learning.",
         img: "/sponsors/DRW.png",
         url: "https://www.drw.com/"
     },
@@ -63,7 +63,7 @@ const SPONSORS_DATA = [
     {
         name: "Stanford Research Park",
         tier: "Silver",
-        desc: "From startup incubation to the innovation arms of global powerhouses, Stanford Research Park is the home to cutting-edge business.",
+        desc: "Since 1951, Stanford Research Park has been the home to cutting-edge business and a top destination for people who want to shape the future. Today, the innovative companies and talented employees based in Stanford Research Park continue to pursue bold ideas and make real world impacts with initiatives ranging from life-saving therapies to robotics and cybersecurity to autonomous vehicles.",
         img: "/sponsors/SRP.png",
         url: "https://stanfordresearchpark.com/"
     },
