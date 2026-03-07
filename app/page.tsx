@@ -14,7 +14,7 @@ const InfoBlock = (props: { header: string; children: string }) => {
   );
 };
 
-// Underwater Bubbles Component (Reverted to fixed viewport illusion)
+// Underwater Bubbles Component
 const Bubbles = () => {
   const [bubbles, setBubbles] = useState<{ id: number; left: string; size: string; duration: string; delay: string }[]>([]);
 
@@ -212,7 +212,7 @@ export default function Home() {
             <div className="space-y-8">
                 <h2 className="text-3xl md:text-4xl font-bold mb-2">Registration</h2>
                 <div className="text-lg opacity-90 leading-relaxed font-medium">
-                    Create an account on ContestDojo as a student. Then register for 'GMC 2026', 'register without a coach'. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
+                    Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
                 </div>
                 <div className="flex gap-4">
                     <Link href="/registration-info" className="flex-1 relative z-10">
