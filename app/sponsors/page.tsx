@@ -49,30 +49,23 @@ const SPONSORS_DATA = [
     {
         name: "DRW",
         tier: "Silver",
-        desc: "DRW is a diversified trading firm with over 3 decades of experience bringing sophisticated technology and exceptional people together to operate in markets around the world. We value autonomy and the ability to quickly pivot to capture opportunities, so we operate using our own capital and trading at our own risk. At DRW, we seek the best and then get out of their way. We foster a low-ego environment with minimal hierarchy and a strong commitment to continuous learning. Learn more at drw.com.",
+        desc: "We are a diversified trading firm innovating across both traditional and cutting-edge markets.",
         img: "/sponsors/DRW.png",
         url: "https://www.drw.com/"
     },
     {
-        name: "Susquehanna",
+        name: "Susquehanna International Group",
         tier: "Silver",
         desc: "Susquehanna is a global quantitative trading firm powered by scientific rigor, curiosity, and innovation.",
-        img: "/sponsors/SIG.png",
+        img: "/sponsors/sig.png",
         url: "https://sig.com/"
     },
     {
         name: "Stanford Research Park",
         tier: "Silver",
-        desc: "Since 1951, Stanford Research Park has been the home to cutting-edge business and a top destination for people who want to shape the future. Today, the innovative companies and talented employees based in Stanford Research Park continue to pursue bold ideas and make real world impacts with initiatives ranging from life-saving therapies to robotics and cybersecurity to autonomous vehicles.",
+        desc: "From startup incubation to the innovation arms of global powerhouses, Stanford Research Park is the home to cutting-edge business.",
         img: "/sponsors/SRP.png",
         url: "https://stanfordresearchpark.com/"
-    },
-    {
-        name: "Jump Trading",
-        tier: "Silver",
-        desc: "Jump Trading is a global trading firm where smart people build remarkable things. We’ve spent over two decades developing the research, infrastructure, and culture necessary to create a home for people who believe trading is the most interesting problem in the world and want to solve it from every angle. We’re traders, builders, engineers, and researchers obsessed with improving the models, tools, and systems that power everything we do. From raw silicon through order execution, we tackle problems few ever get to see.",
-        img: "/sponsors/jump.png",
-        url: "https://jumptrading.com/"
     },
     {
         name: "AoPS Academy",
@@ -102,53 +95,32 @@ const SPONSORS_DATA = [
         img: "/sponsors/contestdojo.png",
         url: "https://contestdojo.com/"
     },
-    {
-        name: "AoPS Online",
-        tier: "Bronze",
-        desc: "Art of Problem Solving creates educational materials for motivated students in grades 1–12. Our books, classes, and online resources help students become creative, successful problem solvers.",
-        img: "/sponsors/aops.png",
-        url: "https://aops.com/"
-    },
-    {
-        name: "AwesomeMath",
-        tier: "Bronze",
-        desc: "AwesomeMath is devoted to providing enriching experiences in mathematics and physics for intellectually curious learners. Through our summer programs, year-round academy, online journal, and publications, AwesomeMath fosters a community that values creativity, passionate problem-solving, and lifetime learning.",
-        img: "/sponsors/awesomeMath.png",
-        url: "https://awesomemath.org/"
-    },
-    {
-        name: "blackpenredpen",
-        tier: "Bronze",
-        desc: "With a youtube following of 1.4 million subscribers, blackpenredpen is a youtube channel dedicated to a math professor solving math problems; particularly integrals, as seen in his 100 integrals video. His name comes from his usage of whiteboard markers in black and red.",
-        img: "/sponsors/bprp.png",
-        url: "https://www.youtube.com/c/blackpenredpen"
-    },
 ];
 
 export default function SponsorsPage() {
   return (
-    <main className="bg-[#e4efff] min-h-screen text-[#002e66] relative overflow-x-hidden">
+    <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative overflow-x-hidden pt-32 pb-20">
       <NavBar />
 
-      <div className="px-6 md:px-20 pt-40 pb-20 max-w-5xl mx-auto">
-        <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-7xl font-black text-[#002e66] mb-6 tracking-tight">
+      <div className="px-6 md:px-20 max-w-5xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight">
                 Our Sponsors
             </h1>
-            <p className="text-xl text-[#002e66]/70 max-w-2xl mx-auto font-medium">
+            <p className="text-xl text-blue-100/80 max-w-2xl mx-auto font-medium">
                 GMC is made possible by the generous support of these organizations.
             </p>
         </div>
 
         <div className="space-y-8">
             {SPONSORS_DATA.map((sponsor, idx) => (
-                <div key={idx} className="bg-white rounded-2xl p-8 shadow-sm flex flex-col md:flex-row gap-8 items-center md:items-start border border-[#002e66]/5">
-                    <div className="w-48 h-32 flex-shrink-0 flex items-center justify-center p-4 bg-gray-50 rounded-xl">
+                <div key={idx} className="bg-white rounded-3xl p-8 shadow-xl flex flex-col md:flex-row gap-8 items-center md:items-start border border-white/50 text-[#002E67]">
+                    <div className="w-48 h-32 flex-shrink-0 flex items-center justify-center p-4 bg-gray-50 shadow-inner rounded-xl">
                         <img src={sponsor.img} alt={sponsor.name} className="max-w-full max-h-full object-contain" />
                     </div>
                     <div className="flex-1 text-center md:text-left">
                         <div className="flex flex-col md:flex-row md:items-center gap-3 mb-3">
-                            <h2 className="text-2xl font-black text-[#002e66]">{sponsor.name}</h2>
+                            <h2 className="text-2xl font-black text-[#002E67]">{sponsor.name}</h2>
                             <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
                                 sponsor.tier === 'Gold' ? 'bg-yellow-100 text-yellow-700' :
                                 sponsor.tier === 'Silver' ? 'bg-gray-100 text-gray-600' :
@@ -157,10 +129,10 @@ export default function SponsorsPage() {
                                 {sponsor.tier} Sponsor
                             </span>
                         </div>
-                        <p className="text-[#002e66]/80 leading-relaxed font-medium">
+                        <p className="text-[#002E67]/80 leading-relaxed font-medium">
                             {sponsor.desc}
                         </p>
-                        <a href={sponsor.url} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-[#155EA5] font-bold hover:underline">
+                        <a href={sponsor.url} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-blue-600 font-bold hover:underline">
                             Visit Website &rarr;
                         </a>
                     </div>
