@@ -3,7 +3,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
-const navLinks = [
+// Added TypeScript definitions so it knows 'external' is a valid, optional property
+type DropdownItem = {
+    name: string;
+    href: string;
+    external?: boolean;
+};
+
+type NavItem = {
+    name: string;
+    href?: string;
+    dropdown?: DropdownItem[];
+};
+
+const navLinks: NavItem[] = [
     {
         name: "Contest",
         dropdown: [
@@ -119,7 +132,7 @@ export default function NavBar() {
                         ) : (
                             <Link 
                                 key={item.name} 
-                                href={item.href}
+                                href={item.href || "#"}
                                 onClick={() => setActiveDropdown(null)}
                                 className="text-sm xl:text-base font-semibold text-[#E4EFFF] hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all py-4"
                             >
@@ -190,7 +203,7 @@ export default function NavBar() {
                         ) : (
                             <Link 
                                 key={item.name} 
-                                href={item.href}
+                                href={item.href || "#"}
                                 className="text-base font-bold text-white block py-4 border-b border-white/10 hover:text-blue-200 transition-colors pl-2"
                                 onClick={() => {
                                     setMobileMenuOpen(false);
