@@ -95,7 +95,7 @@ export default function PrizesAndScoring() {
             <div className="p-4 bg-[#001332]/5 rounded-xl border border-[#002E67]/5">
                 <h3 className="font-bold text-xl mb-2">Overall Team Score</h3>
                 <p className="font-medium opacity-80 leading-relaxed">
-                  Across the three rounds, the overall team score will be <strong>weighted by ⅓-⅓-⅓</strong> for individual-team-guts. The individual component is the <strong>average of all team members' individual scores</strong> (provided that the team has at least 3 members). All component scores will be <strong>scaled to the highest achieved score</strong> for that component.
+                  Across the three rounds, the overall team score will be <strong>weighted by ⅓-⅓-⅓</strong> for individual-team-guts. The individual component is the <strong>average of all team members&apos; individual scores</strong> (provided that the team has at least 3 members). All component scores will be <strong>scaled to the highest achieved score</strong> for that component.
                 </p>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function PrizesAndScoring() {
                 Proctoring & Anti-Cheating
             </h2>
             <ul className="space-y-3 font-medium opacity-80 list-disc pl-5">
-                <li>All competitors are expected to adhere to <strong>academic honesty</strong>. Students' work and solutions to each problem should be <strong>of their own</strong>, and <strong>no discussion will be allowed</strong> until the head proctor signals it is okay to do so.</li>
+                <li>All competitors are expected to adhere to <strong>academic honesty</strong>. Students&apos; work and solutions to each problem should be <strong>of their own</strong>, and <strong>no discussion will be allowed</strong> until the head proctor signals it is okay to do so.</li>
                 <li><strong>Absolutely NO electronic devices</strong> are allowed as aids or communication devices during the rounds.</li>
                 <li><strong>Writing utensils, protractors, and blank paper</strong> are the <strong>only tools allowed</strong> for ALL rounds (including the Estimathon).</li>
                 <li>If it is decided that a certain individual has cheated, the <strong>entire team may be penalized</strong> for such actions.</li>
