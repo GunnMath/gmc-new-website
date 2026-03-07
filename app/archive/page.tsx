@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import NavBar from '@/components/nav';
 
 const YEARS = [
-    
   {
     year: "2025",
     exams: [
@@ -88,10 +87,10 @@ export default function Archive() {
   }, []);
 
   return (
-    <main className="bg-[#e4efff] min-h-screen text-[#002e66] relative overflow-x-hidden">
+    <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative overflow-x-hidden pb-20">
       <NavBar />
 
-      <div className="bg-[#002E67] pt-40 pb-16 px-6 md:px-20 relative overflow-hidden">
+      <div className="pt-40 pb-16 px-6 md:px-20 relative overflow-hidden">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
               
               <div 
@@ -104,7 +103,7 @@ export default function Archive() {
                   <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight">
                       ARCHIVE
                   </h1>
-                  <p className="text-gray-300 mt-4 text-lg font-bold">
+                  <p className="text-gray-300 mt-4 text-lg font-medium opacity-90">
                       Review problems and solutions from previous years of the Gunn Math Competition.
                   </p>
               </div>
@@ -124,12 +123,12 @@ export default function Archive() {
           </div>
       </div>
 
-      <div className="px-6 md:px-20 py-20 max-w-7xl mx-auto space-y-16">
+      <div className="px-6 md:px-20 py-10 max-w-7xl mx-auto space-y-16 relative z-10">
         <div className="space-y-16">
             {YEARS.map((yearGroup) => (
                 <div key={yearGroup.year} className="relative">
                     <div className="relative z-10">
-                        <h2 className="text-3xl font-black text-[#002e66] mb-8 border-b-2 border-[#155EA5]/30 pb-4 inline-block">
+                        <h2 className="text-3xl font-black text-white mb-8 border-b-2 border-blue-400/50 pb-4 inline-block">
                             {yearGroup.year}
                         </h2>
                         
@@ -140,13 +139,13 @@ export default function Archive() {
                                     href={exam.link} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="bg-white p-4 rounded-xl shadow-sm hover:shadow-lg border border-[#002e66]/5 hover:border-[#155EA5] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-[100px] group"
+                                    className="bg-white p-4 rounded-xl shadow-sm hover:shadow-white/20 border border-[#002E67]/10 hover:border-blue-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-[100px] group"
                                 >
-                                    <div className="font-bold text-[#002e66] text-lg leading-tight group-hover:text-[#155EA5] transition-colors">
+                                    <div className="font-bold text-[#002E67] text-lg leading-tight group-hover:text-blue-600 transition-colors">
                                         {exam.name.replace("Individual", "Indiv.")}
                                     </div>
                                     <div className="flex justify-end">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-5 h-5 text-[#002e66]/30 group-hover:text-[#155EA5]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-5 h-5 text-[#002E67]/30 group-hover:text-blue-600">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                         </svg>
                                     </div>

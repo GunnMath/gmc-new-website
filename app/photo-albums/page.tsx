@@ -1,46 +1,83 @@
 "use client";
-import React from "react";
+
+import React, { useState, useEffect } from "react";
 import NavBar from '@/components/nav';
 
-export default function PhotoAlbumsPage() {
+export default function PhotoAlbums() {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+      const handleScroll = () => setOffset(window.scrollY);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <main className="bg-[#E4EFFF] min-h-screen text-[#002E67] relative overflow-x-hidden pt-32 pb-20">
+    <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative overflow-x-hidden pb-20">
       <NavBar />
-      <div className="px-6 md:px-20 max-w-5xl mx-auto">
-        <h1 className="text-5xl md:text-6xl font-black mb-12 text-center tracking-tight">Photo Albums</h1>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* 2025 */}
-            <a href="https://photos.app.goo.gl/vcgvXctyjPKaARDR8" target="_blank" rel="noopener noreferrer" className="bg-white p-8 rounded-3xl shadow-xl border border-[#002E67]/10 hover:-translate-y-2 hover:shadow-2xl transition-all group">
-                <div className="text-4xl font-black text-[#002E67] mb-2 group-hover:text-[#155EA5] transition-colors">2025</div>
-                <div className="font-bold opacity-70 flex items-center gap-2">Google Photos Album <span className="text-xl">&rarr;</span></div>
+
+      {/* HEADER SECTION */}
+      <div className="pt-40 pb-16 px-6 md:px-20 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
+              <div 
+                  className="max-w-2xl relative z-10 text-center md:text-left"
+                  style={{ transform: `translateY(${offset * 0.4}px)` }}
+              >
+                  <span className="text-blue-400 font-bold tracking-widest uppercase text-xs mb-3 block">
+                      Memories
+                  </span>
+                  <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight">
+                      PHOTO ALBUMS
+                  </h1>
+                  <p className="text-blue-100/80 mt-4 text-lg font-medium">
+                      Relive the excitement of the Gunn Math Competition from past years.
+                  </p>
+              </div>
+              
+              <div 
+                  className="relative opacity-10 hidden md:block"
+                  style={{ transform: `translateY(${offset * -0.1}px)` }}
+              >
+                  <img 
+                      src="/fsh.png" 
+                      width="250" 
+                      height="200" 
+                      alt="GMC logo background" 
+                      className="object-contain brightness-0 invert" 
+                  />
+              </div>
+          </div>
+      </div>
+
+      {/* ALBUMS GRID */}
+      <div className="px-6 md:px-20 py-10 max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            
+            {/* 2024 Album */}
+            <a href="#" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-10 rounded-3xl border border-white/20 hover:border-blue-400 hover:bg-white/20 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-300 group flex flex-col items-center justify-center text-center">
+                <h2 className="text-4xl font-black text-white group-hover:text-blue-200 transition-colors mb-3">2024</h2>
+                <span className="text-blue-400 font-bold flex items-center gap-2 uppercase tracking-wide text-sm">
+                    View Album <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </span>
             </a>
 
-            {/* 2024 */}
-            <div className="bg-white/50 p-8 rounded-3xl border border-[#002E67]/10 flex flex-col justify-center">
-                <div className="text-4xl font-black text-[#002E67] mb-2 opacity-50">2024</div>
-                <div className="font-bold opacity-50">Photos coming soon</div>
-            </div>
-
-            {/* 2023 */}
-            <a href="https://drive.google.com/drive/folders/1K5WU2t8V1lS5gqPG3nsmHqb22FqQax2I" target="_blank" rel="noopener noreferrer" className="bg-white p-8 rounded-3xl shadow-xl border border-[#002E67]/10 hover:-translate-y-2 hover:shadow-2xl transition-all group">
-                <div className="text-4xl font-black text-[#002E67] mb-2 group-hover:text-[#155EA5] transition-colors">2023</div>
-                <div className="font-bold opacity-70 flex items-center gap-2">Google Drive Folder <span className="text-xl">&rarr;</span></div>
+            {/* 2023 Album */}
+            <a href="#" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-10 rounded-3xl border border-white/20 hover:border-blue-400 hover:bg-white/20 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-300 group flex flex-col items-center justify-center text-center">
+                <h2 className="text-4xl font-black text-white group-hover:text-blue-200 transition-colors mb-3">2023</h2>
+                <span className="text-blue-400 font-bold flex items-center gap-2 uppercase tracking-wide text-sm">
+                    View Album <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </span>
             </a>
 
-            {/* 2022 */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border border-[#002E67]/10">
-                <div className="text-4xl font-black text-[#002E67] mb-4">2022</div>
-                <div className="flex flex-col gap-4">
-                    <a href="https://www.youtube.com/watch?v=4P0PQ54_JoY" target="_blank" rel="noopener noreferrer" className="font-bold text-[#155EA5] hover:text-[#002E67] underline">
-                        Opening Ceremony Livestream
-                    </a>
-                    <a href="https://www.youtube.com/live/k-chm_F5XQ8" target="_blank" rel="noopener noreferrer" className="font-bold text-[#155EA5] hover:text-[#002E67] underline">
-                        Closing Ceremony Livestream
-                    </a>
-                </div>
-            </div>
-        </div>
+            {/* 2022 Album */}
+            <a href="#" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-10 rounded-3xl border border-white/20 hover:border-blue-400 hover:bg-white/20 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-300 group flex flex-col items-center justify-center text-center">
+                <h2 className="text-4xl font-black text-white group-hover:text-blue-200 transition-colors mb-3">2022</h2>
+                <span className="text-blue-400 font-bold flex items-center gap-2 uppercase tracking-wide text-sm">
+                    View Album <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+            </a>
+
+          </div>
       </div>
     </main>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import NavBar from '@/components/nav';
 import Sponsors from '@/components/Sponsors';
 
@@ -175,15 +176,15 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 w-full flex-wrap">
-               <a href="https://contestdojo.com/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all flex items-center justify-center">
+               <a href="https://contestdojo.com/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all flex items-center justify-center relative z-10">
                  Register Now
                </a>
-               <a href="/registration-info" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center relative z-10">
+               <Link href="/registration-info" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center relative z-10">
                  How to Register
-               </a>
-               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto border-2 border-white/30 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all relative z-10">
-                 Event Manual
-               </a>
+               </Link>
+               <Link href="/schedule" className="w-full sm:w-auto border-2 border-white/30 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all relative z-10">
+                 View Schedule
+               </Link>
             </div>
         </div>
       </div>
@@ -210,11 +211,11 @@ export default function Home() {
                     Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
                 </div>
                 <div className="flex gap-4">
-                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" className="flex-1 relative z-10">
+                    <Link href="/registration-info" className="flex-1 relative z-10">
                         <div className="text-center font-semibold text-xl py-4 rounded-xl bg-[#002E67] text-white hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg">
-                        Read Manual
+                        Registration Info
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
             
@@ -233,42 +234,68 @@ export default function Home() {
             </div>
         </div>
 
-        {/* Schedule Section */}
+        {/* Shortened Schedule Section */}
         <div>
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="font-bold text-5xl md:text-6xl text-[#E4EFFF]">Schedule</h2>
-              <div className="font-semibold text-[#E4EFFF]/50 mt-3 text-lg">Subject to change</div>
+              <Link href="/schedule" className="group text-blue-400 hover:text-blue-300 transition-colors font-semibold text-lg md:text-xl mt-4 inline-flex items-center justify-center gap-2 relative z-10">
+                View In-Depth Schedule 
+                <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
             
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-white/50 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-[150px_1fr_200px] border-b border-gray-100 bg-[#002E67] text-white font-semibold p-4 md:px-8 hidden md:grid text-lg">
-                    <div>Time</div>
-                    <div>Event</div>
-                    <div className="text-right">Location</div>
-                </div>
-                
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-white/50 relative z-10 max-w-4xl mx-auto">
                 <div className="divide-y divide-gray-100">
                     {[
-                        { time: "8:00 - 8:45", event: "Registration / Check-In", loc: "Bow Gym" },
-                        { time: "8:45 - 9:00", event: "Opening Ceremony", loc: "Bow Gym" },
-                        { time: "9:15 - 10:15", event: "Individual Round", loc: "N-Building" },
-                        { time: "9:15 - 10:00", event: "Guest Speaker for Parents", loc: "Bow Gym", highlight: true },
-                        { time: "10:25 - 11:25", event: "Team Round", loc: "N-Building" },
-                        { time: "11:30 - 12:15", event: "Lunch", loc: "Bow Gym" },
-                        { time: "12:30 - 14:00", event: "Guts Round", loc: "Bow/Titan Gym" },
-                        { time: "14:15 - 15:30", event: "Activities / Tiebreakers", loc: "N-Building" },
-                        { time: "15:45 - 17:30", event: "Activities Block 2", loc: "Bow/Titan Gym" },
-                        { time: "17:30 - 18:00", event: "Awards Ceremony", loc: "Bow/Titan Gym" },
+                        { time: "8:00 AM", event: "Registration & Check-In" },
+                        { time: "9:15 AM", event: "Individual & Team Rounds" },
+                        { time: "11:30 AM", event: "Lunch (Free for Competitors)" },
+                        { time: "12:30 PM", event: "Guts Round" },
+                        { time: "2:15 PM", event: "Activities & Tiebreakers" },
+                        { time: "5:30 PM", event: "Awards Ceremony" },
                     ].map((item, i) => (
-                        <div key={i} className={`p-6 md:px-8 grid grid-cols-1 md:grid-cols-[150px_1fr_200px] gap-2 items-center hover:bg-blue-50 transition-colors ${item.highlight ? 'bg-blue-50/50' : ''}`}>
+                        <div key={i} className="p-5 md:px-8 grid grid-cols-[120px_1fr] md:grid-cols-[150px_1fr] gap-4 items-center hover:bg-blue-50 transition-colors">
                             <div className="font-semibold text-[#002E67] opacity-80 text-lg md:text-xl">{item.time}</div>
-                            <div className={`font-semibold text-lg md:text-xl ${item.highlight ? 'text-blue-600' : 'text-[#002E67]'}`}>{item.event}</div>
-                            <div className="font-semibold text-[#002E67]/60 md:text-right text-lg">{item.loc}</div>
+                            <div className="font-semibold text-lg md:text-xl text-[#002E67]">{item.event}</div>
                         </div>
                     ))}
                 </div>
             </div>
         </div>
+
+        {/* LOCATION / MAP SECTION */}
+        <div className="pt-8">
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-white/50 p-2 md:p-3 relative z-10">
+               <div className="grid md:grid-cols-2 gap-6 items-center">
+                  <div className="p-6 md:p-10 text-[#002E67]">
+                      <h2 className="text-3xl md:text-5xl font-bold mb-4">Location</h2>
+                      <p className="text-xl md:text-2xl font-bold mb-2">Henry M. Gunn High School</p>
+                      <p className="text-lg opacity-80 mb-8 font-medium">
+                        780 Arastradero Road<br/>
+                        Palo Alto, CA 94306
+                      </p>
+                      <Link href="/map" className="inline-flex bg-[#002E67] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg items-center gap-2">
+                          View Campus Map
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                          </svg>
+                      </Link>
+                  </div>
+                  <div className="w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-inner">
+                      <iframe 
+                        src="https://maps.google.com/maps?q=Henry%20M.%20Gunn%20High%20School,%20780%20Arastradero%20Road,%20Palo%20Alto,%20CA%2094306&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style={{ border: 0 }} 
+                        allowFullScreen 
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                      ></iframe>
+                  </div>
+               </div>
+            </div>
+        </div>
+
       </div>
 
       {/* REVERSE WAVE TRANSITION */}

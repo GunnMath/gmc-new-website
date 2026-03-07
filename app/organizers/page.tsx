@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from '@/components/nav';
 
-// We put the data directly in the file to prevent the "Module not found" error!
 const ORGANIZERS_DATA = [
   { name: "Aarush", image: "/staff/Aarush.jpg" },
   { name: "Aiden", image: "/staff/Aiden.jpg" },
@@ -39,23 +38,23 @@ export default function Organizers() {
   }, []);
 
   return (
-    <main className="bg-[#e4efff] min-h-screen text-[#002e66] relative overflow-x-hidden">
+    <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative overflow-x-hidden pb-24">
       <NavBar />
 
-      <div className="bg-[#002E67] pt-40 pb-16 px-6 md:px-20 relative overflow-hidden">
+      <div className="pt-40 pb-16 px-6 md:px-20 relative overflow-hidden">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
               
               <div 
                   className="max-w-2xl relative z-10 text-center md:text-left"
                   style={{ transform: `translateY(${offset * 0.4}px)` }}
               >
-                  <span className="text-blue-300 font-bold tracking-widest uppercase text-xs mb-3 block">
+                  <span className="text-blue-400 font-bold tracking-widest uppercase text-xs mb-3 block">
                       Behind GMC 2026
                   </span>
                   <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight">
                       MEET THE TEAM
                   </h1>
-                  <p className="text-gray-300 mt-4 text-lg font-bold">
+                  <p className="text-blue-100/80 mt-4 text-lg font-medium">
                       GMC is entirely organized by high school students in Palo Alto, including Henry M. Gunn High School, and Palo Alto High School.
                   </p>
               </div>
@@ -75,10 +74,10 @@ export default function Organizers() {
           </div>
       </div>
 
-      <div className="px-6 md:px-20 py-24 max-w-7xl mx-auto">
+      <div className="px-6 md:px-20 py-10 max-w-7xl mx-auto relative z-10">
         <div className="space-y-20">
             <div>
-                <h2 className="text-3xl font-black text-[#002E67] mb-10 border-b-2 border-[#155EA5]/30 pb-4 inline-block">
+                <h2 className="text-3xl font-black text-white mb-12 border-b-2 border-blue-400/50 pb-4 inline-block">
                     Organizers
                 </h2>
                 
@@ -88,10 +87,9 @@ export default function Organizers() {
                             <img 
                                 src={p.image} 
                                 alt={p.name} 
-                                className="w-32 h-32 rounded-full object-cover border-4 border-[#002E67]/10 group-hover:border-[#002E67] transition-all duration-300 shadow-lg" 
+                                className="w-32 h-32 rounded-full object-cover border-4 border-white/10 group-hover:border-blue-400 transition-all duration-300 shadow-lg" 
                             />
-                            {/* Uncommented the name so it shows up now! */}
-                            <h3 className="font-bold text-xl text-[#002E67] mt-4">{p.name}</h3>
+                            <h3 className="font-bold text-xl text-white mt-4">{p.name}</h3>
                         </div>
                     ))}
                 </div>

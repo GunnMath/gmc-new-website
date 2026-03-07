@@ -2,35 +2,34 @@
 
 import React from "react";
 import NavBar from '@/components/nav';
-import { Heading1, Paragraph } from '@/components/headers';
 
 export default function GuestSpeaker() {
   return (
-    <main className="bg-[#e4efff] min-h-screen text-[#002e66] relative overflow-x-hidden">
+    <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative overflow-x-hidden pb-24 pt-32">
       <NavBar />
 
-      <div className="px-6 md:px-20 pt-32 pb-20 max-w-7xl mx-auto">
+      <div className="px-6 md:px-20 max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row gap-12 items-start">
           
           {/* Text Content */}
           <div className="flex-1 space-y-8">
             <div>
-                <span className="bg-[#004184] text-white font-bold px-4 py-1 rounded-full text-xs tracking-widest uppercase mb-4 inline-block">
+                <span className="bg-blue-600 text-white font-bold px-4 py-1 rounded-full text-xs tracking-widest uppercase mb-4 inline-block">
                     Guest Speaker 2026
                 </span>
-                <Heading1>Simon Rubinstein-Salzedo</Heading1>
-                <div className="text-xl md:text-2xl font-bold text-[#002e66]/60 mt-2 mb-6">
+                <h1 className="text-5xl md:text-6xl font-black mb-2 text-white">Simon Rubinstein-Salzedo</h1>
+                <div className="text-xl md:text-2xl font-bold text-blue-300 mt-2 mb-6">
                     Director of Euler Circle
                 </div>
             </div>
 
-            <Paragraph>
+            <p className="text-lg font-medium opacity-90 leading-relaxed">
               Simon Rubinstein-Salzedo is the founder and director of Euler Circle, a mathematics institute dedicated to teaching college-level mathematics to advanced high-school students. He received his PhD in Mathematics from Stanford University in 2012.
-            </Paragraph>
+            </p>
             
-            <Paragraph>
+            <p className="text-lg font-medium opacity-90 leading-relaxed">
               Beyond his work at Euler Circle, Simon is a dedicated mentor and researcher. He has coached the SFBA/NorCal ARML team to multiple national championships and previously taught at Stanford University and Dartmouth College. His research interests span number theory, algebraic geometry, combinatorics, and game theory.
-            </Paragraph>
+            </p>
           </div>
 
           {/* Image Card */}
@@ -56,13 +55,13 @@ export default function GuestSpeaker() {
         </div>
 
         {/* Past Speakers Section */}
-        <div className="mt-32 pt-16 border-t border-[#002e66]/10">
-            <h2 className="text-3xl font-black text-[#002e66] mb-8">Past Speakers</h2>
+        <div className="mt-32 pt-16 border-t border-white/10">
+            <h2 className="text-3xl font-black text-white mb-8">Past Speakers</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#002e66]/5 opacity-70 hover:opacity-100 transition-opacity">
-                    <div className="font-black text-lg text-[#002e66]">Po-Shen Loh</div>
-                    <div className="text-sm text-[#002e66]/60">Carnegie Mellon University</div>
-                    <div className="text-xs font-bold text-[#002e66]/40 mt-1">2025 Speaker</div>
+                <div className="bg-white/10 p-6 rounded-2xl shadow-sm border border-white/10 opacity-80 hover:opacity-100 transition-opacity">
+                    <div className="font-black text-lg text-white">Po-Shen Loh</div>
+                    <div className="text-sm text-blue-200">Carnegie Mellon University</div>
+                    <div className="text-xs font-bold text-white/50 mt-1">2025 Speaker</div>
                 </div>
             </div>
         </div>
