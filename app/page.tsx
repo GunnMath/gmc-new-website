@@ -6,9 +6,46 @@ import Sponsors from '@/components/Sponsors';
 
 const InfoBlock = (props: { header: string; children: string }) => {
   return (
-    <div className="flex-1 min-w-[200px] p-6 rounded-2xl border-2 border-[#002E67]/10 bg-white hover:border-[#002E67] transition-all shadow-sm text-center md:text-left group">
+    <div className="flex-1 min-w-[200px] p-6 rounded-2xl border-2 border-[#002E67]/10 bg-white hover:border-[#002E67] transition-all shadow-sm text-center md:text-left group relative z-10">
       <div className="text-xl font-bold text-[#002E67] mb-1 group-hover:scale-105 transition-transform origin-left">{props.header}</div>
       <div className="text-[#002E67]/80 text-sm font-medium leading-tight">{props.children}</div>
+    </div>
+  );
+};
+
+// Underwater Bubbles Component
+const Bubbles = () => {
+  const [bubbles, setBubbles] = useState<{ id: number; left: string; size: string; duration: string; delay: string }[]>([]);
+
+  useEffect(() => {
+    // Generate bubbles only on the client side to avoid hydration mismatches
+    const generatedBubbles = Array.from({ length: 30 }).map((_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}vw`,
+      size: `${Math.random() * 50 + 10}px`,
+      duration: `${Math.random() * 10 + 5}s`, 
+      delay: `-${Math.random() * 15}s`, 
+    }));
+    setBubbles(generatedBubbles);
+  }, []);
+
+  if (bubbles.length === 0) return null;
+
+  return (
+    <div className="fixed inset-0 pointer-events-none z-[35] overflow-hidden">
+      {bubbles.map((b) => (
+        <div
+          key={b.id}
+          className="bubble absolute rounded-full bg-white/10"
+          style={{
+            left: b.left,
+            width: b.size,
+            height: b.size,
+            animationDuration: b.duration,
+            animationDelay: b.delay,
+          }}
+        />
+      ))}
     </div>
   );
 };
@@ -35,6 +72,7 @@ export default function Home() {
   return (
     <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative overflow-x-hidden">
       <NavBar />
+      <Bubbles />
       
       {/* FLOATING ACTION BUTTONS */}
       <div className={`fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 flex flex-col gap-4 transition-all duration-500 ease-out ${showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
@@ -73,10 +111,7 @@ export default function Home() {
         <div className="max-w-8xl mx-auto w-full flex flex-col-reverse md:grid md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
           
           {/* TEXT BLOCK */}
-          <div 
-            className={`flex flex-col gap-6 transition-all duration-1000 ease-out items-center text-center md:items-start md:text-left ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
-            style={{ transform: `translateY(${offset * 0.2}px)` }}
-          >
+          <div className={`flex flex-col gap-6 transition-all duration-1000 ease-out items-center text-center md:items-start md:text-left ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="inline-block">
               <span className="bg-white/10 text-[#E4EFFF] font-semibold px-4 py-1.5 rounded-full text-sm md:text-base mb-2 inline-block border border-white/20">
                 Fifth Annual
@@ -89,10 +124,7 @@ export default function Home() {
           </div>
 
           {/* IMAGE BLOCK */}
-          <div 
-            className={`relative flex justify-center md:justify-end transition-all duration-1000 delay-300 ease-out w-full ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ transform: `translateY(${offset * -0.1}px)` }}
-          >
+          <div className={`relative flex justify-center md:justify-end transition-all duration-1000 delay-300 ease-out w-full ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
              <div className="relative w-[220px] sm:w-[280px] md:w-[500px] aspect-square mx-auto md:mr-0">
                 <div className="absolute inset-0 bg-white/2 rounded-full blur-2xl transform scale-90"></div>
                 <img 
@@ -114,7 +146,7 @@ export default function Home() {
       </div>
 
       {/* WAVE TRANSITION */}
-      <div className="w-full bg-[#002E67] -mb-1">
+      <div className="w-full bg-[#002E67] -mb-1 relative z-20">
         <img 
           src="/wave.png" 
           alt="Wave Transition" 
@@ -123,7 +155,7 @@ export default function Home() {
       </div>
 
       {/* Event Info & Registration */}
-      <div className="bg-[#001332] py-16 px-6 md:px-20 text-center">
+      <div className="bg-[#001332] py-16 px-6 md:px-20 text-center relative z-20">
         <div className="max-w-5xl mx-auto space-y-10">
             
             {/* BIGGER TAGLINE */}
@@ -146,10 +178,10 @@ export default function Home() {
                <a href="https://contestdojo.com/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all flex items-center justify-center">
                  Register Now
                </a>
-               <a href="/registration-info" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center">
+               <a href="/registration-info" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center relative z-10">
                  How to Register
                </a>
-               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto border-2 border-white/30 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all">
+               <a href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto border-2 border-white/30 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all relative z-10">
                  Event Manual
                </a>
             </div>
@@ -157,7 +189,7 @@ export default function Home() {
       </div>
 
       {/* INFO CARDS */}
-      <div id="info" className="px-6 md:px-20 max-w-8xl mx-auto mt-10">
+      <div id="info" className="px-6 md:px-20 max-w-8xl mx-auto mt-10 relative z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           <InfoBlock header="2 Divisions">Beginner & Advanced</InfoBlock>
           <InfoBlock header="Free Lunch">For all competitors</InfoBlock>
@@ -168,7 +200,7 @@ export default function Home() {
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="px-6 md:px-20 py-24 max-w-7xl mx-auto space-y-24">
+      <div className="px-6 md:px-20 py-24 max-w-7xl mx-auto space-y-24 relative z-20">
         
         {/* Registration Section */}
         <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -178,7 +210,7 @@ export default function Home() {
                     Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
                 </div>
                 <div className="flex gap-4">
-                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" className="flex-1">
+                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/11Ac9OguL8Ay38kQBQwlAPb5WGqTtD8cD-7ZJ7YDiy_4/edit?tab=t.0#heading=h.3sn6znb7b0ay" className="flex-1 relative z-10">
                         <div className="text-center font-semibold text-xl py-4 rounded-xl bg-[#002E67] text-white hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg">
                         Read Manual
                         </div>
@@ -208,7 +240,7 @@ export default function Home() {
               <div className="font-semibold text-[#E4EFFF]/50 mt-3 text-lg">Subject to change</div>
             </div>
             
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-white/50">
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-white/50 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-[150px_1fr_200px] border-b border-gray-100 bg-[#002E67] text-white font-semibold p-4 md:px-8 hidden md:grid text-lg">
                     <div>Time</div>
                     <div>Event</div>
@@ -240,7 +272,7 @@ export default function Home() {
       </div>
 
       {/* REVERSE WAVE TRANSITION */}
-      <div className="w-full bg-[#001332]">
+      <div className="w-full bg-[#001332] relative z-20">
         <img 
           src="/reversewave.png" 
           alt="Wave Transition" 
@@ -249,7 +281,7 @@ export default function Home() {
       </div>
 
       {/* SPONSORS SECTION */}
-      <div className="bg-[#E3EEFE] pt-10 pb-20">
+      <div className="bg-[#E3EEFE] pt-10 pb-20 relative z-20">
         <div className="max-w-7xl mx-auto px-6 md:px-20">
           <Sponsors />
         </div>
