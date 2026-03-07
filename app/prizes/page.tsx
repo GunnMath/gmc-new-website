@@ -2,11 +2,13 @@
 
 import React from "react";
 import NavBar from "@/components/nav";
+import Bubbles from '@/components/Bubbles';
 
 export default function PrizesAndScoring() {
   return (
     <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative pb-24 pt-32">
       <NavBar />
+      <Bubbles />
       
       <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10">
         

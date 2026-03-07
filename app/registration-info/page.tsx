@@ -1,11 +1,13 @@
 "use client";
 import React from "react";
 import NavBar from '@/components/nav';
+import Bubbles from '@/components/Bubbles';
 
 export default function RegistrationInfoPage() {
   return (
     <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative overflow-x-hidden pt-32 pb-20">
       <NavBar />
+      <Bubbles />
       <div className="px-6 md:px-20 max-w-5xl mx-auto relative z-10">
         <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-black tracking-tight mb-4 text-white">Registration Info</h1>

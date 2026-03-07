@@ -2,11 +2,13 @@
 
 import React from "react";
 import NavBar from '@/components/nav';
+import Bubbles from '@/components/Bubbles';
 
 export default function GuestSpeaker() {
   return (
     <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative overflow-x-hidden pb-24 pt-32">
       <NavBar />
+      <Bubbles />
 
       <div className="px-6 md:px-20 max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row gap-12 items-start">

@@ -2,6 +2,7 @@
 
 import React, { ReactNode } from "react";
 import NavBar from "@/components/nav";
+import Bubbles from '@/components/Bubbles';
 import Link from "next/link";
 
 export default function Schedule() {
@@ -105,6 +106,7 @@ export default function Schedule() {
   return (
     <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative pb-24 pt-32">
       <NavBar />
+      <Bubbles />
 
       <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center mb-16">
