@@ -77,7 +77,7 @@ export default function PrizesAndScoring() {
             <div className="p-4 bg-[#001332]/5 rounded-xl border border-[#002E67]/5">
                 <h3 className="font-bold text-xl mb-2">Individual Round</h3>
                 <p className="font-medium opacity-80 leading-relaxed">
-                  Each problem on the individual round is <strong>weighted differently</strong>; getting problem number <em>k</em> will merit you <span className="inline-block align-middle mx-1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><msup><mrow><mo>(</mo><mfrac><mn>3</mn><mi>e</mi></mfrac><mo>)</mo></mrow><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup></math></span> points. Essentially, a problem is <strong>weighted more if it is later in the test</strong>, and this allows for <strong>no ties</strong> unless there are two competitors with the exact same distributions. The <strong>maximum total point value</strong> for the individual round is <strong>16.218</strong>.
+                  Each problem on the individual round is <strong>weighted differently</strong>; getting problem number <em>k</em> will merit you <span className="inline-block mx-1 font-serif text-[1.1em]">(3/e)<sup>k-1</sup></span> points. Essentially, a problem is <strong>weighted more if it is later in the test</strong>, and this allows for <strong>no ties</strong> unless there are two competitors with the exact same distributions. The <strong>maximum total point value</strong> for the individual round is <strong>16.218</strong>.
                 </p>
             </div>
             <div className="p-4 bg-[#001332]/5 rounded-xl border border-[#002E67]/5">
