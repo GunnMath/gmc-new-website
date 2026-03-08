@@ -1,285 +1,150 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React from "react";
 import NavBar from '@/components/nav';
-import Sponsors from '@/components/Sponsors';
-import Bubbles from '@/components/Bubbles';
 
-const InfoBlock = (props: { header: string; children: string }) => {
+const SPONSORS_DATA = [
+    {
+        name: "Thinkfund",
+        tier: "Gold",
+        desc: "The City of Palo Alto’s Think Fund is a youth mini-grant program that provides high school students with funding, mentorship, and City support to turn their ideas into community programs, events, or long-term initiatives.",
+        img: "/sponsors/thinkfund.png",
+        url: "https://www.mitchellparkteenservices.org/thinkfund"
+    },
+    {
+        name: "City of Palo Alto",
+        tier: "Gold",
+        desc: "The City of Palo Alto supports numerous community programs and youth initiatives through its community grants.",
+        img: "/sponsors/PaloAlto.png",
+        url: "https://www.cityofpaloalto.org/Home"
+    },
+    {
+        name: "LIVE by Po-Shen Loh",
+        tier: "Silver",
+        desc: "LIVE, by Po-Shen Loh is the first and only online math course that captivates, entertains, and inspires. Invented by legendary math coach Po-Shen Loh.",
+        img: "/sponsors/live.png",
+        url: "https://live.poshenloh.com/"
+    },
+    {
+        name: "Jane Street",
+        tier: "Silver",
+        desc: "Jane Street is a global quantitative trading firm and liquidity provider trading a wide range of financial products.",
+        img: "/sponsors/janestreet.png",
+        url: "https://www.janestreet.com/"
+    },
+    {
+        name: "Hudson River Trading",
+        tier: "Silver",
+        desc: "Hudson River Trading brings a scientific approach to trading financial products. We have built one of the world’s most sophisticated computing environments for research and development.",
+        img: "/sponsors/HRT.png",
+        url: "https://www.hudsonrivertrading.com/"
+    },
+    {
+        name: "Citadel Securities",
+        tier: "Silver",
+        desc: "Citadel Securities is a leading global market maker, delivering a broad suite of fixed income and equity products to clients around the world.",
+        img: "/sponsors/citadel.png",
+        url: "https://www.citadelsecurities.com/"
+    },
+    {
+        name: "DRW",
+        tier: "Silver",
+        desc: "DRW is a diversified trading firm with over 3 decades of experience bringing sophisticated technology and exceptional people together to operate in markets around the world. We value autonomy and the ability to quickly pivot to capture opportunities, so we operate using our own capital and trading at our own risk. At DRW, we seek the best and then get out of their way. We foster a low-ego environment with minimal hierarchy and a strong commitment to continuous learning.",
+        img: "/sponsors/DRW.png",
+        url: "https://www.drw.com/"
+    },
+    {
+        name: "Susquehanna International Group",
+        tier: "Silver",
+        desc: "Susquehanna is a global quantitative trading firm powered by scientific rigor, curiosity, and innovation.",
+        img: "/sponsors/SIG.png",
+        url: "https://sig.com/"
+    },
+    {
+        name: "Jump Trading",
+        tier: "Silver",
+        desc: "Jump Trading is a leading global quantitative trading firm that combines sophisticated quantitative research, cutting-edge technology, and an entrepreneurial culture. Founded in 1999, Jump has over 2,000 employees across offices in Chicago, New York, London, Amsterdam, Singapore, Shanghai, Hong Kong, and more. Jump is still privately owned and funded, fostering a culture of intellectual curiosity and learning. Our people are some of the world’s most brilliant minds with backgrounds from the trading industry, Silicon Valley tech companies and start-ups, top PhD programs and research labs. We have a 25+ year history of investing in superior infrastructure, including custom hardware, software, wireless networks, and a world-class supercomputer. We leverage our proprietary technology to analyse massive data sets and identify trends in global markets across asset classes.",
+        img: "/sponsors/jump.png",
+        url: "https://www.jumptrading.com/"
+    },
+    {
+        name: "Stanford Research Park",
+        tier: "Silver",
+        desc: "Since 1951, Stanford Research Park has been the home to cutting-edge business and a top destination for people who want to shape the future. Today, the innovative companies and talented employees based in Stanford Research Park continue to pursue bold ideas and make real world impacts with initiatives ranging from life-saving therapies to robotics and cybersecurity to autonomous vehicles.",
+        img: "/sponsors/SRP.png",
+        url: "https://stanfordresearchpark.com/"
+    },
+    {
+        name: "AoPS Academy",
+        tier: "Bronze",
+        desc: "AoPS Academy is an after-school enrichment program with a mission to teach problem solving skills through advanced math, language arts, and science courses.",
+        img: "/sponsors/aopsacademy.png",
+        url: "https://aopsacademy.org/campus/mountainview"
+    },
+    {
+        name: "Euler Circle",
+        tier: "Bronze",
+        desc: "Euler Circle is a mathematics institute for advanced students who love mathematics. It offers college-level mathematics classes specifically tailored to high-school students.",
+        img: "/sponsors/eulercircle.png",
+        url: "https://eulercircle.com/"
+    },
+    {
+        name: "Wolfram",
+        tier: "Bronze",
+        desc: "Wolfram Research is one of the world's most respected computer, web and cloud software companies—as well as a powerhouse of scientific and technical innovation.",
+        img: "/sponsors/wolfram.png",
+        url: "https://www.wolfram.com/"
+    },
+    {
+        name: "ContestDojo",
+        tier: "Bronze",
+        desc: "ContestDojo is an online math competition platform built and used for tournaments such as the Stanford Math Tournament and the Berkeley Math Tournament.",
+        img: "/sponsors/contestdojo.png",
+        url: "https://contestdojo.com/"
+    },
+];
+
+export default function SponsorsPage() {
   return (
-    <div className="flex-1 min-w-[200px] p-6 rounded-2xl border-2 border-[#002E67]/10 bg-white hover:border-[#002E67] transition-all shadow-sm text-center md:text-left group relative z-10">
-      <div className="text-xl font-bold text-[#002E67] mb-1 group-hover:scale-105 transition-transform origin-left">{props.header}</div>
-      <div className="text-[#002E67]/80 text-sm font-medium leading-tight">{props.children}</div>
-    </div>
-  );
-};
-
-export default function Home() {
-  const [offset, setOffset] = useState(0);
-  const [showButton, setShowButton] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-    const handleScroll = () => {
-      setOffset(window.scrollY);
-      setShowButton(window.scrollY > 300);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  return (
-    <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative overflow-x-hidden">
+    <main className="bg-[#001332] min-h-screen text-[#E4EFFF] relative overflow-x-hidden pt-32 pb-20">
       <NavBar />
-      <Bubbles />
-      
-      {/* FLOATING ACTION BUTTONS */}
-      <div className={`fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 flex flex-col gap-4 transition-all duration-500 ease-out ${showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
-        <a 
-          href="https://contestdojo.com/register" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="bg-[#002E67] text-white font-semibold py-3 px-6 rounded-full shadow-xl hover:bg-[#004080] hover:scale-105 transition-all flex items-center justify-center gap-2 border-2 border-transparent"
-        >
-          <span className="hidden md:inline">Register Now</span>
-          <span className="md:hidden">Register</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-          </svg>
-        </a>
-        <button 
-          onClick={scrollToTop}
-          className="self-end bg-white text-[#002E67] p-3 rounded-full shadow-xl border-2 border-[#002E67]/10 hover:border-[#002E67] transition-all"
-          aria-label="Back to top"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
-          </svg>
-        </button>
-      </div>
 
-      {/* HERO SECTION */}
-      <div className="bg-[#002E67] min-h-[85vh] md:min-h-[80vh] relative overflow-hidden flex flex-col justify-center px-6 md:px-20 pt-28 pb-20">
-        
-        <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-            <div className="absolute top-[-10%] right-[-10%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-white rounded-full blur-[100px]" />
-            <div className="absolute bottom-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-blue-500 rounded-full blur-[100px]" />
-        </div>
-
-        <div className="max-w-8xl mx-auto w-full flex flex-col-reverse md:grid md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
-          
-          {/* TEXT BLOCK */}
-          <div className={`flex flex-col gap-4 transition-all duration-1000 ease-out items-center text-center md:items-start md:text-left ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className="inline-block">
-              <span className="bg-white/10 text-[#E4EFFF] font-semibold px-4 py-1.5 rounded-full text-sm md:text-base mb-2 inline-block border border-white/20">
-                Fifth Annual
-              </span>
-            </div>
-            
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-[#E4EFFF] leading-[1.1] tracking-tighter">
-              GUNN MATH<br className="hidden md:block" /> COMPETITION
+      <div className="px-6 md:px-20 max-w-5xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight">
+                Our Sponsors
             </h1>
-
-            {/* Date and Location added below title */}
-            <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-2 sm:gap-4 mt-2 text-blue-200 font-semibold text-lg md:text-xl">
-                <div className="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
-                    </svg>
-                    Sunday, March 29th, 2026
-                </div>
-                <span className="hidden sm:block opacity-50">•</span>
-                <div className="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                    </svg>
-                    Palo Alto, CA
-                </div>
-            </div>
-          </div>
-
-          {/* IMAGE BLOCK */}
-          <div className={`relative flex justify-center md:justify-end transition-all duration-1000 delay-300 ease-out w-full ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-             <div className="relative w-[220px] sm:w-[280px] md:w-[450px] aspect-square mx-auto md:mr-0">
-                <div className="absolute inset-0 bg-white/2 rounded-full blur-2xl transform scale-90"></div>
-                <img 
-                  src="/fsh.png" 
-                  alt="GMC logo" 
-                  className="w-full h-full object-contain brightness-0 invert drop-shadow-2xl relative z-10" 
-                />
-             </div>
-          </div>
-        </div>
-
-        {/* SCROLL INDICATOR */}
-        <div className={`absolute bottom-8 left-0 right-0 flex flex-col items-center justify-center pointer-events-none transition-opacity duration-500 hidden md:flex ${offset > 50 ? 'opacity-0' : 'opacity-100 animate-bounce'}`}>
-            <span className="text-[#E4EFFF]/50 text-base font-semibold mb-2">Scroll</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="rgba(228, 239, 255, 0.5)" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-            </svg>
-        </div>
-      </div>
-
-      {/* WAVE TRANSITION */}
-      <div className="w-full bg-[#002E67] -mb-1 relative z-20">
-        <img 
-          src="/wave.png" 
-          alt="Wave Transition" 
-          className="w-full h-auto block select-none" 
-        />
-      </div>
-
-      {/* Event Info & Registration */}
-      <div className="bg-[#001332] py-16 px-6 md:px-20 text-center relative z-20">
-        <div className="max-w-5xl mx-auto space-y-10">
-            
-            <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#E4EFFF] opacity-95 leading-tight px-4">
-               The premier high school-run math contest on the West Coast, with 250+ annual attendees.
+            <p className="text-xl text-blue-100/80 max-w-2xl mx-auto font-medium">
+                GMC is made possible by the generous support of these organizations.
             </p>
-
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 w-full flex-wrap">
-               <a href="https://contestdojo.com/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-[#002E67] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-white/20 transition-all flex items-center justify-center relative z-10">
-                 Register Now
-               </a>
-               <Link href="/registration-info" className="w-full sm:w-auto bg-blue-600/30 border-2 border-blue-400/50 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-blue-600/50 transition-all flex items-center justify-center relative z-10">
-                 How to Register
-               </Link>
-               <Link href="/schedule" className="w-full sm:w-auto border-2 border-white/30 text-[#E4EFFF] font-semibold text-lg sm:text-xl py-4 px-8 rounded-xl hover:bg-white/10 transition-all relative z-10">
-                 View Schedule
-               </Link>
-            </div>
         </div>
-      </div>
 
-      {/* INFO CARDS */}
-      <div id="info" className="px-6 md:px-20 max-w-8xl mx-auto mt-4 relative z-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          <InfoBlock header="2 Divisions">Beginner & Advanced</InfoBlock>
-          <InfoBlock header="Free Lunch">For all competitors</InfoBlock>
-          <InfoBlock header="3 Rounds">Individual, Guts, & Team</InfoBlock>
-          <InfoBlock header="Over $7500">In prizes for top teams</InfoBlock>
-          <InfoBlock header="Guest Speaker">Real-world math applications</InfoBlock>
-        </div>
-      </div>
-
-      {/* MAIN CONTENT */}
-      <div className="px-6 md:px-20 py-24 max-w-7xl mx-auto relative z-20">
-
-        {/* Registration Section */}
-        <div className="grid md:grid-cols-2 gap-16 items-start mb-24">
-            <div className="space-y-8">
-                <h2 className="text-3xl md:text-4xl font-bold mb-2">Registration</h2>
-                <div className="text-lg opacity-90 leading-relaxed font-medium">
-                    Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
-                </div>
-                <div className="flex gap-4">
-                    <Link href="/registration-info" className="flex-1 relative z-10">
-                        <div className="text-center font-semibold text-xl py-4 rounded-xl bg-[#002E67] text-white hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg border border-white/20">
-                        Registration Info
-                        </div>
-                    </Link>
-                </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-3xl shadow-xl border border-white/50 text-[#002E67]">
-                <h2 className="text-3xl font-bold mb-4">Divisions</h2>
-                <div className="space-y-6 mt-6">
-                    <div className="p-4 bg-[#001332]/5 rounded-xl border border-[#002E67]/5">
-                        <h3 className="font-bold text-2xl mb-2">Division A</h3>
-                        <p className="font-medium opacity-80 leading-relaxed">For experienced competitors. Difficulty ranges from mid-AMC 10 to late AIME. (Required for AIME qualifiers)</p>
+        <div className="space-y-8">
+            {SPONSORS_DATA.map((sponsor, idx) => (
+                <div key={idx} className="bg-white rounded-3xl p-8 shadow-xl flex flex-col md:flex-row gap-8 items-center md:items-start border border-white/50 text-[#002E67]">
+                    <div className="w-48 h-32 flex-shrink-0 flex items-center justify-center p-4 bg-gray-50 shadow-inner rounded-xl">
+                        <img src={sponsor.img} alt={sponsor.name} className="max-w-full max-h-full object-contain" />
                     </div>
-                    <div className="p-4 bg-[#001332]/5 rounded-xl border border-[#002E67]/5">
-                        <h3 className="font-bold text-2xl mb-2">Division B</h3>
-                        <p className="font-medium opacity-80 leading-relaxed">For students newer to competition math. Difficulty ranges from AMC 8 to late AMC 10.</p>
+                    <div className="flex-1 text-center md:text-left">
+                        <div className="flex flex-col md:flex-row md:items-center gap-3 mb-3">
+                            <h2 className="text-2xl font-black text-[#002E67]">{sponsor.name}</h2>
+                            <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider w-max mx-auto md:mx-0 ${
+                                sponsor.tier === 'Gold' ? 'bg-yellow-100 text-yellow-700' :
+                                sponsor.tier === 'Silver' ? 'bg-gray-100 text-gray-600' :
+                                'bg-orange-100 text-orange-700'
+                            }`}>
+                                {sponsor.tier} Sponsor
+                            </span>
+                        </div>
+                        <p className="text-[#002E67]/80 leading-relaxed font-medium">
+                            {sponsor.desc}
+                        </p>
+                        <a href={sponsor.url} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-blue-600 font-bold hover:underline">
+                            Visit Website &rarr;
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        {/* Shortened Schedule Section */}
-        <div className="mb-24">
-            <div className="text-center mb-12">
-              <h2 className="font-bold text-5xl md:text-6xl text-[#E4EFFF]">Schedule</h2>
-              <Link href="/schedule" className="group text-blue-400 hover:text-blue-300 transition-colors font-semibold text-lg md:text-xl mt-4 inline-flex items-center justify-center gap-2 relative z-10">
-                View In-Depth Schedule 
-                <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
-              </Link>
-            </div>
-            
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-white/50 relative z-10 max-w-4xl mx-auto">
-                <div className="divide-y divide-gray-100">
-                    {[
-                        { time: "8:00 AM", event: "Registration & Check-In" },
-                        { time: "9:15 AM", event: "Individual & Team Rounds" },
-                        { time: "11:30 AM", event: "Lunch (Free for Competitors)" },
-                        { time: "12:30 PM", event: "Guts Round" },
-                        { time: "2:15 PM", event: "Activities & Tiebreakers" },
-                        { time: "5:30 PM", event: "Awards Ceremony" },
-                    ].map((item, i) => (
-                        <div key={i} className="p-5 md:px-8 grid grid-cols-[120px_1fr] md:grid-cols-[150px_1fr] gap-4 items-center hover:bg-blue-50 transition-colors">
-                            <div className="font-semibold text-[#002E67] opacity-80 text-lg md:text-xl">{item.time}</div>
-                            <div className="font-semibold text-lg md:text-xl text-[#002E67]">{item.event}</div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-
-        {/* LOCATION / MAP SECTION */}
-        <div>
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-white/50 p-2 md:p-3 relative z-10">
-               <div className="grid md:grid-cols-2 gap-6 items-center">
-                  <div className="p-6 md:p-10 text-[#002E67]">
-                      <h2 className="text-3xl md:text-5xl font-bold mb-4">Location</h2>
-                      <p className="text-xl md:text-2xl font-bold mb-2">Henry M. Gunn High School</p>
-                      <p className="text-lg opacity-80 mb-8 font-medium">
-                        780 Arastradero Road<br/>
-                        Palo Alto, CA 94306
-                      </p>
-                      <Link href="/map" className="inline-flex bg-[#002E67] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg items-center gap-2">
-                          View Campus Map
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                          </svg>
-                      </Link>
-                  </div>
-                  <div className="w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-inner">
-                      <iframe 
-                        src="https://maps.google.com/maps?q=Henry%20M.%20Gunn%20High%20School,+Palo+Alto&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                        width="100%" 
-                        height="100%" 
-                        style={{ border: 0 }} 
-                        allowFullScreen 
-                        loading="lazy" 
-                        referrerPolicy="no-referrer-when-downgrade"
-                      ></iframe>
-                  </div>
-               </div>
-            </div>
-        </div>
-
-      </div>
-
-      {/* REVERSE WAVE TRANSITION */}
-      <div className="w-full bg-[#001332] relative z-20">
-        <img 
-          src="/reversewave.png" 
-          alt="Wave Transition" 
-          className="w-full h-auto block select-none" 
-        />
-      </div>
-
-      {/* SPONSORS SECTION */}
-      <div className="bg-[#E3EEFE] pt-10 pb-20 relative z-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-20">
-          <Sponsors />
+            ))}
         </div>
       </div>
     </main>
