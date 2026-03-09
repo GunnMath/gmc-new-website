@@ -28,14 +28,14 @@ const SPONSORS_DATA = [
     {
         name: "Jane Street",
         tier: "Silver",
-        desc: "Jane Street is a global quantitative trading firm and liquidity provider trading a wide range of financial products.",
+        desc: "Jane Street is a quantitative trading firm with offices worldwide. They hire smart, humble people who love to solve problems, build systems, and test theories. You’ll learn something new every day in their office—whether it’s connecting with a colleague to share perspectives, or participating in a talk, class, or game night. Their success is driven by their people and they never stop improving.",
         img: "/sponsors/janestreet.png",
         url: "https://www.janestreet.com/"
     },
     {
         name: "Hudson River Trading",
         tier: "Silver",
-        desc: "Hudson River Trading brings a scientific approach to trading financial products. We have built one of the world’s most sophisticated computing environments for research and development.",
+        desc: "Hudson River Trading is one of the world’s leading quantitative trading firms, powered by a community of curious and technical minds who share a passion for complex problems, cutting-edge tech, and elegant math. Whether your expertise lies in math, computer science, physics, or beyond, we empower deep thinkers from a range of backgrounds to build the future of trading. Learn more about HRT and our open roles on our website.",
         img: "/sponsors/HRT.png",
         url: "https://www.hudsonrivertrading.com/"
     },
