@@ -24,6 +24,7 @@ const sponsors: Sponsor[] = [
   { name: "DRW", src: "/sponsors/DRW.png", url: "https://www.drw.com/", tier: "Silver" },
   { name: "Stanford Research Park", src: "/sponsors/SRP.png", url: "https://stanfordresearchpark.com/", tier: "Silver" },
   { name: "Susquehanna International Group", src: "/sponsors/susquehanna.png", url: "https://sig.com/", tier: "Silver" },
+  { name: "Jump Trading", src: "/sponsors/jump.png", url: "https://jumptrading.com/", tier: "Silver" },
 
   // --- BRONZE ---
   { name: "AoPS Academy", src: "/sponsors/aopsacademy.png", url: "https://aopsacademy.org/campus/mountainview", tier: "Bronze" },
