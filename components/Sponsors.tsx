@@ -23,13 +23,16 @@ const sponsors: Sponsor[] = [
   { name: "Citadel Securities", src: "/sponsors/citadel.png", url: "https://www.citadelsecurities.com/", tier: "Silver" },
   { name: "DRW", src: "/sponsors/DRW.png", url: "https://www.drw.com/", tier: "Silver" },
   { name: "Stanford Research Park", src: "/sponsors/SRP.png", url: "https://stanfordresearchpark.com/", tier: "Silver" },
-  { name: "Susquehanna International Group", src: "/sponsors/sig.png", url: "https://sig.com/", tier: "Silver" },
+  { name: "Susquehanna International Group", src: "/sponsors/susquehanna.png", url: "https://sig.com/", tier: "Silver" },
 
   // --- BRONZE ---
   { name: "AoPS Academy", src: "/sponsors/aopsacademy.png", url: "https://aopsacademy.org/campus/mountainview", tier: "Bronze" },
   { name: "Euler Circle", src: "/sponsors/eulercircle.png", url: "https://eulercircle.com/", tier: "Bronze" },
   { name: "Wolfram", src: "/sponsors/wolfram.png", url: "https://www.wolfram.com/", tier: "Bronze" },
   { name: "ContestDojo", src: "/sponsors/contestdojo.png", url: "https://contestdojo.com/", tier: "Bronze" },
+  { name: "AwesomeMath", src: "/sponsors/awesomeMath.png", url: "https://awesomemath.com/", tier: "Bronze" },
+  { name: "Aops Online", src: "/sponsors/aops.png", url: "https://aops.com/", tier: "Bronze" },
+  { name: "blackpenredpen", src: "/sponsors/bprp.png", url: "https://www.youtube.com/c/blackpenredpen", tier: "Bronze" },
 ];
 
 const TierSection = ({ tier, color, data }: { tier: SponsorTier; color: string; data: Sponsor[] }) => {

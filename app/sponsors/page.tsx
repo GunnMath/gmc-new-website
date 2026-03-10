@@ -57,7 +57,7 @@ const SPONSORS_DATA = [
         name: "Susquehanna International Group",
         tier: "Silver",
         desc: "Susquehanna is a global quantitative trading firm powered by scientific rigor, curiosity, and innovation.",
-        img: "/sponsors/SIG.png",
+        img: "/sponsors/susquehanna.png",
         url: "https://sig.com/"
     },
     {
@@ -101,6 +101,27 @@ const SPONSORS_DATA = [
         desc: "ContestDojo is an online math competition platform built and used for tournaments such as the Stanford Math Tournament and the Berkeley Math Tournament.",
         img: "/sponsors/contestdojo.png",
         url: "https://contestdojo.com/"
+    },
+    {
+        name: "AwesomeMath",
+        tier: "Bronze",
+        desc: "AwesomeMath is devoted to providing enriching experiences in mathematics and physics for intellectually curious learners. Through our summer programs, year-round academy, online journal, and publications, AwesomeMath fosters a community that values creativity, passionate problem-solving, and lifetime learning.",
+        img: "/sponsors/awesomeMath.png",
+        url: "https://awesomemath.org/"
+    },
+    {
+        name: "AoPS Online",
+        tier: "Bronze",
+        desc: "Since 1993, AoPS has helped hundreds of thousands of passionate students succeed in the classroom and beyond. We know that learning math means more than memorizing formulas or doing lots of simple calculations quickly. Students deserve teachers and peers who share their enthusiasm and a curriculum that helps them think critically and understand concepts on a deeper level. AoPS provides the opportunity to learn to solve problems by trying, failing, and ultimately succeeding.",
+        img: "/sponsors/aops.png",
+        url: "https://aops.com/"
+    },
+    {
+        name: "blackpenredpen",
+        tier: "Bronze",
+        desc: "blackpenredpen (also abbreviated as bprp), is a Taiwanese American math professor and a YouTuber known for making videos of himself solving mathematical problems. The name of the channel comes from the colors he prefers for whiteboard markers in many of his videos.",
+        img: "/sponsors/bprp.png",
+        url: "https://www.youtube.com/c/blackpenredpen"
     },
 ];
 
