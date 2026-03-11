@@ -3,9 +3,31 @@
 import React, { useState, useEffect } from "react";
 import NavBar from '@/components/nav';
 
-const YEARS = [
+// --- Type Definitions ---
+type MediaItem = {
+  name: string;
+  href?: string;
+  isComingSoon?: boolean;
+};
+
+type ExamItem = {
+  name: string;
+  link: string;
+};
+
+type YearGroup = {
+  year: string;
+  media?: MediaItem[];
+  exams: ExamItem[];
+};
+// ------------------------
+
+const YEARS: YearGroup[] = [
   {
     year: "2025",
+    media: [
+        { name: "Google Photos Album", href: "https://photos.app.goo.gl/vcgvXctyjPKaARDR8" }
+    ],
     exams: [
       { name: "Individual A", link: "/2025/Individual_A.pdf" },
       { name: "Individual A Solutions", link: "/2025/Individual_A_Solutions.pdf" },
@@ -30,6 +52,9 @@ const YEARS = [
   },
   {
     year: "2024",
+    media: [
+        { name: "Photos coming soon", isComingSoon: true }
+    ],
     exams: [
       { name: "Individual A", link: "/2024/Individual_A.pdf" },
       { name: "Individual B", link: "/2024/Individual_B.pdf" },
@@ -45,6 +70,9 @@ const YEARS = [
   },
   {
     year: "2023",
+    media: [
+        { name: "Google Drive Folder", href: "https://drive.google.com/drive/folders/1K5WU2t8V1lS5gqPG3nsmHqb22FqQax2I" }
+    ],
     exams: [
       { name: "Individual A", link: "/2023/Individual_A.pdf" },
       { name: "Individual B", link: "/2023/Individual_B.pdf" },
@@ -58,6 +86,10 @@ const YEARS = [
   },
   {
     year: "2022",
+    media: [
+        { name: "Opening Ceremony Livestream", href: "https://www.youtube.com/watch?v=4P0PQ54_JoY" },
+        { name: "Closing Ceremony Livestream", href: "https://www.youtube.com/live/k-chm_F5XQ8" }
+    ],
     exams: [
         { name: "Individual A", link: "/2022/Individual_A.pdf" },
         { name: "Individual A Solutions", link: "/2022/Individual_A_Solutions.pdf" },
@@ -98,13 +130,13 @@ export default function Archive() {
                   style={{ transform: `translateY(${offset * 0.4}px)` }}
               >
                   <span className="text-blue-300 font-bold tracking-widest uppercase text-xs mb-3 block">
-                      Past Problems & Solutions
+                      Past Problems, Solutions, & Photos
                   </span>
                   <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight">
                       ARCHIVE
                   </h1>
                   <p className="text-gray-300 mt-4 text-lg font-medium opacity-90">
-                      Review problems and solutions from previous years of the Gunn Math Competition.
+                      Review problems, solutions, and memories from previous years of the Gunn Math Competition.
                   </p>
               </div>
 
@@ -128,9 +160,24 @@ export default function Archive() {
             {YEARS.map((yearGroup) => (
                 <div key={yearGroup.year} className="relative">
                     <div className="relative z-10">
-                        <h2 className="text-3xl font-black text-white mb-8 border-b-2 border-blue-400/50 pb-4 inline-block">
-                            {yearGroup.year}
-                        </h2>
+                        <div className="flex flex-col md:flex-row md:items-end gap-4 mb-8 border-b-2 border-blue-400/50 pb-4">
+                            <h2 className="text-3xl font-black text-white inline-block m-0">
+                                {yearGroup.year}
+                            </h2>
+                            <div className="flex flex-wrap gap-2 md:mb-1">
+                                {yearGroup.media?.map((item, idx) => (
+                                    item.isComingSoon ? (
+                                        <span key={idx} className="bg-white/5 text-white/50 px-3 py-1 rounded-full text-sm font-bold border border-white/10">
+                                            {item.name}
+                                        </span>
+                                    ) : (
+                                        <a key={idx} href={item.href || "#"} target="_blank" rel="noopener noreferrer" className="bg-white/10 text-blue-200 px-3 py-1 rounded-full text-sm font-bold hover:bg-white/20 hover:text-white transition-all flex items-center gap-1 border border-white/10">
+                                            {item.name} <span>&rarr;</span>
+                                        </a>
+                                    )
+                                ))}
+                            </div>
+                        </div>
                         
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                             {yearGroup.exams.map((exam, idx) => (

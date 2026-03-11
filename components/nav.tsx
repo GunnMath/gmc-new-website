@@ -33,13 +33,7 @@ const navLinks: NavItem[] = [
             { name: "Sponsors", href: "/sponsors" }
         ]
     },
-    {
-        name: "Archive",
-        dropdown: [
-            { name: "Problems & Results", href: "/archive" },
-            { name: "Photo Albums", href: "/photo-albums" }
-        ]
-    },
+    { name: "Archive", href: "/archive" },
     { name: "FAQ", href: "/faq" }
 ];
 
