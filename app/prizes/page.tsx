@@ -128,6 +128,7 @@ export default function PrizesAndScoring() {
               <div className="bg-white px-6 py-2 rounded-full font-bold shadow-md">Top 5 Team Round (Plaques)</div>
               <div className="bg-white px-6 py-2 rounded-full font-bold shadow-md">Top 5 Guts Round (Plaques)</div>
               <div className="bg-white px-6 py-2 rounded-full font-bold shadow-md">Top 5 Overall (Plaques)</div>
+              <div className="bg-white px-6 py-2 rounded-full font-bold shadow-md">All Participants (T-Shirts, Rubik's Cubes, Water Bottles, Card Decks, and More!)</div>
           </div>
         </div>
 
