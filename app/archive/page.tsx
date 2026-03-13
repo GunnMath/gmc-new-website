@@ -26,7 +26,7 @@ const YEARS: YearGroup[] = [
   {
     year: "2025",
     media: [
-        { name: "Google Photos Album", href: "https://photos.app.goo.gl/vcgvXctyjPKaARDR8" }
+        { name: "Google Photos Album", href: "https://photos.app.goo.gl/G1aHyWZQu4R99i6W7" }
     ],
     exams: [
       { name: "Individual A", link: "/2025/Individual_A.pdf" },

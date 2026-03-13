@@ -68,6 +68,9 @@ export default function RegistrationInfoPage() {
                     <div>
                         <h3 className="text-2xl font-bold mb-2">Form Your Team</h3>
                         <p className="font-semibold opacity-80">Go back to your event dashboard. You can click <strong>Create Team</strong> to generate a unique 4-letter team code, or click <strong>Join Team</strong> if a teammate has already given you a code. Teams can have a maximum of 4 students.</p>
+                        <p className="font-bold opacity-100 mt-2">
+                            * Incomplete teams with less than 4 people may be/are likely to be merged to form complete teams of 4, and emails + assignments will go out on Sunday, March 22nd. Any registrations after that date are not guaranteed to be full. If you have a group of 2 people, please register together as a team so that you can be guaranteed to be placed on the same team as your friend.
+                        </p>
                     </div>
                 </div>
             </div>
