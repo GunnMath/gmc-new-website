@@ -5,13 +5,6 @@ import NavBar from '@/components/nav';
 
 const SPONSORS_DATA = [
     {
-        name: "Thinkfund",
-        tier: "Gold",
-        desc: "The City of Palo Alto’s Think Fund is a youth mini-grant program that provides high school students with funding, mentorship, and City support to turn their ideas into community programs, events, or long-term initiatives.",
-        img: "/sponsors/thinkfund.png",
-        url: "https://www.mitchellparkteenservices.org/thinkfund"
-    },
-    {
         name: "City of Palo Alto",
         tier: "Gold",
         desc: "The City of Palo Alto supports numerous community programs and youth initiatives through its community grants.",
@@ -19,11 +12,18 @@ const SPONSORS_DATA = [
         url: "https://www.cityofpaloalto.org/Home"
     },
     {
-        name: "LIVE by Po-Shen Loh",
+        name: "Thinkfund",
+        tier: "Gold",
+        desc: "The City of Palo Alto’s Think Fund is a youth mini-grant program that provides high school students with funding, mentorship, and City support to turn their ideas into community programs, events, or long-term initiatives.",
+        img: "/sponsors/thinkfund.png",
+        url: "https://www.mitchellparkteenservices.org/thinkfund"
+    },
+    {
+        name: "Jump Trading",
         tier: "Silver",
-        desc: "LIVE, by Po-Shen Loh is the first and only online math course that captivates, entertains, and inspires. Invented by legendary math coach Po-Shen Loh.",
-        img: "/sponsors/live.png",
-        url: "https://live.poshenloh.com/"
+        desc: "Jump Trading is a leading global quantitative trading firm that combines sophisticated quantitative research, cutting-edge technology, and an entrepreneurial culture. Founded in 1999, Jump has over 2,000 employees across offices in Chicago, New York, London, Amsterdam, Singapore, Shanghai, Hong Kong, and more. Jump is still privately owned and funded, fostering a culture of intellectual curiosity and learning. Our people are some of the world’s most brilliant minds with backgrounds from the trading industry, Silicon Valley tech companies and start-ups, top PhD programs and research labs. We have a 25+ year history of investing in superior infrastructure, including custom hardware, software, wireless networks, and a world-class supercomputer. We leverage our proprietary technology to analyse massive data sets and identify trends in global markets across asset classes.",
+        img: "/sponsors/jump.png",
+        url: "https://www.jumptrading.com/"
     },
     {
         name: "Jane Street",
@@ -61,11 +61,11 @@ const SPONSORS_DATA = [
         url: "https://sig.com/"
     },
     {
-        name: "Jump Trading",
+        name: "LIVE by Po-Shen Loh",
         tier: "Silver",
-        desc: "Jump Trading is a leading global quantitative trading firm that combines sophisticated quantitative research, cutting-edge technology, and an entrepreneurial culture. Founded in 1999, Jump has over 2,000 employees across offices in Chicago, New York, London, Amsterdam, Singapore, Shanghai, Hong Kong, and more. Jump is still privately owned and funded, fostering a culture of intellectual curiosity and learning. Our people are some of the world’s most brilliant minds with backgrounds from the trading industry, Silicon Valley tech companies and start-ups, top PhD programs and research labs. We have a 25+ year history of investing in superior infrastructure, including custom hardware, software, wireless networks, and a world-class supercomputer. We leverage our proprietary technology to analyse massive data sets and identify trends in global markets across asset classes.",
-        img: "/sponsors/jump.png",
-        url: "https://www.jumptrading.com/"
+        desc: "LIVE, by Po-Shen Loh is the first and only online math course that captivates, entertains, and inspires. Invented by legendary math coach Po-Shen Loh.",
+        img: "/sponsors/live.png",
+        url: "https://live.poshenloh.com/"
     },
     {
         name: "Stanford Research Park",
