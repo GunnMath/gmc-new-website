@@ -100,29 +100,34 @@ export default function Home() {
       </div>
 
       {/* HERO SECTION */}
-      <div className="bg-[#002E67] min-h-[85vh] md:min-h-[80vh] relative overflow-hidden flex flex-col justify-center px-6 md:px-20 pt-28 pb-20">
+      <div className="bg-[#002E67] min-h-[90vh] md:min-h-[85vh] relative overflow-hidden flex flex-col justify-center px-6 md:px-20 pt-32 pb-32">
         
         <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
             <div className="absolute top-[-10%] right-[-10%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-white rounded-full blur-[100px]" />
             <div className="absolute bottom-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-blue-500 rounded-full blur-[100px]" />
         </div>
 
-        <div className="max-w-8xl mx-auto w-full flex flex-col-reverse md:grid md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
+        <div className="max-w-6xl mx-auto w-full flex flex-col items-center justify-center relative z-10 mb-12">
           
-          {/* TEXT BLOCK */}
-          <div className={`flex flex-col gap-4 transition-all duration-1000 ease-out items-center text-center md:items-start md:text-left ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`flex flex-col gap-6 transition-all duration-1000 ease-out items-center text-center w-full ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-block">
-              <span className="bg-white/10 text-[#E4EFFF] font-semibold px-4 py-1.5 rounded-full text-sm md:text-base mb-2 inline-block border border-white/20">
+              <span className="bg-white/10 text-[#E4EFFF] font-semibold px-4 py-1.5 rounded-full text-sm md:text-base inline-block border border-white/20 shadow-sm">
                 Fifth Annual
               </span>
             </div>
             
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-[#E4EFFF] leading-[1.1] tracking-tighter">
-              GUNN MATH<br className="hidden md:block" /> COMPETITION
-            </h1>
+            {/* Centered Logo (Scaled Up) */}
+            <div className="relative w-full max-w-[320px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1000px] mx-auto my-4 md:my-8">
+                <div className="absolute inset-0 bg-white/5 rounded-full blur-3xl transform scale-110 pointer-events-none"></div>
+                <img 
+                  src="/gmc.png" 
+                  alt="Gunn Math Competition Logo" 
+                  className="w-full h-auto object-contain brightness-0 invert drop-shadow-2xl relative z-10" 
+                />
+            </div>
 
-            {/* Date and Location added below title */}
-            <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-2 sm:gap-4 mt-2 text-blue-200 font-semibold text-lg md:text-xl">
+            {/* Date and Location */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-blue-200 font-semibold text-lg md:text-xl mt-2">
                 <div className="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
@@ -138,18 +143,6 @@ export default function Home() {
                     Palo Alto, CA
                 </div>
             </div>
-          </div>
-
-          {/* IMAGE BLOCK */}
-          <div className={`relative flex justify-center md:justify-end transition-all duration-1000 delay-300 ease-out w-full ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-             <div className="relative w-[220px] sm:w-[280px] md:w-[450px] aspect-square mx-auto md:mr-0">
-                <div className="absolute inset-0 bg-white/2 rounded-full blur-2xl transform scale-90"></div>
-                <img 
-                  src="/fsh.png" 
-                  alt="GMC logo" 
-                  className="w-full h-full object-contain brightness-0 invert drop-shadow-2xl relative z-10" 
-                />
-             </div>
           </div>
         </div>
 
@@ -212,7 +205,7 @@ export default function Home() {
             <div className="space-y-8">
                 <h2 className="text-3xl md:text-4xl font-bold mb-2">Registration</h2>
                 <div className="text-lg opacity-90 leading-relaxed font-medium">
-                    Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
+                    Create an account on ContestDojo as a student. Then register for 'GMC 2026', 'register without a coach'. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
                 </div>
                 <div className="flex gap-4">
                     <Link href="/registration-info" className="flex-1 relative z-10">
