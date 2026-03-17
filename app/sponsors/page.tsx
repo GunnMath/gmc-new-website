@@ -40,11 +40,11 @@ const SPONSORS_DATA = [
         url: "https://www.hudsonrivertrading.com/"
     },
     {
-        name: "Citadel Securities",
+        name: "Citadel | Citadel Securities",
         tier: "Silver",
-        desc: "Citadel Securities is a leading global market maker, delivering a broad suite of fixed income and equity products to clients around the world.",
+        desc: "Citadel is a leading alternative investment manager, delivering consistently high returns to clients including endowments, hospitals, and pensions.\n\nCitadel Securities is a leading global market maker, delivering a broad suite of fixed income and equity products to clients around the world.",
         img: "/sponsors/citadel.png",
-        url: "https://www.citadelsecurities.com/"
+        url: "https://www.citadel.com/"
     },
     {
         name: "DRW",
@@ -157,7 +157,7 @@ export default function SponsorsPage() {
                                 {sponsor.tier} Sponsor
                             </span>
                         </div>
-                        <p className="text-[#002E67]/80 leading-relaxed font-medium">
+                        <p className="text-[#002E67]/80 leading-relaxed font-medium whitespace-pre-line">
                             {sponsor.desc}
                         </p>
                         <a href={sponsor.url} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-blue-600 font-bold hover:underline">

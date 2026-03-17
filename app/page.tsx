@@ -189,9 +189,9 @@ export default function Home() {
       {/* INFO CARDS */}
       <div id="info" className="px-6 md:px-20 max-w-8xl mx-auto mt-4 relative z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          <InfoBlock header="2 Divisions">Beginner & Advanced</InfoBlock>
+          <InfoBlock header="2 Divisions">Beginner &amp; Advanced</InfoBlock>
           <InfoBlock header="Free Lunch">For all competitors</InfoBlock>
-          <InfoBlock header="3 Rounds">Individual, Guts, & Team</InfoBlock>
+          <InfoBlock header="3 Rounds">Individual, Guts, &amp; Team</InfoBlock>
           <InfoBlock header="Over $7500">In prizes for top teams</InfoBlock>
           <InfoBlock header="Guest Speaker">Real-world math applications</InfoBlock>
         </div>
@@ -205,7 +205,7 @@ export default function Home() {
             <div className="space-y-8">
                 <h2 className="text-3xl md:text-4xl font-bold mb-2">Registration</h2>
                 <div className="text-lg opacity-90 leading-relaxed font-medium">
-                    Create an account on ContestDojo as a student. Then register for 'GMC 2026', 'register without a coach'. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
+                    Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
                 </div>
                 <div className="flex gap-4">
                     <Link href="/registration-info" className="flex-1 relative z-10">
