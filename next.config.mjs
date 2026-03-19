@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // basePath removed for custom domain (compete.gunnmathcircle.org)
+  assetPrefix: '/void-where-prohibited/',
+
   images: {
     unoptimized: true,
   },
