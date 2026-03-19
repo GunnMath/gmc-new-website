@@ -15,6 +15,8 @@ const sponsors: Sponsor[] = [
   // --- GOLD ---
   { name: "City of Palo Alto", src: "/sponsors/PaloAlto.png", url: "https://www.cityofpaloalto.org/Home", tier: "Gold" },
   { name: "Thinkfund", src: "/sponsors/thinkfund.png", url: "https://www.mitchellparkteenservices.org/thinkfund", tier: "Gold" },
+  { name: "Non-Trivial", src: "/sponsors/nontrivial.png", url: "https://www.non-trivial.org/", tier: "Gold" },
+
   
   
   // --- SILVER ---

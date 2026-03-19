@@ -19,6 +19,13 @@ const SPONSORS_DATA = [
         url: "https://www.mitchellparkteenservices.org/thinkfund"
     },
     {
+        name: "Non-Trivial",
+        tier: "Gold",
+        desc: "Launch your impactful research journey before university with Non-Trivial, a selective online program for ambitious teenagers. Build research skills, hear from experts, and join a global community of exceptional young thinkers as you learn to identify and tackle humanity's most pressing challenges. School-year training courses followed by a free summer Fellowship with mentorship, project grants, and college scholarships up to $10,000. Register for exclusive application opportunities here.",
+        img: "/sponsors/nontrivial.png",
+        url: "https://www.non-trivial.org/"
+    },
+    {
         name: "Jump Trading",
         tier: "Silver",
         desc: "Jump Trading is a leading global quantitative trading firm that combines sophisticated quantitative research, cutting-edge technology, and an entrepreneurial culture. Founded in 1999, Jump has over 2,000 employees across offices in Chicago, New York, London, Amsterdam, Singapore, Shanghai, Hong Kong, and more. Jump is still privately owned and funded, fostering a culture of intellectual curiosity and learning. Our people are some of the world’s most brilliant minds with backgrounds from the trading industry, Silicon Valley tech companies and start-ups, top PhD programs and research labs. We have a 25+ year history of investing in superior infrastructure, including custom hardware, software, wireless networks, and a world-class supercomputer. We leverage our proprietary technology to analyse massive data sets and identify trends in global markets across asset classes.",
