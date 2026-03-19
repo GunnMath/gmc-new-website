@@ -18,13 +18,17 @@ const SPONSORS_DATA = [
         img: "/sponsors/thinkfund.png",
         url: "https://www.mitchellparkteenservices.org/thinkfund"
     },
-    {
-        name: "Non-Trivial",
-        tier: "Gold",
-        desc: "Launch your impactful research journey before university with Non-Trivial, a selective online program for ambitious teenagers. Build research skills, hear from experts, and join a global community of exceptional young thinkers as you learn to identify and tackle humanity's most pressing challenges. School-year training courses followed by a free summer Fellowship with mentorship, project grants, and college scholarships up to $10,000. Register for exclusive application opportunities here.",
-        img: "/sponsors/nontrivial.png",
-        url: "https://www.non-trivial.org/"
-    },
+{
+    name: "Non-Trivial",
+    tier: "Gold",
+    desc: (
+        <>
+            Launch your impactful research journey before university with Non-Trivial, a selective online program for ambitious teenagers. Build research skills, hear from experts, and join a global community of exceptional young thinkers as you learn to identify and tackle humanity's most pressing challenges. School-year training courses followed by a free summer Fellowship with mentorship, project grants, and college scholarships up to $10,000. Register for exclusive application opportunities <a href="https://apply.non-trivial.org/referral-network" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">here</a>.
+        </>
+    ),
+    img: "/sponsors/nontrivial.png",
+    url: "https://apply.non-trivial.org/referral-network"
+},
     {
         name: "Jump Trading",
         tier: "Silver",
