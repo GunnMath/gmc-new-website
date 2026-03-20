@@ -207,6 +207,11 @@ export default function Home() {
                 <div className="text-lg opacity-90 leading-relaxed font-medium">
                     Create an account on ContestDojo as a student. Then register for &apos;GMC 2026&apos;, &apos;register without a coach&apos;. Scroll up to create a team. Only one person needs to create a team, and other members can join the team by entering the four-letter team code.
                 </div>
+
+                <div className="text-lg opacity-90 leading-relaxed font-medium">
+                  Registration deadline is Monday, March 23rd, 11:59pm PDT. 
+                </div>
+
                 <div className="flex gap-4">
                     <Link href="/registration-info" className="flex-1 relative z-10">
                         <div className="text-center font-semibold text-xl py-4 rounded-xl bg-[#002E67] text-white hover:bg-[#004080] hover:-translate-y-1 transition-all shadow-lg border border-white/20">
