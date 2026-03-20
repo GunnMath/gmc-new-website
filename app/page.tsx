@@ -209,7 +209,7 @@ export default function Home() {
                 </div>
 
                 <div className="text-lg opacity-90 leading-relaxed font-medium">
-                  Registration deadline is Monday, March 23rd, 11:59pm PDT. 
+                    <b>Registration deadline is Monday, March 23rd, 11:59pm PDT or when there are 272 signups. </b>
                 </div>
 
                 <div className="flex gap-4">
