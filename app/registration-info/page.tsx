@@ -17,7 +17,7 @@ export default function RegistrationInfoPage() {
         <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="bg-white text-[#002E67] p-6 rounded-3xl shadow-xl border border-white/50">
                 <div className="font-bold text-2xl mb-2">Deadline</div>
-                <div className="font-semibold opacity-80">March 25th, 2026<br/>at 11:59 PM PST</div>
+                <div className="font-semibold opacity-80">March 23rd, 2026<br/>at 11:59 PM PST, or upon reaching 272 signups</div>
             </div>
             <div className="bg-white text-[#002E67] p-6 rounded-3xl shadow-xl border border-white/50">
                 <div className="font-bold text-2xl mb-2">Eligibility</div>
