@@ -15,7 +15,7 @@ export default function Footer() {
              Gunn Math Competition
           </h3>
           <p className="text-white/60 font-medium text-sm mt-2">
-            © 2026 Gunn Math Circle. All rights reserved.
+            Hosted by Gunn Math Circle.
           </p>
         </div>
 
