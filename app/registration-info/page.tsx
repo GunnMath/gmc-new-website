@@ -17,7 +17,9 @@ export default function RegistrationInfoPage() {
         <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="bg-white text-[#002E67] p-6 rounded-3xl shadow-xl border border-white/50">
                 <div className="font-bold text-2xl mb-2">Deadline</div>
-                <div className="font-semibold opacity-80">March 23rd, 2026<br/>at 11:59 PM PST, or upon reaching 272 signups</div>
+                <div className="font-semibold opacity-80">We have reached full capacity and unfortunately we are no longer able
+                    to take signups via ContestDojo.<br/> We will put a waitlist form here on the website and on ContestDojo shortly.
+                    The waitlist will be first-come, first serve.</div>
             </div>
             <div className="bg-white text-[#002E67] p-6 rounded-3xl shadow-xl border border-white/50">
                 <div className="font-bold text-2xl mb-2">Eligibility</div>
