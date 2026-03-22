@@ -19,7 +19,7 @@ export default function RegistrationInfoPage() {
                 <div className="font-bold text-2xl mb-2">Deadline</div>
                 <div className="font-semibold opacity-80">We have reached full capacity and unfortunately we are no longer able
                     to take signups via ContestDojo.<br/> 
-                    If you are still interested, please fill out the <a href="https://forms.gle/mkrNofGv9cnYCAEr7" target="_blank" rel="noopener noreferrer">waitlist form</a>
+                    If you are still interested, please fill out the <a href="https://forms.gle/mkrNofGv9cnYCAEr7" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }} >waitlist form.</a>
                     </div>
             </div>
             <div className="bg-white text-[#002E67] p-6 rounded-3xl shadow-xl border border-white/50">
@@ -33,56 +33,21 @@ export default function RegistrationInfoPage() {
         </div>
 
         <div className="bg-white text-[#002E67] p-8 md:p-12 rounded-3xl shadow-2xl border border-white/50">
-            <h2 className="text-3xl font-black mb-8 border-b border-[#002E67]/10 pb-4">How to Register</h2>
+            <h2 className="text-3xl font-black mb-8 border-b border-[#002E67]/10 pb-4">Joining the Waitlist</h2>
             
             <div className="space-y-8">
                 <div className="flex gap-4 md:gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#002E67] text-white rounded-full flex items-center justify-center font-bold text-xl shadow-md">1</div>
                     <div>
-                        <h3 className="text-2xl font-bold mb-2">Create a ContestDojo Account</h3>
-                        <p className="font-semibold opacity-80">Visit <a href="https://contestdojo.com/register" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">contestdojo.com/register</a> and select the &quot;Student&quot; account type to create your profile.</p>
-                    </div>
-                </div>
-
-                <div className="flex gap-4 md:gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#002E67] text-white rounded-full flex items-center justify-center font-bold text-xl shadow-md">2</div>
-                    <div>
-                        <h3 className="text-2xl font-bold mb-2">Register for GMC 2026</h3>
-                        <p className="font-semibold opacity-80 mb-3">Log in to your account. Under &quot;Events Accepting Registrations,&quot; locate <strong>GMC 2026</strong> and click Register. You will be prompted to enter:</p>
-                        <ul className="list-disc list-inside space-y-1 font-semibold opacity-80 ml-2">
-                            <li>Your grade level</li>
-                            <li>T-shirt size</li>
-                            <li>Dietary restrictions</li>
-                            <li><strong>Division:</strong> Choose Division A (experienced / AIME qualifiers) or Division B (newer to competition math).</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="flex gap-4 md:gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#002E67] text-white rounded-full flex items-center justify-center font-bold text-xl shadow-md">3</div>
-                    <div>
-                        <h3 className="text-2xl font-bold mb-2">Sign the Digital Waiver</h3>
-                        <p className="font-semibold opacity-80">Your registration is not complete until your waiver is signed! After submitting your details, your parent/guardian will receive an email from ContestDojo containing a secure link to digitally sign the medical and media release waiver. The waiver
-                            must be signed by <b>Tuesday March 24th, 2026 at 11:59 PM PST or else you will forfeit your spot. </b>
-                        </p>
-                    </div>
-                </div>
-
-                <div className="flex gap-4 md:gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#002E67] text-white rounded-full flex items-center justify-center font-bold text-xl shadow-md">4</div>
-                    <div>
-                        <h3 className="text-2xl font-bold mb-2">Form Your Team</h3>
-                        <p className="font-semibold opacity-80">Go back to your event dashboard. You can click <strong>Create Team</strong> to generate a unique 4-letter team code, or click <strong>Join Team</strong> if a teammate has already given you a code. Teams can have a maximum of 4 students.</p>
-                        <p className="font-bold opacity-100 mt-2">
-                            * Incomplete teams with less than 4 people may be/are likely to be merged to form complete teams of 4, and emails + assignments will go out on Monday, March 23rd. Any registrations after that date are not guaranteed to be full. If you have a group of 2 people, please register together as a team so that you can be guaranteed to be placed on the same team as your friend.
-                        </p>
+                      <p className="font-semibold opacity-80 mb-3"> All 272 spots have been filled up for the 2026th Gunn Math Competition. If you are still interested in competing this year, please consider joining the waitlist! 
+                        There is no guarantee that joining the waitlist means that you will get a spot. The waitlist will close on Tuesday March 24th, 2026 at 11:59 PM PST and people who get off the waitlist will be notified on the following day on Wednesday March 25th, 2026. 
+                        It is first come first serve.</p>
                     </div>
                 </div>
             </div>
 
             <div className="mt-12 pt-8 border-t border-[#002E67]/10 text-center">
-                <a href="https://contestdojo.com/register" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#002E67] text-white font-semibold text-xl py-4 px-10 rounded-xl shadow-lg hover:scale-105 hover:bg-[#004080] transition-all">
-                    Register on ContestDojo Now &rarr;
+                <a href="https://forms.gle/MDtV9LQ2k2QAer8h8" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#002E67] text-white font-semibold text-xl py-4 px-10 rounded-xl shadow-lg hover:scale-105 hover:bg-[#004080] transition-all">
+                    Join the Waitlist &rarr;
                 </a>
             </div>
         </div>
