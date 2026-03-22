@@ -78,7 +78,7 @@ export default function Schedule() {
       loc: "Bow/Titan Gym",
       desc: (
         <p>
-          Hosted by <strong>Jane Street</strong>, the Estimathon is a 13-question team (4 people) contest where the goal is to solve Fermi-style estimation problems (you aren't supposed to know the exact answer to these questions!). For more information, visit the <a href="https://estimathon.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 font-bold underline underline-offset-2 transition-colors">Estimathon website</a>.
+          Hosted by <strong>Jane Street</strong>, the Estimathon is a 13-question team (4 people) contest where the goal is to solve Fermi-style estimation problems (you are not supposed to know the exact answer to these questions!). For more information, visit the <a href="https://estimathon.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 font-bold underline underline-offset-2 transition-colors">Estimathon website</a>.
         </p>
       )
     },
