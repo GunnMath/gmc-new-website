@@ -18,7 +18,8 @@ export default function RegistrationInfoPage() {
             <div className="bg-white text-[#002E67] p-6 rounded-3xl shadow-xl border border-white/50">
                 <div className="font-bold text-2xl mb-2">Deadline</div>
                 <div className="font-semibold opacity-80">We have reached full capacity and unfortunately we are no longer able
-                    to take signups via ContestDojo.<br/> We will put a waitlist form here on the website and on ContestDojo shortly.
+                    to take signups via ContestDojo.<br/> 
+                    If you are still interested, please fill out the <a href="https://forms.gle/mkrNofGv9cnYCAEr7" target="_blank" rel="noopener noreferrer">waitlist form</a>
                     </div>
             </div>
             <div className="bg-white text-[#002E67] p-6 rounded-3xl shadow-xl border border-white/50">
