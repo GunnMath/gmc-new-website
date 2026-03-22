@@ -57,7 +57,7 @@ export default function Schedule() {
     },
     { 
       time: "2:15 - 3:30 PM", 
-      event: "Activities Block 1 & Tiebreakers", 
+      event: "Activities Block 1: USAYNO & Tiebreakers", 
       loc: "N-Building/Titan Gym",
       desc: (
         <div className="space-y-4">
