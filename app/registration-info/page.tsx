@@ -19,7 +19,7 @@ export default function RegistrationInfoPage() {
                 <div className="font-bold text-2xl mb-2">Deadline</div>
                 <div className="font-semibold opacity-80">We have reached full capacity and unfortunately we are no longer able
                     to take signups via ContestDojo.<br/> We will put a waitlist form here on the website and on ContestDojo shortly.
-                    The waitlist will be first-come, first serve.</div>
+                    </div>
             </div>
             <div className="bg-white text-[#002E67] p-6 rounded-3xl shadow-xl border border-white/50">
                 <div className="font-bold text-2xl mb-2">Eligibility</div>
@@ -61,7 +61,9 @@ export default function RegistrationInfoPage() {
                     <div className="flex-shrink-0 w-12 h-12 bg-[#002E67] text-white rounded-full flex items-center justify-center font-bold text-xl shadow-md">3</div>
                     <div>
                         <h3 className="text-2xl font-bold mb-2">Sign the Digital Waiver</h3>
-                        <p className="font-semibold opacity-80">Your registration is not complete until your waiver is signed! After submitting your details, your parent/guardian will receive an email from ContestDojo containing a secure link to digitally sign the medical and media release waiver.</p>
+                        <p className="font-semibold opacity-80">Your registration is not complete until your waiver is signed! After submitting your details, your parent/guardian will receive an email from ContestDojo containing a secure link to digitally sign the medical and media release waiver. The waiver
+                            must be signed by <b>Tuesday March 24th, 2026 at 11:59 PM PST or else you will forfeit your spot. </b>
+                        </p>
                     </div>
                 </div>
 
@@ -71,7 +73,7 @@ export default function RegistrationInfoPage() {
                         <h3 className="text-2xl font-bold mb-2">Form Your Team</h3>
                         <p className="font-semibold opacity-80">Go back to your event dashboard. You can click <strong>Create Team</strong> to generate a unique 4-letter team code, or click <strong>Join Team</strong> if a teammate has already given you a code. Teams can have a maximum of 4 students.</p>
                         <p className="font-bold opacity-100 mt-2">
-                            * Incomplete teams with less than 4 people may be/are likely to be merged to form complete teams of 4, and emails + assignments will go out on Sunday, March 22nd. Any registrations after that date are not guaranteed to be full. If you have a group of 2 people, please register together as a team so that you can be guaranteed to be placed on the same team as your friend.
+                            * Incomplete teams with less than 4 people may be/are likely to be merged to form complete teams of 4, and emails + assignments will go out on Monday, March 23rd. Any registrations after that date are not guaranteed to be full. If you have a group of 2 people, please register together as a team so that you can be guaranteed to be placed on the same team as your friend.
                         </p>
                     </div>
                 </div>
