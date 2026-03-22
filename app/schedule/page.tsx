@@ -17,7 +17,7 @@ export default function Schedule() {
       time: "8:45 - 9:00 AM", 
       event: "Opening Ceremony", 
       loc: "Bow Gym",
-      desc: "A brief welcome to the 5th Annual GMC! We will introduce the day's logistics, rules, and our generous sponsors." 
+      desc: "A brief welcome to the 5th Annual GMC! We will introduce the day's logistics, rules, and our sponsors." 
     },
     { 
       time: "9:15 - 10:15 AM", 
@@ -36,13 +36,13 @@ export default function Schedule() {
       time: "10:25 - 11:25 AM", 
       event: "Team Round", 
       loc: "N-Building",
-      desc: "The Team Round is a 60-minute, 10-problem test for Division A, and a 60-minute, 15-problem test for Division B. All members of a team work together to target individual strengths and weaknesses, and all answers are single values." 
+      desc: "The Team Round is a 60-minute, 10-problem test for Division A, and a 60-minute, 10-problem test for Division B. All members of a team work together to target individual strengths and weaknesses, and all answers are single values." 
     },
     { 
       time: "11:30 - 12:15 PM", 
       event: "Lunch", 
       loc: "Bow Gym",
-      desc: "Catered Jersey Mike's Subs will be provided for all competitors. During this time, competitors must stay on campus and eat in designated areas to rest and prepare for the afternoon rounds." 
+      desc: "We will have Costco Pizza provided for all competitors. During this time, competitors must stay on campus and eat in designated areas to rest and prepare for the afternoon rounds." 
     },
     { 
       time: "12:30 - 2:00 PM", 
@@ -65,15 +65,9 @@ export default function Schedule() {
             <strong>Tiebreakers:</strong> Due to the nature of the Individual Round score algorithm, ties are unlikely. In the event of a tie between top performing competitors, we will be holding a tiebreaker round concurrently with Activities. Competitors who qualify will have exactly 15 minutes to solve 3 challenging problems. Ties in the tiebreaker round will be broken by submission time, and more details will be provided during the round if necessary.
           </p>
           <hr className="border-[#002E67]/10 my-4" />
-          <p className="font-bold text-xl text-[#002E67]">Activities</p>
+          <p className="font-bold text-xl text-[#002E67]">Activity</p>
           <p>
-            <strong>Plank Countdown:</strong> A Mathcounts-style countdown round, with a slight twist—you will have to solve problems while holding the plank position!
-          </p>
-          <p>
-            <strong>SET:</strong> A fast-paced card game where a &quot;set&quot; is three cards. Within this group of three cards, every feature (color, shape, number, and shading) must be either all the same or all different. The person who finds the most sets in the game wins! (Note: SET requires some sort of electronic device like a phone or laptop, which may be provided by an organizer).
-          </p>
-          <p>
-            <strong>Rubik&apos;s Cubing:</strong> The hobby of solving a Rubik&apos;s Cube and its many variants. All competitors will be graciously provided with a Jane Street Rubik&apos;s Cube and an HRT Rubik&apos;s Cube to learn.
+            <strong>USAYNO:</strong> USAYNO consists of a series of YES or NO math questions that people will have to answer, most of the questions are NOT supposed to be easily solvable!
           </p>
         </div>
       )
@@ -84,7 +78,7 @@ export default function Schedule() {
       loc: "Bow/Titan Gym",
       desc: (
         <p>
-          Hosted by <strong>Jane Street</strong>, the Estimathon is a 13-question team (4 people) contest where the goal is to solve Fermi-style estimation problems. For more information, visit the <a href="https://estimathon.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 font-bold underline underline-offset-2 transition-colors">Estimathon website</a>.
+          Hosted by <strong>Jane Street</strong>, the Estimathon is a 13-question team (4 people) contest where the goal is to solve Fermi-style estimation problems (you aren't supposed to know the exact answer to these questions!). For more information, visit the <a href="https://estimathon.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 font-bold underline underline-offset-2 transition-colors">Estimathon website</a>.
         </p>
       )
     },
