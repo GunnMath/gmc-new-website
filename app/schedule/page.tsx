@@ -10,13 +10,13 @@ export default function Schedule() {
     { 
       time: "8:00 - 8:45 AM", 
       event: "Registration / Check-In", 
-      loc: "Bow Gym",
+      loc: "Titan Gym",
       desc: "Teams arrive, check in, and receive their nametags and competition packets for the day." 
     },
     { 
       time: "8:45 - 9:00 AM", 
       event: "Opening Ceremony", 
-      loc: "Bow Gym",
+      loc: "Titan Gym",
       desc: "A brief welcome to the 5th Annual GMC! We will introduce the day's logistics, rules, and our generous sponsors." 
     },
     { 
@@ -28,7 +28,7 @@ export default function Schedule() {
     { 
       time: "9:15 - 10:00 AM", 
       event: "Guest Speaker for Parents", 
-      loc: "Bow Gym",
+      loc: "Titan Gym",
       highlight: true,
       desc: "A special presentation and Q&A session specifically for parents and coaches while the students are testing." 
     },
@@ -41,13 +41,13 @@ export default function Schedule() {
     { 
       time: "11:30 - 12:15 PM", 
       event: "Lunch", 
-      loc: "Bow Gym",
+      loc: "outside Titan Gym",
       desc: "Catered Jersey Mike's Subs will be provided for all competitors. During this time, competitors must stay on campus and eat in designated areas to rest and prepare for the afternoon rounds." 
     },
     { 
       time: "12:30 - 2:00 PM", 
       event: "Guts Round", 
-      loc: "Bow/Titan Gym",
+      loc: "N-building (div A) / Titan Gym (div B)",
       desc: (
         <div className="space-y-4">
           <p>The Guts Round is an 90-minute team event with 27 short-answer questions on an assortment of subjects, of varying difficulty and point values. The problems are divided into 8 sets of 3 questions each, as well as 1 set of 3 estimation-style questions.</p>
@@ -58,7 +58,7 @@ export default function Schedule() {
     { 
       time: "2:15 - 3:30 PM", 
       event: "Activities Block 1 & Tiebreakers", 
-      loc: "N-Building/Titan Gym",
+      loc: "Titan Gym/N-Building",
       desc: (
         <div className="space-y-4">
           <p>
@@ -81,7 +81,7 @@ export default function Schedule() {
     { 
       time: "3:45 - 5:00 PM", 
       event: "Activities Block 2: Estimathon", 
-      loc: "Bow/Titan Gym",
+      loc: "N-building/Titan Gym",
       desc: (
         <p>
           Hosted by <strong>Jane Street</strong>, the Estimathon is a 13-question team (4 people) contest where the goal is to solve Fermi-style estimation problems. For more information, visit the <a href="https://estimathon.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 font-bold underline underline-offset-2 transition-colors">Estimathon website</a>.
@@ -91,14 +91,14 @@ export default function Schedule() {
     { 
       time: "5:00 - 5:30 PM", 
       event: "Guest Speech for Students", 
-      loc: "Bow Gym",
+      loc: "Titan Gym",
       highlight: true,
-      desc: "A fascinating keynote speech given by our guest speaker to all students while our grading team finalizes the scores for the day." 
+      desc: "A fascinating keynote speech given by our guest speaker Simon Rubinstein-Salzedo to all students while our grading team finalizes the scores for the day." 
     },
     { 
       time: "5:30 - 6:00 PM", 
       event: "Awards Ceremony", 
-      loc: "Bow/Titan Gym",
+      loc: "Titan Gym",
       desc: "Recognition of the top-performing individuals and teams across all divisions. We will be handing out medals, plaques, and allowing top performers and activity winners to select items from our massive prize pool!" 
     },
   ];
