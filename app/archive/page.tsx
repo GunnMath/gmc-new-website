@@ -26,6 +26,10 @@ const YEARS: YearGroup[] = [
   {
     year: "2026",
     exams: [
+      { name: "Team A", link: "/2026/Team_A.pdf" },
+      { name: "Team A Solutions", link: "/2026/Team_A_Solutions.pdf" },
+      { name: "Guts A", link: "/2026/Guts_A.pdf" },
+      { name: "Guts A (problems & answers)", link: "/2026/Guts_A_Problems_and_Answers.pdf" },
       { name: "Awards A", link: "/2026/Awards_A.pdf" },
       { name: "Awards B", link: "/2026/Awards_B.pdf" },
     ],
