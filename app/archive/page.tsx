@@ -24,6 +24,13 @@ type YearGroup = {
 
 const YEARS: YearGroup[] = [
   {
+    year: "2026",
+    exams: [
+      { name: "Awards A", link: "/2026/Awards_A.pdf" },
+      { name: "Awards B", link: "/2026/Awards_B.pdf" },
+    ],
+  },
+  {
     year: "2025",
     media: [
         { name: "Google Photos Album", href: "https://photos.app.goo.gl/G1aHyWZQu4R99i6W7" }
