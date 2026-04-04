@@ -28,8 +28,12 @@ const YEARS: YearGroup[] = [
     exams: [
       { name: "Individual A", link: "/2026/Individual_A.pdf" },
       { name: "Individual A Solutions", link: "/2026/Individual_A_Solutions.pdf" },
+      { name: "Individual B", link: "/2026/Individual_B.pdf" },
+      { name: "Individual B Solutions", link: "/2026/Individual_B_Solutions.pdf" },
       { name: "Team A", link: "/2026/Team_A.pdf" },
       { name: "Team A Solutions", link: "/2026/Team_A_Solutions.pdf" },
+      { name: "Team B", link: "/2026/Team_B.pdf" },
+      { name: "Team B Solutions", link: "/2026/Team_B_Solutions.pdf" },
       { name: "Guts A", link: "/2026/Guts_A.pdf" },
       { name: "Guts A Solutions", link: "/2026/Guts_A_Solutions.pdf" },
       { name: "Awards A", link: "/2026/Awards_A.pdf" },
